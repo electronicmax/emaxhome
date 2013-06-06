@@ -121,7 +121,8 @@
 		   "dpi":"http://dl.acm.org/citation.cfm?doid=1518701.1518924"
 	   }
    ],
-   contact: [
+   "contact": [
+	   { "id": "blog-emax", "name":"the future is personal", "url":"http://thefutureispersonal.wordpress.com" },
 	   { "id": "twitter-emax", "name": "twitter", "url": "http://twitter.com/emax" },
 	   { "id": "facebook-emax", "name": "fb", "url": "http://facebook.com/electronicmax" },
 	   { "id": "scholar-emax", "name": "scholar", "url": "http://scholar.google.co.uk/citations?user=bknlzZwAAAAJ" },
