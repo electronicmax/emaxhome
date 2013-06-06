@@ -1,7 +1,7 @@
 {
    "chairs": [
 	   {
-		   "id":'pubchair-chi1',
+		   "id":"pubchair-chi1",
 		   "title":"Proceedings Chair",
            "conference":"CHI 2011",
        },
