@@ -3,34 +3,34 @@
 	   {
 		   "id":"pubchair-chi1",
 		   "title":"Proceedings Chair",
-           "conference":"CHI 2011",
+           "conference":"CHI 2011"
        },
        {
 		   "id":"pubchair-chi2",
 		   "title":"Proceedings Chair",
-           "conference":"CHI 2012",
+           "conference":"CHI 2012"
        },
        {
 		   "id":"datachair",
 		   "title":"Data Chair",
-           "conference":"CHI 2013",
+           "conference":"CHI 2013"
        },
 	   {
 		   "id":"cscw2014",
 		   "title":"Programme Committe (PC) Area Chair",
-           "conference":"CSCW 2014",
+           "conference":"CSCW 2014"
        },
 	   {
 		   "id":"socm2013",
 		   "title":"Workshop Organiser"
            "for":"SOCM 2013",
-           "conference":"WWW 2013",
+           "conference":"WWW 2013"
        },
 	   {
 		   "id":"temporal",
 		   "title":"Workshop Organiser",
            "for":"Interacting with Temporal Data",
-           "conference":"CHI 2009",
+           "conference":"CHI 2009"
        }
    ],
    "publications": [
