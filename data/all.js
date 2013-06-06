@@ -119,6 +119,15 @@
 		   "year":2009,
 		   "url":"http://people.csail.mit.edu/emax/papers/listit-chi2009.pdf",
 		   "dpi":"http://dl.acm.org/citation.cfm?doid=1518701.1518924"
+	   },
+	   {
+		   "id":"mikko-ubicomm",
+		   "title":"Auditory Context Recognition Using SVMs",
+		   "authors":["Mikko Pertunnen", "Max Van Kleek","Ora Lassila","Jukka Riekki"],
+		   "type":["conference paper"],
+		   "conference":"UBICOMM 2008",
+		   "year":2008,
+		   "url":"http://people.csail.mit.edu/emax/papers/UBICOMM%20audio%20context%20sensing%202008.pdf",
 	   }
    ],
    "contact": [
