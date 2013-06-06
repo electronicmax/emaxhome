@@ -92,12 +92,18 @@ background-image:url(../imgs/glitch1.png);
     padding:10px 14px 100px 14px !important;	
 	background-color:rgba(255,255,255,0.99);
 	height:100%;
-
+	vertical-align:top;
 }
+
 .column-sec {
+	vertical-align:top;
 	display:inline-block;
-	max-width:400px;
-	&.wide { max-width:800px; }
+	max-width:800px;
+	&.full-width {
+		max-width:100% !important;
+		width:100% !important;
+		display:block;
+	}
 	h2.sec-title {
 		font-size:16pt;
 		margin:0px;

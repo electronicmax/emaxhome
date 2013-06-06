@@ -140,6 +140,6 @@
 	   { "id": "lastfm-emax", "name": "lastfm", "url": "http://last.fm/user/electronicmax" }
    ],
 	"people": [
-		{ id:"Daniel A. Smith", homepage:"https://danielsmith.eu", photo:"" }
+		{ "id":"Daniel A. Smith", "homepage":"https://danielsmith.eu", "photo":"" }
 	]
 }
