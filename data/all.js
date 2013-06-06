@@ -127,12 +127,12 @@
 		   "type":["conference paper"],
 		   "conference":"UBICOMM 2008",
 		   "year":2008,
-		   "url":"http://people.csail.mit.edu/emax/papers/UBICOMM%20audio%20context%20sensing%202008.pdf",
+		   "url":"http://people.csail.mit.edu/emax/papers/UBICOMM%20audio%20context%20sensing%202008.pdf"
 	   }
    ],
-   "contact": [
+	"contact": [
 	   { "id": "blog-emax", "name":"the future is personal", "url":"http://thefutureispersonal.wordpress.com" },
-	   { "id": "twitter-emax", "name": "twitter", "url": "http://twitter.com/emax" },
+		{ "id": "twitter-emax", "name": "twitter", "url": "http://twitter.com/emax" },
 	   { "id": "facebook-emax", "name": "fb", "url": "http://facebook.com/electronicmax" },
 	   { "id": "scholar-emax", "name": "scholar", "url": "http://scholar.google.co.uk/citations?user=bknlzZwAAAAJ" },
 	   { "id": "linkedin-emax", "name": "linkedin", "url": "http://www.linkedin.com/profile/view?id=27825397" },
