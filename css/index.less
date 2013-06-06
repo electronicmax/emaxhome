@@ -94,20 +94,28 @@ background-image:url(../imgs/glitch1.png);
 	height:100%;
 
 }
-.publications {
-	list-style-type:none;
-	margin:0 0 10px 0px !important;
-	.pub {
-		.authors {
-			font-size:80%;
-			.author {
-				display:inline-block;
-				padding:0px 5px 0px 5px;
-			}		
-		}
+.column-sec {
+	display:inline-block;
+	max-width:400px;
+	&.wide { max-width:800px; }
+	h2.sec-title {
+		font-size:16pt;
+		margin:0px;
 	}
 }
-h2.sec-title {
-	font-size:16pt;
-	margin:0px;
+
+.listing {
+	list-style-type:none;
+	margin:0 0 10px 0px !important;
 }
+// publications
+.pub {
+	.authors {
+		font-size:80%;
+		.author {
+			display:inline-block;
+			padding:0px 5px 0px 5px;
+		}		
+	}
+}
+

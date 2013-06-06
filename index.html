@@ -28,19 +28,27 @@
 		</div>
 	  </div>
 	  <div class="restblock">
-		<div class="">
+		<div class="column-sec interests">
 		  <h2 class="sec-title">interests</h2>
 		  <div>personal information management, behavioural interfaces, </div>
 		  <div>data ownership and management, complex social systems</div>
 		</div>				  	  
-		<div class="">
+		<div class="column-sec papers">
 		  <h2 class="sec-title">papers</h2>
-		  <ul class="publications">
+		  <ul class="listing">
 			<li ng-repeat="p in publications">
 			  <pub data="p"></pub>
 			</li>
 		  </ul>
 		</div>
+		<div class="column-sec papers">
+		  <h2 class="sec-title">active projects</h2>
+		  <ul class="listing">
+			<li ng-repeat="p in projects | filter:{active:true}">
+			  <pub data="p"></pub>
+			</li>
+		  </ul>
+		</div>		
 	  </div>
 	</div>
   </body>
