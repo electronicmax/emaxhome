@@ -22,7 +22,7 @@
        },
 	   {
 		   "id":"socm2013",
-		   "title":"Workshop Organiser"
+		   "title":"Workshop Organiser",
            "for":"SOCM 2013",
            "conference":"WWW 2013"
        },
