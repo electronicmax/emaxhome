@@ -38,7 +38,7 @@
 		   "id": "phdthesis",
 		   "title":"Attention, Memory, Effort and Time: Paths to More Effective Personal Information Management",
 		   "type":["Ph.D. Thesis"],
-		   "author":["Max Van Kleek"],
+		   "authors":["Max Van Kleek"],
 		   "url":"http://dspace.mit.edu/handle/1721.1/66466",
 		   "year":2011,
 		   "topics":["personal information management", "list-it", "field studies"]
@@ -46,6 +46,7 @@
 	   {
 		   "id": "mengthesis",
 		   "title":"Intelligent Environments for Informal Public Spaces: the Ki/o Kiosk Platform",
+		   "authors":["Max Van Kleek"],
 		   "type":["M.Eng Thesis"],
 		   "url":"http://people.csail.mit.edu/emax/papers/kiothesis2003.pdf",
 		   "year":2003,
@@ -118,6 +119,14 @@
 		   "year":2009,
 		   "url":"http://people.csail.mit.edu/emax/papers/listit-chi2009.pdf",
 		   "dpi":"http://dl.acm.org/citation.cfm?doid=1518701.1518924"
-	   }	   
+	   }
+   ],
+   contact: [
+	   { "id": "twitter-emax", "name": "twitter", "url": "http://twitter.com/emax" },
+	   { "id": "facebook-emax", "name": "fb", "url": "http://facebook.com/electronicmax" },
+	   { "id": "scholar-emax", "name": "scholar", "url": "http://scholar.google.co.uk/citations?user=bknlzZwAAAAJ" },
+	   { "id": "linkedin-emax", "name": "linkedin", "url": "http://www.linkedin.com/profile/view?id=27825397" },
+	   { "id": "gplus-emax", "name": "g+", "url": "https://plus.google.com/118213120258413824316" },	   
+	   { "id": "lastfm-emax", "name": "lastfm", "url": "http://last.fm/user/electronicmax" }
    ]
 }

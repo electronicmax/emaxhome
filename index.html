@@ -9,21 +9,28 @@
   </head>
   <body ng-app='emax'>
 	<div class="container-fluid main" ng-controller="TopLevel">
-	  <div class="nameblock">
-		<div class="name">
-		  max van kleek
+	  <div class="topblock">
+		<div class="nameblock">
+		  <div class="name">
+			max van kleek
+		  </div>
+		  <div class="title">
+			<div>personal data technologies</div>
+			<div>senior research fellow</div>
+			<div><a href="http://wais.ecs.soton.ac.uk/">web and internet science</a></div>
+			<div><a href="http://sociam.org">sociam project</a></div>
+			<div><a href="http://www.soton.ac.uk">university of southampton</a></div>		  
+		  </div>
 		</div>
-		<div class="title">
-		  <div>senior research fellow</div>
-		  <div>university of southampton</div>
-		  <div>personal data technologies</div>
-		  <div><a href="http://sociam.org">sociam project</a></div>
+		<div class="linkblock">
+		  
 		</div>
 	  </div>
 	  <div class="">
+		<h2 class="sec-title">papers</h2>
 		<ul class="publications">
 		  <li ng-repeat="p in publications">
-			<div ng-bind-unsafe="p.title"></div>
+			<pub data="p"></pub>
 		  </li>
 		</ul>
 	  </div>				  
