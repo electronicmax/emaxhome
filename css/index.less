@@ -27,20 +27,46 @@
 	font-family:"Roboto Condensed";
 	src:url('../fonts/RobotoCondensed-Normal.ttf');
 }
+.background {
+   -webkit-background-size: cover !important;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   position:fixed;
+   top:0px; bottom:0px; right:0px; left:0px;
+   z-index:-10;
+   // background-image:url(../imgs/blip.jpg);
+background-image:url(../imgs/glitch1.png);   
+   opacity:0.8;
+   /* opacity:1.0; */
+   /* &.selected { opacity:1.0; } */
+
+   /* -webkit-transition: opacity 10.5s ease-out; // ease-in-out; */
+   /* // opacity:0; */
+   /* // opacity:1.0; */
+
+}
 .main {
 	font-family:"Roboto Condensed Light", sans-serif;
 	font-weight:50;
     max-width:1024px;
     margin:30px auto 0px auto;
+    height:100%;
 }
 .topblock {
-   padding:90px 0px 0px 0px !important;
-   height:100px;
-   position:relative;
-   margin:0px;
-   .nameblock {
+	background-color:rgba(50,50,50,0.9);
+	color:white;
+	padding:90px 20px 0px 20px !important;
+	height:100px;
+	position:relative;
+	margin:0px;
+	a { color:rgba(0,200,250,1.0); }
+	.nameblock, .linkblock {
 	   position:absolute;
-	   bottom:0px; left:0px;
+	   bottom:16px; 
+	}
+	.nameblock {
+   	    left:17px;		
 	   .name {
            font-size:24pt;
            margin:5px 0px 5px 0px;          
@@ -51,8 +77,7 @@
 	   }
    }
    .linkblock {
-	   position:absolute;
-	   bottom:0px; right:0px;
+	   right:14px;
 	   text-align:right;
 	   width:200px;
 	   .contact {
@@ -62,8 +87,16 @@
 	   }
    }   
 }
+.restblock {
+	margin:2px 0 0 0;
+    padding:10px 14px 100px 14px !important;	
+	background-color:rgba(255,255,255,0.99);
+	height:100%;
+
+}
 .publications {
 	list-style-type:none;
+	margin:0 0 10px 0px !important;
 	.pub {
 		.authors {
 			font-size:80%;
