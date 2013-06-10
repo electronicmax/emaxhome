@@ -21,7 +21,7 @@
 		   "id":"datachair",
 		   "title":"Data Chair",
            "conference":"CHI 2013",
-		   "url":"http://chi2013.acm.org",
+		   "url":"http://chi2013.acm.org"
        },
 	   {
 		   "id":"cscw2014",
