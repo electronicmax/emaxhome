@@ -45,6 +45,15 @@
 		</div>
 		<div class="column-sec papers">
 		  <div class="teaching">		  
+			<h2 class="sec-title">chairing</h2>
+			<ul class="listing">
+			  <li ng-repeat="c in chairing">
+				<div> {{ c.title }}, <a href="{{c.url}}" target="_top">{{ c.conference }}</a>  </div>
+			  </li>
+			</ul>
+		  </div>		  
+		  
+		  <div class="teaching">		  
 			<h2 class="sec-title">teaching</h2>
 			<ul class="listing">
 			  <li ng-repeat="p in teaching | filter:{active:true} | orderBy:date:reverse">

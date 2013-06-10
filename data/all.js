@@ -4,38 +4,44 @@
 		"architectures for distributed social systems",
 		"data visualisation"
 	],
-   "chairs": [
+   "chairing": [
 	   {
 		   "id":"pubchair-chi1",
 		   "title":"Proceedings Chair",
-           "conference":"CHI 2011"
+          "conference":"CHI 2011",
+		   "url":"http://dl.acm.org/citation.cfm?id=1978942"
        },
        {
 		   "id":"pubchair-chi2",
 		   "title":"Proceedings Chair",
-           "conference":"CHI 2012"
+          "conference":"CHI 2012",
+		   "url":"http://dl.acm.org/citation.cfm?id=2207676"		   
        },
        {
 		   "id":"datachair",
 		   "title":"Data Chair",
-           "conference":"CHI 2013"
+           "conference":"CHI 2013",
+		   "url":"http://chi2013.acm.org",
        },
 	   {
 		   "id":"cscw2014",
 		   "title":"Programme Committe (PC) Area Chair",
-           "conference":"CSCW 2014"
+           "conference":"CSCW 2014",
+		   "url":"http://cscw.acm.org"
        },
 	   {
 		   "id":"socm2013",
 		   "title":"Workshop Organiser",
            "for":"SOCM 2013",
-           "conference":"WWW 2013"
+           "conference":"WWW 2013",
+		   "url":"http://sociam.org/www2013"
        },
 	   {
 		   "id":"temporal",
 		   "title":"Workshop Organiser",
            "for":"Interacting with Temporal Data",
-           "conference":"CHI 2009"
+           "conference":"CHI 2009",
+ 		   "url":"http://dl.acm.org/citation.cfm?id=1518701"
        }
    ],
    "publications": [
