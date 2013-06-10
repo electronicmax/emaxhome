@@ -10,6 +10,7 @@ angular
 		};
 		$.getJSON('data/all.js').then(function(objs) {
 		 	$sa(function() {
+				window._data = objs;
 				_($scope).extend(objs);
 				console.log('contac t>> ', objs.contact);
 			});
@@ -29,6 +30,16 @@ angular
 			restrict:'E',
 			scope:{val:'=data'},
 			template:"<a href='{{val.url}}' target='_new' ng-bind-unsafe='val.name'> {{ val.name }}</a>"
+		};
+	})
+	.directive('hoverable', function() {
+		return {
+			restrict:'E',	scope:{ val:'=data' }, replace:true,
+			template:"<div data-id='{{ val }}' class='hoverable {{ semcls }}'>{{ val }}</div>",
+			controller:function($scope, $attrs) {
+				window._sc = $scope;
+				$scope.semcls = $attrs.semcls;
+			}
 		};
 	})
 	.directive('pub', function($compile) {

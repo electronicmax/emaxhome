@@ -1,4 +1,9 @@
 {
+	"interests": [
+		"personal information management", "data ownership", "behavioural interfaces",
+		"architectures for distributed social systems",
+		"data visualisation"
+	],
    "chairs": [
 	   {
 		   "id":"pubchair-chi1",
@@ -39,6 +44,7 @@
 		   "title":"Attention, Memory, Effort and Time: Paths to More Effective Personal Information Management",
 		   "type":["Ph.D. Thesis"],
 		   "authors":["Max Van Kleek"],
+		   "tags":["personal information management"],
 		   "url":"http://dspace.mit.edu/handle/1721.1/66466",
 		   "year":2011,
 		   "topics":["personal information management", "list-it", "field studies"]
@@ -67,7 +73,8 @@
 		   "id": "carpe-data",
 		   "title":"Carpe Data: Supporting Serendipitous Data Integration in Personal Information Management",
 		   "authors":["Max Van Kleek", "Daniel A. Smith", "Heather Packer", "James Skinner", "Nigel Shadbolt"],
-		   "type":["conference paper"],		   
+		   "type":["conference paper"],
+		   "tags":["personal information management"],		   
 		   "url":"http://people.csail.mit.edu/emax/papers/chi2013-carpe-data.pdf",
 		   "year":2013,
 		   "topics":["ubiquitous computing", "field study", "software architecture", "smart spaces"]
@@ -77,6 +84,7 @@
 		   "title":"Information scraps: How and why information eludes our personal information management tools",
 		   "authors":["Michael Bernstein", "Max Van Kleek", "David Karger", "mc schraefel"],
 		   "type":["journal paper"],
+		   "tags":["personal information management"],		   
 		   "journal_name":"TOIS",
 		   "year":2008,
 		   "doi":"http://dl.acm.org/citation.cfm?doid=1402256.1402263",

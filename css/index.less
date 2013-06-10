@@ -94,7 +94,6 @@ background-image:url(../imgs/glitch1.png);
 	height:100%;
 	vertical-align:top;
 }
-
 .column-sec {
 	vertical-align:top;
 	display:inline-block;
@@ -106,7 +105,8 @@ background-image:url(../imgs/glitch1.png);
 	}
 	h2.sec-title {
 		font-size:16pt;
-		margin:0px;
+		margin:10px 0px 0px 0px;
+		line-height:1.4em;
 	}
 }
 
@@ -125,3 +125,15 @@ background-image:url(../imgs/glitch1.png);
 	}
 }
 
+.interest {
+	display:inline-block;
+	-webkit-transition: all 0.2s ease-out;
+	padding:2px 8px 2px 8px;
+	margin:0px;
+	&:hover {
+		background-color:yellow;
+	}
+	&:first-of-type {
+		margin-left:-8px;
+	}
+}

@@ -7,10 +7,11 @@
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">	
 	<meta name="apple-mobile-web-app-capable" content="yes">
   </head>
-  <body ng-app='emax'>
+  <body ng-app='emax' ng-cloak ng-animate>
 	<div class="background"></div>
 	<div class="container-fluid main" ng-controller="TopLevel">
 	  <div class="topblock">
+		<candy></candy>
 		<div class="nameblock">
 		  <div class="name">
 			max van kleek
@@ -30,8 +31,7 @@
 	  <div class="restblock">
 		<div class="column-sec full-width">
 		  <h2 class="sec-title">interests</h2>
-		  <div>personal information management, behavioural interfaces, </div>
-		  <div>data ownership and management, complex social systems</div>
+		  <hoverable ng-repeat='i in interests' data='i' semcls="interest" sem-cls="interest"></hoverable>
 		</div>
 		<div class="column-sec">
 		  <div class="papers">
