@@ -1,8 +1,17 @@
 {
+	"sections":[
+		"papers", "chairing", "active projects", "projects"
+	],
 	"interests": [
-		"personal information management", "data ownership", "behavioural interfaces",
-		"architectures for distributed social systems",
-		"data visualisation"
+		"personal information management",
+		"privacy",
+		"data management",
+		"behavioural interfaces",
+		"distributed data systems",
+		"information design",
+		"ubiquitous computing",
+		"human computation"
+		"lifelogging",
 	],
    "chairing": [
 	   {
@@ -32,15 +41,14 @@
 	   {
 		   "id":"socm2013",
 		   "title":"Workshop Organiser",
-           "for":"SOCM 2013",
-           "conference":"WWW 2013",
+           "for":"WWW 2013",
+           "conference":"SOCM 2013",
 		   "url":"http://sociam.org/www2013"
        },
 	   {
 		   "id":"temporal",
 		   "title":"Workshop Organiser",
-           "for":"Interacting with Temporal Data",
-           "conference":"CHI 2009",
+           "conference":"Temporal Data @ CHI 2009",
  		   "url":"http://dl.acm.org/citation.cfm?id=1518701"
        }
    ],
@@ -50,10 +58,10 @@
 		   "title":"Attention, Memory, Effort and Time: Paths to More Effective Personal Information Management",
 		   "type":["Ph.D. Thesis"],
 		   "authors":["Max Van Kleek"],
-		   "tags":["personal information management"],
+		   "categories":["personal information management"],
 		   "url":"http://dspace.mit.edu/handle/1721.1/66466",
 		   "year":2011,
-		   "topics":["personal information management", "list-it", "field studies"]
+		   "categories":["personal information management", "list-it", "field studies"]
 	   },
 	   {
 		   "id": "mengthesis",
@@ -62,7 +70,7 @@
 		   "type":["M.Eng Thesis"],
 		   "url":"http://people.csail.mit.edu/emax/papers/kiothesis2003.pdf",
 		   "year":2003,
-		   "topics":["ubiquitous computing", "field study", "software architecture", "smart spaces"]
+		   "categories":["ubiquitous computing", "field study", "software architecture", "smart spaces"]
 	   },
 	   {
 		   "id": "twiage",
@@ -73,7 +81,7 @@
 		   "doi":"http://dl.acm.org/citation.cfm?doid=2207676.2208530",
 		   "conference":"CHI 2012",
 		   "year":2012,
-		   "topics":["ubiquitous computing", "field study", "software architecture", "smart spaces"]
+		   "categories":["ubiquitous computing", "field study", "software architecture", "smart spaces", "human computation"]
 	   },	   
 	   {
 		   "id": "carpe-data",
@@ -83,7 +91,7 @@
 		   "tags":["personal information management"],		   
 		   "url":"http://people.csail.mit.edu/emax/papers/chi2013-carpe-data.pdf",
 		   "year":2013,
-		   "topics":["ubiquitous computing", "field study", "software architecture", "smart spaces"]
+		   "categories":["ubiquitous computing", "field study", "software architecture", "smart spaces"]
 	   },
 	   {
 		   "id":"infoscraps",
@@ -94,7 +102,8 @@
 		   "journal_name":"TOIS",
 		   "year":2008,
 		   "doi":"http://dl.acm.org/citation.cfm?doid=1402256.1402263",
-		   "url":"http://people.csail.mit.edu/emax/papers/TOIS-infoscraps-cameraready.pdf"
+		   "url":"http://people.csail.mit.edu/emax/papers/TOIS-infoscraps-cameraready.pdf",
+		   "categories":["personal information management", "list-it", "field studies"]		   
 	   },
 	   {
 		   "id":"pim2012-webbox",
@@ -103,7 +112,8 @@
 		   "type":["workshop paper"],
 		   "conference":"PIM 2012",
 		   "year":2012,
-		   "url":"http://users.ecs.soton.ac.uk/~mvk/webbox-pim.pdf"
+		   "url":"http://users.ecs.soton.ac.uk/~mvk/webbox-pim.pdf",
+		   "categories":["personal information management", "distributed data systems", "privacy"]		   
 	   },	   
 	   {
 		   "id":"eyebrowse",
@@ -112,7 +122,8 @@
 		   "type":["short paper"],
 		   "conference":"CHI 2010",
 		   "year":2010,
-		   "url":"http://people.csail.mit.edu/emax/papers/eyebrowse-wip299-vankleek.pdf"
+		   "url":"http://people.csail.mit.edu/emax/papers/eyebrowse-wip299-vankleek.pdf",
+		   "categories":["lifelogging", "privacy"]		   		   
 	   },
 	   {
 		   "id":"atomate",
@@ -122,7 +133,8 @@
 		   "conference":"CHI 2010",
 		   "year":2010,
 		   "url":"http://people.csail.mit.edu/emax/papers/atomate-www2010-camera.pdf",
-		   "doi":"http://dl.acm.org/citation.cfm?doid=1772690.1772787"
+		   "doi":"http://dl.acm.org/citation.cfm?doid=1772690.1772787",
+		   "categories":["lifelogging", "data management"]
 	   },	   
 	   {
 		   "id":"listit-chi2009",
@@ -132,7 +144,8 @@
 		   "conference":"CHI 2009",
 		   "year":2009,
 		   "url":"http://people.csail.mit.edu/emax/papers/listit-chi2009.pdf",
-		   "dpi":"http://dl.acm.org/citation.cfm?doid=1518701.1518924"
+		   "dpi":"http://dl.acm.org/citation.cfm?doid=1518701.1518924",
+		   "categories":["personal information management", "distributed data systems", "privacy"]		   		   
 	   },
 	   {
 		   "id":"mikko-ubicomm",
@@ -142,6 +155,7 @@
 		   "conference":"UBICOMM 2008",
 		   "year":2008,
 		   "url":"http://people.csail.mit.edu/emax/papers/UBICOMM%20audio%20context%20sensing%202008.pdf"
+		   "categories":["ubiquitous computing"]		   
 	   }
    ],
 	"contact": [

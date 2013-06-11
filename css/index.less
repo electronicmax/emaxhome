@@ -9,6 +9,7 @@
 /* @import url('http://fonts.googleapis.com/css?family=Playfair+Display'); */
 /* @import url('http://fonts.googleapis.com/css?family=Merriweather'); */
 /* @import url('http://fonts.googleapis.com/css?family=Lora'); */
+* {	box-sizing:border-box; }
 
 @font-face {
 	font-family:"PoiretOne";
@@ -88,11 +89,36 @@ background-image:url(../imgs/glitch1.png);
    }   
 }
 .restblock {
+	position:relative;
 	margin:2px 0 0 0;
-    padding:10px 14px 100px 14px !important;	
+    // set programmatically > padding: 13px 14px 100px 14px;	
 	background-color:rgba(255,255,255,0.99);
 	height:100%;
 	vertical-align:top;
+    .interests {
+		font-size:95%;
+		background-color:rgba(255,255,255,0.99);		
+		line-height:1.0em;
+		max-width:1024px;		
+		position:absolute;
+		top:0px;
+		padding:7px 0px 6px 0px;
+		&.sticky {
+			position: fixed;
+			top: 0px;
+		}
+		.interest {
+			background-color:rgba(255,255,255,0.9);
+			color:black;
+			display:inline-block;
+			-webkit-transition: all 0.2s ease-out;
+			padding:0px;
+			margin:0px 24px 0px 0px;
+			&.interest-sel { color:rgba(0,0,50,1.0); }
+			&.interest-out { color:rgba(150,150,150,0.5);	}
+			// &:first-of-type { margin-left:-8px;	}
+		}
+    }    
 }
 .column-sec {
 	vertical-align:top;
@@ -122,18 +148,5 @@ background-image:url(../imgs/glitch1.png);
 			display:inline-block;
 			padding:0px 5px 0px 5px;
 		}		
-	}
-}
-
-.interest {
-	display:inline-block;
-	-webkit-transition: all 0.2s ease-out;
-	padding:2px 8px 2px 8px;
-	margin:0px;
-	&:hover {
-		background-color:yellow;
-	}
-	&:first-of-type {
-		margin-left:-8px;
 	}
 }
