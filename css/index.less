@@ -111,14 +111,17 @@ background-image:url(../imgs/glitch1.png);
 			background-color:rgba(255,255,255,0.9);
 			color:black;
 			display:inline-block;
+			transition: all 0.2s ease-out;			
 			-webkit-transition: all 0.2s ease-out;
 			padding:0px;
 			margin:0px 24px 0px 0px;
-			&.interest-sel { color:rgba(0,0,50,1.0); }
-			&.interest-out { color:rgba(150,150,150,0.5);	}
 			// &:first-of-type { margin-left:-8px;	}
 		}
-    }    
+    }
+	transition: all 0.2s ease-out;	
+	-webkit-transition: all 0.2s ease-out;	
+	.interest-sel { color:rgba(0,0,50,1.0); }	
+	.interest-out { color:rgba(150,150,150,0.5);	}	
 }
 .column-sec {
 	vertical-align:top;

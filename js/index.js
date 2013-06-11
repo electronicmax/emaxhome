@@ -52,36 +52,33 @@ angular
 			controller:function($scope, $attrs) {
 				$scope.semcls = $attrs.semcls;
 			},
-			link:function(scope, element, attrs) {
+			link:function($scope, element, attrs) {
 				$(element).mouseenter(function() {
 					var h_el = this;
-					console.log('enter ', h_el);					
 					$('.interest').not(h_el).addClass('interest-out')
 						.removeClass('interest-sel');
 					$(h_el).addClass('interest-sel');
+					// find the hits
+
+					var sel = $('.pub:not([data\-categories*="'+$scope.name+'"])');
+					console.log(' sel ', sel);
+					$('.pub:not([data\-categories*="'+$scope.name+'"])').addClass('interest-out');
 				}).mouseleave(function() {
 					var h_el = this;
-					console.log('exit ', h_el);										
 					$('.interest').removeClass('interest-out').removeClass('interest-sel');
+					$('.interest-out').removeClass('interest-out');
 				});
 			}			
-		};
-	})
-	.directive('hoverable', function() {
-		return {
-			restrict:'E',	scope:{ val:'=data' }, replace:true,
-			template:"<div data-id='{{ val }}' class='hoverable {{ semcls }}'>{{ val }}</div>",
-			controller:function($scope, $attrs) {
-				window._sc = $scope;
-				$scope.semcls = $attrs.semcls;
-			}
 		};
 	})
 	.directive('pub', function($compile) {
 		return {
 			restrict:'E',
 			scope:{val:'=data'},
-			template:"<div class='pub'><div class='title' ng-bind='val.title'></div><div class='authors'><div class='author' ng-repeat='a in val.authors'><author data='a'></author></div></div></div>"
+			template:"<div class='pub' data-categories='{{ catsjoined }}'><div class='title' ng-bind='val.title'></div><div class='authors'><div class='author' ng-repeat='a in val.authors'><author data='a'></author></div></div></div>",
+			controller:function($scope) {
+				$scope.catsjoined = ($scope.val.categories || []).join(";");
+			}
 		};
 	});
 

@@ -70,7 +70,7 @@
 		   "type":["M.Eng Thesis"],
 		   "url":"http://people.csail.mit.edu/emax/papers/kiothesis2003.pdf",
 		   "year":2003,
-		   "categories":["ubiquitous computing", "field study", "software architecture", "smart spaces"]
+		   "categories":["ubiquitous computing","software architecture", "smart spaces"]
 	   },
 	   {
 		   "id": "twiage",
@@ -81,7 +81,7 @@
 		   "doi":"http://dl.acm.org/citation.cfm?doid=2207676.2208530",
 		   "conference":"CHI 2012",
 		   "year":2012,
-		   "categories":["ubiquitous computing", "field study", "software architecture", "smart spaces", "human computation"]
+		   "categories":["human computation"]
 	   },	   
 	   {
 		   "id": "carpe-data",
@@ -91,7 +91,7 @@
 		   "tags":["personal information management"],		   
 		   "url":"http://people.csail.mit.edu/emax/papers/chi2013-carpe-data.pdf",
 		   "year":2013,
-		   "categories":["ubiquitous computing", "field study", "software architecture", "smart spaces"]
+		   "categories":["data management"]
 	   },
 	   {
 		   "id":"infoscraps",
@@ -113,7 +113,7 @@
 		   "conference":"PIM 2012",
 		   "year":2012,
 		   "url":"http://users.ecs.soton.ac.uk/~mvk/webbox-pim.pdf",
-		   "categories":["personal information management", "distributed data systems", "privacy"]		   
+		   "categories":["distributed data systems", "privacy"]		   
 	   },	   
 	   {
 		   "id":"eyebrowse",
@@ -145,7 +145,7 @@
 		   "year":2009,
 		   "url":"http://people.csail.mit.edu/emax/papers/listit-chi2009.pdf",
 		   "dpi":"http://dl.acm.org/citation.cfm?doid=1518701.1518924",
-		   "categories":["personal information management", "distributed data systems", "privacy"]		   		   
+		   "categories":["personal information management"]
 	   },
 	   {
 		   "id":"mikko-ubicomm",
