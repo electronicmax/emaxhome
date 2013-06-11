@@ -11,7 +11,7 @@
 		"information design",
 		"ubiquitous computing",
 		"human computation",
-		"lifelogging",
+		"lifelogging"
 	],
    "chairing": [
 	   {
