@@ -37,7 +37,7 @@
 		  <div class="papers">
 			<h2 class="sec-title">papers</h2>
 			<ul class="listing">
-			  <li ng-repeat="p in publications">
+			  <li ng-repeat="p in publications | orderBy:'year':true">
 				<pub data="p"></pub>
 			  </li>
 			</ul>
@@ -47,7 +47,7 @@
 		  <div class="teaching">		  
 			<h2 class="sec-title">chairing</h2>
 			<ul class="listing">
-			  <li ng-repeat="c in chairing">
+			  <li ng-repeat="c in chairing | orderBy:'year':true">
 				<div> {{ c.title }}, <a href="{{c.url}}" target="_new">{{ c.conference }}</a>  </div>
 			  </li>
 			</ul>
@@ -75,7 +75,7 @@
 				<project data="p"></pub>
 			  </li>
 			</ul>
-		  </div>		  
+		  </div>
 		</div>		
 	  </div>
 	</div>
@@ -83,7 +83,7 @@
   <script src="lib/scrollto.js" type="text/javascript"></script>
   <script src="lib/lesscss.min.js" type="text/javascript"></script>
   <script src="lib/jquery.min.js" type="text/javascript"></script>
-  <script src="lib/angular.min.js" type="text/javascript"></script>
+  <script src="lib/angular-beta.min.js" type="text/javascript"></script>
   <script src="lib/angular-ui.js" type="text/javascript"></script>        
   <script src="lib/underscore.min.js" type="text/javascript"></script>
   <script src="lib/backbone.min.js" type="text/javascript"></script>

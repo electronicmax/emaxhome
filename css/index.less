@@ -109,21 +109,24 @@ background-image:url(../imgs/glitch1.png);
 		}
 		.interest {
 			background-color:rgba(255,255,255,0.9);
-			// color:black;
 			display:inline-block;
-			// transition: all 0.2s ease-out;			
-			// -webkit-transition: all 0.2s ease-out;
+			transition: all 0.4s ease-out;	
+			-webkit-transition: all 0.4s ease-out;
 			padding:0px;
 			margin:0px 24px 0px 0px;
+			color:black;			
 			// &:first-of-type { margin-left:-8px;	}
-			// &.interest-sel { color:rgba(0,0,50,1.0); }	
-			// &.interest-out { color:rgba(150,150,150,0.5);	}	
+			&.interest-sel { color:rgba(0,0,50,1.0); }	
+			&.interest-out { color:rgba(150,150,150,0.7);	}	
 		}
     }
-	color:black;
-	-webkit-transition: all 0.4s ease-out;
-	div.interest-sel { color:rgba(0,0,50,1.0); }	
-	div.interest-out { color:rgba(150,150,150,0.5);	}	
+	.pub {
+		transition: all 0.4s ease-out;	
+		-webkit-transition: all 0.4s ease-out;
+		color:black;
+		&.interest-sel { color:rgba(0,0,50,1.0); }	
+		&.interest-out { color:rgba(150,150,150,0.7);	}
+	}
 }
 .column-sec {
 	vertical-align:top;

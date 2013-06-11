@@ -75,7 +75,7 @@ angular
 		return {
 			restrict:'E',
 			scope:{val:'=data'},
-			template:"<div class='pub' data-categories='{{ catsjoined }}'><div class='title' ng-bind='val.title'></div><div class='authors'><div class='author' ng-repeat='a in val.authors'><author data='a'></author></div></div></div>",
+			templateUrl:"partials/pub.html",
 			controller:function($scope) {
 				$scope.catsjoined = ($scope.val.categories || []).join(";");
 			}

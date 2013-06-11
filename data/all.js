@@ -18,24 +18,28 @@
 		   "id":"pubchair-chi1",
 		   "title":"Proceedings Chair",
           "conference":"CHI 2011",
+		   "year":2011,
 		   "url":"http://dl.acm.org/citation.cfm?id=1978942"
        },
        {
 		   "id":"pubchair-chi2",
 		   "title":"Proceedings Chair",
           "conference":"CHI 2012",
+		   "year":2012,
 		   "url":"http://dl.acm.org/citation.cfm?id=2207676"		   
        },
        {
 		   "id":"datachair",
 		   "title":"Data Chair",
-           "conference":"CHI 2013",
+          "conference":"CHI 2013",
+		   "year":2013,
 		   "url":"http://chi2013.acm.org"
        },
 	   {
 		   "id":"cscw2014",
-		   "title":"Programme Committe (PC) Area Chair",
-           "conference":"CSCW 2014",
+		   "title":"Technical Programme Area Chair (AC)",
+          "conference":"CSCW 2014",
+		   "year":2014,
 		   "url":"http://cscw.acm.org"
        },
 	   {
@@ -43,12 +47,14 @@
 		   "title":"Workshop Organiser",
            "for":"WWW 2013",
            "conference":"SOCM 2013",
+		   "year":2013,
 		   "url":"http://sociam.org/www2013"
        },
 	   {
 		   "id":"temporal",
 		   "title":"Workshop Organiser",
            "conference":"Temporal Data @ CHI 2009",
+		   "year":2009,
  		   "url":"http://dl.acm.org/citation.cfm?id=1518701"
        }
    ],

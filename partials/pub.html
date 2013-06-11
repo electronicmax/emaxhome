@@ -1,0 +1,8 @@
+<div class='pub' data-categories='{{ catsjoined }}'>
+  <div ui-if='val.url' class='title'><a href='{{val.url}}' ng-bind='val.title'></a></div>
+  <div ui-if='!val.url' class='title' ng-bind='val.title'></div>
+  <div class='authors'>
+	<div class='author' ng-repeat='a in val.authors'><author data='a'></author>
+  </div>
+  <div ui-if="val.type == 'conference paper'"><i class="icon-globe"></i> Presented at: {{ val.conference }} </div>
+</div>
