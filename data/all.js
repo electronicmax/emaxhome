@@ -154,7 +154,7 @@
 		   "type":["conference paper"],
 		   "conference":"UBICOMM 2008",
 		   "year":2008,
-		   "url":"http://people.csail.mit.edu/emax/papers/UBICOMM%20audio%20context%20sensing%202008.pdf"
+		   "url":"http://people.csail.mit.edu/emax/papers/UBICOMM%20audio%20context%20sensing%202008.pdf",
 		   "categories":["ubiquitous computing"]		   
 	   }
    ],
