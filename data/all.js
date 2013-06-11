@@ -10,7 +10,7 @@
 		"distributed data systems",
 		"information design",
 		"ubiquitous computing",
-		"human computation"
+		"human computation",
 		"lifelogging",
 	],
    "chairing": [
