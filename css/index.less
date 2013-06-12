@@ -37,7 +37,7 @@
    top:0px; bottom:0px; right:0px; left:0px;
    z-index:-10;
    // background-image:url(../imgs/blip.jpg);
-background-image:url(../imgs/glitch1.png);   
+   background-image:url(../imgs/glitch1.png);   
    opacity:0.8;
    /* opacity:1.0; */
    /* &.selected { opacity:1.0; } */
@@ -47,6 +47,7 @@ background-image:url(../imgs/glitch1.png);
    /* // opacity:1.0; */
 
 }
+.squashed { height:0px; }
 .main {
 	font-family:"Roboto Condensed Light", sans-serif;
 	font-weight:50;
@@ -117,15 +118,12 @@ background-image:url(../imgs/glitch1.png);
 			color:black;			
 			// &:first-of-type { margin-left:-8px;	}
 			&.interest-sel { color:rgba(0,0,50,1.0); }	
-			&.interest-out { color:rgba(150,150,150,0.7);	}	
+			&.interest-out {
+				color:rgba(150,150,150,0.7);				
+			}	
 		}
     }
 	.pub {
-		transition: all 0.4s ease-out;	
-		-webkit-transition: all 0.4s ease-out;
-		color:black;
-		&.interest-sel { color:rgba(0,0,50,1.0); }	
-		&.interest-out { color:rgba(150,150,150,0.7);	}
 	}
 }
 .column-sec {
@@ -150,11 +148,48 @@ background-image:url(../imgs/glitch1.png);
 }
 // publications
 .pub {
+	* { vertical-align:top; }
+	transition: all 0.4s ease-out;	
+	-webkit-transition: all 0.4s ease-out;
+	color:black;
+	&.interest-sel { color:rgba(0,0,50,1.0); }	
+	&.interest-out {
+		opacity:0.3;
+		color:rgba(150,150,150,0.7);
+	}	
 	.authors {
+		margin:0px;
+		padding:0px;
 		font-size:80%;
 		.author {
 			display:inline-block;
-			padding:0px 5px 0px 5px;
+			padding:0px 5px 0px 0px;
+			margin:0px;
+			line-height:1.0em;
 		}		
 	}
+	.title, .conf {
+		display:inline-block;
+	}
+	.conf {
+		font-size:70%;
+		padding:5px 4px 5px 3px; margin:0px;
+		line-height:1.0em;
+		background:rgba(200,255,255,0.1);
+		&:hover {
+			background:rgba(200,255,255,0.7);
+		}
+	}
+	.video-button {
+		display:inline-block;
+		padding:2px 1px 0px 1px !important;
+		i.icon-facetime-video {
+		
+			font-size:70%;
+		}
+	}
+}
+.video {
+	padding:20px;
+	border:1px solid #eee;
 }

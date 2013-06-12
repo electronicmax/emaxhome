@@ -29,6 +29,7 @@ angular
 		});
 		$(window).resize(setw);
 		$scope.$watch(setw);
+		window._s = $scope;
 	})
 	.directive('author', function() {
 		return {

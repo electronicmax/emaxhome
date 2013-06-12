@@ -6,9 +6,7 @@
 		"personal information management",
 		"privacy",
 		"data management",
-		"behavioural interfaces",
-		"distributed data systems",
-		"information design",
+		"decentralized systems",
 		"ubiquitous computing",
 		"human computation",
 		"lifelogging"
@@ -87,17 +85,20 @@
 		   "doi":"http://dl.acm.org/citation.cfm?doid=2207676.2208530",
 		   "conference":"CHI 2012",
 		   "year":2012,
-		   "categories":["human computation"]
+		   "categories":["human computation"],
+		   "embed_video_url":"http://www.youtube.com/embed/NR2w_ng6-VA"
 	   },	   
 	   {
-		   "id": "carpe-data",
+		   "id": "carpedata",
 		   "title":"Carpe Data: Supporting Serendipitous Data Integration in Personal Information Management",
 		   "authors":["Max Van Kleek", "Daniel A. Smith", "Heather Packer", "James Skinner", "Nigel Shadbolt"],
 		   "type":["conference paper"],
 		   "tags":["personal information management"],		   
 		   "url":"http://people.csail.mit.edu/emax/papers/chi2013-carpe-data.pdf",
+		   "conference":"CHI 2013",		   
 		   "year":2013,
-		   "categories":["data management"]
+		   "categories":["data management"],
+		   "embed_video_url":"http://www.youtube.com/embed/YwG3jNuDNjg"
 	   },
 	   {
 		   "id":"infoscraps",
@@ -106,6 +107,7 @@
 		   "type":["journal paper"],
 		   "tags":["personal information management"],		   
 		   "journal_name":"TOIS",
+		   "conference":"TOIS",
 		   "year":2008,
 		   "doi":"http://dl.acm.org/citation.cfm?doid=1402256.1402263",
 		   "url":"http://people.csail.mit.edu/emax/papers/TOIS-infoscraps-cameraready.pdf",
@@ -119,7 +121,7 @@
 		   "conference":"PIM 2012",
 		   "year":2012,
 		   "url":"http://users.ecs.soton.ac.uk/~mvk/webbox-pim.pdf",
-		   "categories":["distributed data systems", "privacy"]		   
+		   "categories":["decentralized systems", "privacy"]		   
 	   },	   
 	   {
 		   "id":"eyebrowse",
@@ -136,7 +138,7 @@
 		   "title":"Atomate it! end-user context-sensitive automation using heterogeneous information sources on the web",
 		   "authors":["Max Van Kleek","Brennan Moore", "Paul Andre", "David Karger", "mc schraefel"],
 		   "type":["short paper"],
-		   "conference":"CHI 2010",
+		   "conference":"WWW 2010",
 		   "year":2010,
 		   "url":"http://people.csail.mit.edu/emax/papers/atomate-www2010-camera.pdf",
 		   "doi":"http://dl.acm.org/citation.cfm?doid=1772690.1772787",
@@ -154,7 +156,7 @@
 		   "categories":["personal information management"]
 	   },
 	   {
-		   "id":"mikko-ubicomm",
+		   "id":"mikkoubicomm",
 		   "title":"Auditory Context Recognition Using SVMs",
 		   "authors":["Mikko Pertunnen", "Max Van Kleek","Ora Lassila","Jukka Riekki"],
 		   "type":["conference paper"],
@@ -162,7 +164,45 @@
 		   "year":2008,
 		   "url":"http://people.csail.mit.edu/emax/papers/UBICOMM%20audio%20context%20sensing%202008.pdf",
 		   "categories":["ubiquitous computing"]		   
-	   }
+	   },
+	   {
+		   "id":"geordi",
+		   "title":"GEORDi: Supporting lightweight end-user authoring and exploration of Linked Data",
+		   "authors":["Igor Popov", "Daniel Smith","Max Van kleek","m.c. schraefel", "Gianluca Correndo", "Nigel Shadbolt"],
+		   "type":["tech report"],
+		   "year":2010,
+		   "url":"http://eprints.ecs.soton.ac.uk/21968",
+		   "categories":["data management"]		   
+	   },
+	   {
+		   "id":"inky",
+		   "title":"Inky: A Sloppy Command Line for the Web with Rich Visual Feedback",
+		   "authors":["Victoria Chou", "Michael Bernstein", "Greg Little", "Max Van Kleek", "David Karger", "mc schraefel"],
+		   "type":["conference paper"],
+		   "year":2008,
+		   "conference":"UIST 2008",
+		   "url":"http://people.csail.mit.edu/emax/papers/uist08-inky/uist08-inky.pdf",
+		   "categories":["interaction design"]		   
+	   },
+	   {
+		   "id":"journo",
+		   "title":"GUI -- Phooey! The Case for Text Input.",
+		   "authors":["Max Van Kleek", "Michael Bernstein", "David Karger", "mc schraefel"],
+		   "type":["conference paper"],
+		   "year":2007,
+		   "conference":"UIST 2007",
+		   "url":"http://people.csail.mit.edu/emax/papers/guiPhooey-UIST-eprints.pdf",
+		   "categories":["personal information management", "interaction design"]
+	   },
+	   {
+		   "id":"opf",
+		   "title":"OPF: A Distributed Context-Sensing Framework for Ubiquitous Computing Environments",
+		   "authors":["Max Van Kleek", "Michael Bernstein", "David Karger", "mc schraefel"],
+		   "type":["conference paper"],
+		   "year":2007,
+		   "conference":"ISUC 2006",
+		   "categories":["ubiquitous computing", "decentralized systems"]
+	   }	   
    ],
 	"contact": [
 	   { "id": "blog-emax", "name":"the future is personal", "url":"http://thefutureispersonal.wordpress.com" },

@@ -1,8 +1,14 @@
 <div class='pub' data-categories='{{ catsjoined }}'>
   <div ui-if='val.url' class='title'><a href='{{val.url}}' ng-bind='val.title'></a></div>
   <div ui-if='!val.url' class='title' ng-bind='val.title'></div>
+  <div class='conf' ui-if="val.type == 'conference paper'">{{ val.conference }} </div>
+  <div class='video-button' ui-if="val.embed_video_url" ng-click="$parent.show_{{val.id}}=!$parent.show_{{val.id}}"><i class='icon-facetime-video'></i></div>  
   <div class='authors'>
-	<div class='author' ng-repeat='a in val.authors'><author data='a'></author>
+	<author ng-repeat='a in val.authors' data='a'></author>
   </div>
-  <div ui-if="val.type == 'conference paper'"><i class="icon-globe"></i> Presented at: {{ val.conference }} </div>
+
+	<div class='video' ng-show="show_{{val.id}}">
+	  <iframe width="320" height="240" ng-src="{{ val.embed_video_url }}" frameborder="0" allowfullscreen></iframe>
+	</div>
+  </div>
 </div>
