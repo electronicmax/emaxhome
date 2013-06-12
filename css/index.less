@@ -50,12 +50,15 @@
 
 }
 .squashed { height:0px; }
+@mainwidth: 1180px;
 .main {
 	font-family:"Roboto Condensed Light", sans-serif;
+	font-size:12pt;
 	font-weight:50;
-    max-width:1024px;
+    max-width:@mainwidth;
     margin:30px auto 0px auto;
     height:100%;
+	overflow:hidden;
 }
 .topblock {
 	background-color:rgba(50,50,50,0.9);
@@ -102,10 +105,10 @@
 		font-size:95%;
 		background-color:rgba(255,255,255,0.99);		
 		line-height:1.2em;
-		max-width:1024px;		
+		max-width:@mainwidth;		
 		position:absolute;
 		top:0px;
-		padding:7px 0px 6px 0px;
+		padding:7px 0px 3px 0px;
 		&.sticky {
 			position: fixed;
 			top: 0px;
@@ -136,19 +139,21 @@
 	vertical-align:top;
 	display:inline-block;
 	max-width:800px;
-	padding-right:11px;
+	width:750px;	
+	padding:0px 11px 0px 0px;
+	margin:0px;
 	&.full-width {
 		max-width:100% !important;
 		width:100% !important;
 		display:block;
 	}
 	h2.sec-title {
-		font-size:16pt;
-		margin:16px 0px 0px 0px;
+		font-size:15pt;
+		margin:0px 0px 0px 0px;
 		line-height:1.4em;
 	}
 	&.skinnier {
-		width:320px;
+		width:300px;
 	}
 }
 
@@ -180,11 +185,14 @@
 	&.interest-out {
 		opacity:0.3;
 		color:rgba(150,150,150,0.7);
-	}	
+	}
+	.title {
+		font-size:13pt;
+	}
 	.authors {
 		margin:0px;
 		padding:0px;
-		font-size:80%;
+		font-size:90%;
 		.author {
 			display:inline-block;
 			padding:0px 5px 0px 0px;
@@ -218,6 +226,9 @@
 	}
 }
 
+.chairing {
+	font-size:95%;
+}
 .teaching {
 	line-height:1.0em;
 	.description {
