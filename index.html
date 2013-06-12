@@ -44,7 +44,7 @@
 		  </div>
 		</div>
 		<div class="column-sec papers">
-		  <div class="teaching">		  
+		  <div class="chairing">		  
 			<h2 class="sec-title">chairing</h2>
 			<ul class="listing">
 			  <li ng-repeat="c in chairing | orderBy:'year':true">
@@ -52,31 +52,34 @@
 			  </li>
 			</ul>
 		  </div>
+		  <div class="teaching anim">		  
+			<h2 class="sec-title" ng-click='$parent.expand_teaching=!$parent.expand_teaching'>teaching</h2>
+			<div class="squishable" squishif='expand_teaching'>
+			  <ul class="listing" >
+				<h4>hello there i am here</h4>
+				<li ng-repeat="p in teaching | filter:{active:true} | orderBy:date:reverse">
+				  <teaching data="p"></teaching>
+				</li>
+			  </ul>
+			</div>
+		  </div>
 		  <!--
-		  <div class="teaching">		  
-			<h2 class="sec-title">teaching</h2>
-			<ul class="listing">
-			  <li ng-repeat="p in teaching | filter:{active:true} | orderBy:date:reverse">
-				<teaching data="p"></pub>
-			  </li>
-			</ul>
-		  </div>		  
-		  <div class="projects">		  
-			<h2 class="sec-title">active projects</h2>
-			<ul class="listing">
-			  <li ng-repeat="p in projects | filter:{active:true} | orderBy:date:reverse">
-				<project data="p"></pub>
-			  </li>
-			</ul>
-		  </div>
-		  <div class="projects">		  
-			<h2 class="sec-title">other projects</h2>
-			<ul class="listing">
-			  <li ng-repeat="p in projects | filter:{active:false} | orderBy:date:reverse">
-				<project data="p"></pub>
-			  </li>
-			</ul>
-		  </div>
+<div class="projects">		  
+  <h2 class="sec-title">active projects</h2>
+  <ul class="listing">
+	<li ng-repeat="p in projects | filter:{active:true} | orderBy:date:reverse">
+	  <project data="p"></pub>
+</li>
+</ul>
+</div>
+<div class="projects">		  
+  <h2 class="sec-title">other projects</h2>
+  <ul class="listing">
+	<li ng-repeat="p in projects | filter:{active:false} | orderBy:date:reverse">
+	  <project data="p"></pub>
+</li>
+</ul>
+</div>
 -->
 		</div>		
 	  </div>

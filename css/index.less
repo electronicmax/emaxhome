@@ -9,7 +9,9 @@
 /* @import url('http://fonts.googleapis.com/css?family=Playfair+Display'); */
 /* @import url('http://fonts.googleapis.com/css?family=Merriweather'); */
 /* @import url('http://fonts.googleapis.com/css?family=Lora'); */
-* {	box-sizing:border-box; }
+* {
+	box-sizing:border-box;
+}
 
 @font-face {
 	font-family:"PoiretOne";
@@ -195,6 +197,18 @@
 	}
 }
 .video {
-	padding:20px;
-	border:1px solid #eee;
+	padding:3px 3px 3px 3px;
+	// border:1px solid #eee;
+	height:246px;
+	overflow:hidden;
+}
+
+.squishable {
+	transition: all 0.8s ease-out;	
+	-webkit-transition: all 0.8s ease-out;
+	// border:1px solid #eee;
+	&.squish {
+		padding:0px;
+		height:0px !important; overflow:hidden;
+	}
 }

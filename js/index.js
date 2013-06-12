@@ -46,6 +46,26 @@ angular
 			template:"<a href='{{val.url}}' target='_new' ng-bind-unsafe='val.name'> {{ val.name }}</a>"
 		};
 	})
+	.directive('squishif', function() {
+		return {
+			restrict:'A',	
+			link:function($scope, $element, $attrs) {
+				var expr = $attrs.squishif;
+				console.log('expr ', expr);
+				var update = function() {
+					var result = $scope.$eval(expr);
+					if (result) {
+						$($element).addClass('squish');
+					}
+					else {
+						$($element).removeClass('squish');
+					}
+				};				
+				$scope.$watch(expr, update);
+				update();
+			}
+		};		
+	})
 	.directive('interest', function() {
 		return {
 			restrict:'E',	scope:{ name:'=data' }, replace:true,

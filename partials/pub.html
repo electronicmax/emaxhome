@@ -7,7 +7,7 @@
 	<author ng-repeat='a in val.authors' data='a'></author>
   </div>
 
-	<div class='video' ng-show="show_{{val.id}}">
+	<div class='video squishable' squishif="!show_{{val.id}}">
 	  <iframe width="320" height="240" ng-src="{{ val.embed_video_url }}" frameborder="0" allowfullscreen></iframe>
 	</div>
   </div>
