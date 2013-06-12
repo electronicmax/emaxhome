@@ -61,12 +61,12 @@
 	overflow:hidden;
 }
 .topblock {
+	position:relative;
 	background-color:rgba(50,50,50,0.9);
 	color:white;
-	padding:90px 20px 0px 20px !important;
-	height:100px;
-	position:relative;
-	margin:0px;
+	padding:180px 20px 0px 20px !important;
+	// height:100px;
+	// margin:0px;
 	a { color:rgba(0,200,250,1.0); }
 	.nameblock, .linkblock {
 	   position:absolute;
@@ -84,10 +84,11 @@
 	   }
    }
    .linkblock {
-	   right:14px;
+	   right:17px;
 	   text-align:right;
-	   width:200px;
-	   .contact {
+	   width:250px;
+	   .top-contact {
+		   vertical-align:bottom;
 		   line-height:1.2em;
 		   display:inline-block;
 		   padding:0px 5px 0px 5px;
@@ -242,7 +243,6 @@
 }
 
 .contact {
-	width:300px;
 	padding:0px;
 	margin:0px;
 	p {
