@@ -20,7 +20,7 @@ angular
 		var origOffsetY = $('.interests').offset().top;
 		var setw = function() {
 			$('.sticky').css('max-width', $('.restblock').width());
-			var v = Math.max(12,$('.interests').height() || 0) + 'px' + ' 14px 100px 14px';
+			var v = Math.max(12,$('.interests').height() || 0) + 'px' + ' 14px 20px 14px';
 			$('.restblock').css('padding', v);			
 		};
 		document.addEventListener('scroll', function(e) {
