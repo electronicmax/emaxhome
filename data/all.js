@@ -1,7 +1,8 @@
-{
+{	
 	"sections":[
 		"papers", "chairing", "active projects", "projects"
 	],
+	"resume_url":"http://hip.cat/resume.pdf",
 	"interests": [
 		"personal information management",
 		"privacy",

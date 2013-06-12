@@ -43,21 +43,36 @@
 			</ul>
 		  </div>
 		</div>
-		<div class="column-sec papers">
-		  <div class="chairing">		  
-			<h2 class="sec-title">chairing</h2>
-			<ul class="listing">
-			  <li ng-repeat="c in chairing | orderBy:'year':true">
-				<div> {{ c.title }}, <a href="{{c.url}}" target="_new">{{ c.conference }}</a>  </div>
-			  </li>
+		<div class="column-sec skinnier chairing">
+		  <h2 class="sec-title">chairing</h2>
+		  <ul class="listing">
+			<li ng-repeat="c in chairing | orderBy:'year':true">
+			  <div> {{ c.title }}, <a href="{{c.url}}" target="_new">{{ c.conference }}</a>  </div>
+			</li>
 			</ul>
-		  </div>
-		  <div class="teaching anim">		  
-			<h2 class="sec-title">teaching</h2>
-			<div class="squishable">
+		  <div class='teaching'>		  
+			<div class="column-sec skinnier teaching">		  
+			  <h2 class="sec-title">teaching</h2>
 			  <teaching ng-repeat="t in teaching | orderBy:'year':true" data="t"></teaching>
 			</div>
 		  </div>
+		  <div class='contact'>
+			<h2 class="sec-title">contact</h2>
+			<p>
+			  Please contact Max
+			  via <a href="http://www.linkedin.com/profile/view?id=27825397">LinkedIn</a>,
+			  <a href="http://twitter.com/emax">Twitter</a>, <a href="http://facebook.com/electronicmax">FB</a>
+			  or via e-mail at max at hip dot cat.
+			</p>
+			<p>Max is available for freelance consulting on various
+			  interaction and system design topics and enjoys difficult
+			  UI and systems design challenges, particularly pertaining
+			  to personal information management and privacy. His resume
+			  can be found <a href="{{resume_url}}">here</a>.
+			</p>
+		  </div>
+		</div>
+		  
 		  <!--
 <div class="projects">		  
   <h2 class="sec-title">active projects</h2>
