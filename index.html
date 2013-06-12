@@ -53,14 +53,9 @@
 			</ul>
 		  </div>
 		  <div class="teaching anim">		  
-			<h2 class="sec-title" ng-click='$parent.expand_teaching=!$parent.expand_teaching'>teaching</h2>
-			<div class="squishable" squishif='expand_teaching'>
-			  <ul class="listing" >
-				<h4>hello there i am here</h4>
-				<li ng-repeat="p in teaching | filter:{active:true} | orderBy:date:reverse">
-				  <teaching data="p"></teaching>
-				</li>
-			  </ul>
+			<h2 class="sec-title">teaching</h2>
+			<div class="squishable">
+			  <teaching ng-repeat="t in teaching | orderBy:'year':true" data="t"></teaching>
 			</div>
 		  </div>
 		  <!--

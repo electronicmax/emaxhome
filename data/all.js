@@ -56,6 +56,35 @@
  		   "url":"http://dl.acm.org/citation.cfm?id=1518701"
        }
    ],
+	"teaching": [
+		{
+		   "id": "6034",
+		   "title":"6.034: Intro to Artificial Intelligence",
+			"description": "Teaching Assistant for 6.034 under Prof. Tomas Lozano-Perez",
+			"year":2007,
+			"when":"Spring 2007",			
+			"institution":"MIT EECS, Cambridge, MA",
+			"institution_url":"http://www-eecs.mit.edu"
+	   },
+		{
+		   "id": "INFO6005-2012",
+		   "title":"INFO6005: Rich Web Applications",
+			"description": "Taught lectures on data visualisation and interaction",
+ 		    "year":2013,
+			"when":"Spring 2013",
+			"institution":"University of Southampton, Southampton, UK",
+			"institution_url":"http://www.ecs.soton.ac.uk"
+	   },
+		{
+		   "id": "SHORTCOURSE",
+		   "title":"Short Course in Open Data - Data Visualisation",
+			"description": "Taught lectures on data visualisation and interaction.",			
+			"year":2013,
+			"when":"April 2013",
+			"institution":"Open Data Institute, London, UK",
+			"institution_url":"http://www.theodi.org"
+	   }		
+	],
    "publications": [
 	   {
 		   "id": "phdthesis",

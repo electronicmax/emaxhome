@@ -153,6 +153,20 @@
 	list-style-type:none;
 	margin:0 0 10px 0px !important;
 }
+
+.title, .conf {
+	display:inline-block;
+}
+.conf {
+	font-size:70%;
+	padding:5px 4px 5px 3px; margin:0px;
+	line-height:1.0em;
+	background:rgba(200,255,255,0.1);
+	&:hover {
+		background:rgba(200,255,255,0.7);
+	}
+}
+
 // publications
 .pub {
 	* { vertical-align:top; }
@@ -174,18 +188,6 @@
 			margin:0px;
 			line-height:1.0em;
 		}		
-	}
-	.title, .conf {
-		display:inline-block;
-	}
-	.conf {
-		font-size:70%;
-		padding:5px 4px 5px 3px; margin:0px;
-		line-height:1.0em;
-		background:rgba(200,255,255,0.1);
-		&:hover {
-			background:rgba(200,255,255,0.7);
-		}
 	}
 	.video-button {
 		display:inline-block;
@@ -211,4 +213,16 @@
 		padding:0px;
 		height:0px !important; overflow:hidden;
 	}
+}
+
+.teaching {
+	line-height:1.0em;
+	.description {
+		font-size:80%;
+	}
+	.institution {
+		font-size:80%;
+	}
+	padding:0px;
+	margin:0px 0px 1em 0px;
 }
