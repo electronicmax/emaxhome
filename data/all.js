@@ -8,7 +8,6 @@
         "personal data stores",
 		"sensemaking",
 		"citizen science",
-		"self-tracking",		
 		"privacy",
 		"decentralized systems",
 		"ubiquitous computing",
@@ -342,7 +341,7 @@
 		   "type":["conference paper"],
 		   "year":2014,
 		   "conference":"CHI 2014",
-		   "categories":["self-tracking", "sensemaking"]
+		   "categories":["lifelogging", "sensemaking"]
 		}		
    ],
 	"contact": [
