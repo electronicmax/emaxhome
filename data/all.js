@@ -314,7 +314,7 @@
 		   "type":["conference paper"],
 		   "year":2014,
 		   "conference":"SOCM 2014",
-		   "categories":["personal data stores", "personal info management", "privacy"]
+		   "categories":["personal data stores", "personal info management", "privacy", "lifelogging"]
 		},
         {
 		   "id":"smartsocieties",
