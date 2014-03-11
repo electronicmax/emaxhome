@@ -46,7 +46,7 @@
        {
 		   "id":"datachair-3",
 		   "title":"Data Chair",
-          "conference":"CHI 2014",
+          "conference":"CHI 2015",
 		   "year":2015,
 		   "url":"http://chi2015.acm.org"
        },
