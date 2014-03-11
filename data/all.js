@@ -339,7 +339,7 @@
 		   "id":"editable",
 		   "title":"The Editable Self: A Workbench for Personal Activity Data",
 		   "authors":["Heathe Packer", "Gustavo Buzogany", "Daniel A. Smith", "Max Van Kleek", "Nigel R. Shadbolt"],
-		   "type":["short paper"],
+		   "type":["work-in-progress"],
 		   "year":2014,
 		   "conference":"CHI 2014",
 		   "categories":["self-tracking", "sensemaking"]
