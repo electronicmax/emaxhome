@@ -4,9 +4,11 @@
 	],
 	"resume_url":"http://hip.cat/resume.pdf",
 	"interests": [
-		"personal information management",
+		"personal info management",	
+        "personal data stores",
+		"sensemaking",
+		"citizen science",		
 		"privacy",
-		"data management",
 		"decentralized systems",
 		"ubiquitous computing",
 		"human computation",
@@ -34,6 +36,20 @@
 		   "year":2013,
 		   "url":"http://chi2013.acm.org"
        },
+       {
+		   "id":"datachair-2",
+		   "title":"Data Chair",
+          "conference":"CHI 2014",
+		   "year":2014,
+		   "url":"http://chi2014.acm.org"
+       },
+       {
+		   "id":"datachair-3",
+		   "title":"Data Chair",
+          "conference":"CHI 2014",
+		   "year":2015,
+		   "url":"http://chi2015.acm.org"
+       },
 	   {
 		   "id":"cscw2014",
 		   "title":"Technical Programme Area Chair (AC)",
@@ -59,6 +75,15 @@
    ],
 	"teaching": [
 		{
+		   "id": "nhspopup",
+		   "title":"The Do's and Don't's of Data Visualisation",
+			"description": "Course for NHS Innovations Expo 2014 Popup University",
+			"year":2014,
+			"when":"March 2014",			
+		       "institution":"UK National Health Service",
+		       "institution_url": "http://www.healthcareinnovationexpo.com/popupuniversity.asp"
+		},
+		{
 		   "id": "6034",
 		   "title":"6.034: Intro to Artificial Intelligence",
 			"description": "Teaching Assistant for 6.034 under Prof. Tomas Lozano-Perez",
@@ -81,7 +106,7 @@
 		   "title":"Short Course in Open Data - Data Visualisation",
 			"description": "Taught lectures on data visualisation and interaction.",			
 			"year":2013,
-			"when":"April 2013",
+			"when":"April 2013-Present",
 			"institution":"Open Data Institute, London, UK",
 			"institution_url":"http://www.theodi.org"
 	   }		
@@ -136,7 +161,7 @@
 		   "url":"http://people.csail.mit.edu/emax/papers/chi2013-carpe-data.pdf",
 		   "conference":"CHI 2013",		   
 		   "year":2013,
-		   "categories":["data management","personal information management"],
+		   "categories":["personal info management", "sensemaking"],
 		   "embed_video_url":"http://www.youtube.com/embed/YwG3jNuDNjg"
 	   },
 	   {
@@ -160,7 +185,7 @@
 		   "conference":"PIM 2012",
 		   "year":2012,
 		   "url":"http://users.ecs.soton.ac.uk/~mvk/webbox-pim.pdf",
-		   "categories":["decentralized systems", "privacy"]		   
+		   "categories":["decentralized systems", "privacy", "personal data stores"]		   
 	   },	   
 	   {
 		   "id":"eyebrowse",
@@ -181,7 +206,7 @@
 		   "year":2010,
 		   "url":"http://people.csail.mit.edu/emax/papers/atomate-www2010-camera.pdf",
 		   "doi":"http://dl.acm.org/citation.cfm?doid=1772690.1772787",
-		   "categories":["lifelogging", "data management"]
+		   "categories":["lifelogging", "personal info management"]
 	   },	   
 	   {
 		   "id":"listit-chi2009",
@@ -207,11 +232,11 @@
 	   {
 		   "id":"geordi",
 		   "title":"GEORDi: Supporting lightweight end-user authoring and exploration of Linked Data",
-		   "authors":["Igor Popov", "Daniel Smith","Max Van kleek","m.c. schraefel", "Gianluca Correndo", "Nigel Shadbolt"],
+		   "authors":["Igor Popov", "Daniel Smith","Max Van Kleek","m.c. schraefel", "Gianluca Correndo", "Nigel Shadbolt"],
 		   "type":["tech report"],
 		   "year":2010,
 		   "url":"http://eprints.ecs.soton.ac.uk/21968",
-		   "categories":["data management"]		   
+		   "categories":["personal info management", "sensemaking"]		   
 	   },
 	   {
 		   "id":"inky",
@@ -258,7 +283,7 @@
 		   "authors":["Alice Oh", "Harold Fox", "Max Van Kleek", "Aaron Adler", "Louis-Phillipe Morency", "Krzysztof Gajos", "Trevor Darrell"],
 		   "type":["conference paper"],
 		   "year":2002,
-		   "conference":"CHI 2002",
+		   "conference":"CHI 2002", 
 		   "categories":["ubiquitous computing"],
 		   "url":"http://people.csail.mit.edu/emax/papers/ltt_chi2002.pdf"
 	   },
@@ -281,7 +306,34 @@
 		   "conference":"HICSS 2000",
 		   "categories":["interaction design"],
 		   "url":"http://people.csail.mit.edu/emax/papers/HICSS2000.pdf"
-	   }	   
+		}, 
+        {
+		   "id":"telescopes",
+		   "title":"7 Billion Telescopes: Observing Social Machines through Personal Data Stores",
+		   "authors":["Max Van Kleek", "Daniel A. Smith", "Ramine Tinati", "Kieron O'Hara", "Wendy Hall", "Nigel R. Shadbolt"],
+		   "type":["conference paper"],
+		   "year":2014,
+		   "conference":"SOCM 2014",
+		   "categories":["personal data stores", "personal info management", "privacy"]
+		},
+        {
+		   "id":"smartsocieties",
+		   "title":"The Future of Social is Personal: The Potential of the Personal Data Store",
+		   "authors":["Max Van Kleek", "Kieron O'Hara"],
+		   "type":["book chapter"],
+		   "year":2014,
+		   "conference":"Smart Societies",
+		   "categories":["personal data stores", "personal info management"]
+		},
+        {
+		   "id":"aliens",
+		   "title":"Why Won't Aliens Talk to Us? Content and Community Dynamics in Online Citizen Science",
+		   "authors":["Markus Luczak-Rosch", "Ramine Tinati", "Elena Simperl", "Max Van Kleek", "Robsert Simpson", "Nigel R. Shadbolt"],
+		   "type":["conference paper"],
+		   "year":2014,
+		   "conference":"ICWSM 2014",
+		   "categories":["citizen science"]
+		}
    ],
 	"contact": [
 	   { "id": "blog-emax", "name":"the future is personal", "url":"http://thefutureispersonal.wordpress.com" },
