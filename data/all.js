@@ -134,7 +134,7 @@
 	   {
 		   "id": "twiage",
 		   "title":"Twiage: A Game for Finding Good Advice on Twitter",
-		   "authors":["Max Van Kleek", "Daniel A. Smith", "Ruben Stranders", "mc schraefel"],		   
+		   "authors":["Max Van Kleek", "Daniel A. Smith", "Ruben Stranders", "m.c. schraefel"],		   
 		   "type":["conference paper"],		   
 		   "url":"http://people.csail.mit.edu/emax/papers/chi2013-carpe-data.pdf",
 		   "doi":"http://dl.acm.org/citation.cfm?doid=2207676.2208530",
@@ -146,7 +146,7 @@
 	   {
 		   "id": "finderskeepers",
 		   "title":"Finders/Keepers: A Longitudinal Study of People Managing Information Scraps in a Micro-note Tool",
-		   "authors":["Max Van Kleek", "Wolfe Styke", "David Karger", "mc schraefel"],
+		   "authors":["Max Van Kleek", "Wolfe Styke", "David Karger", "m.c. schraefel"],
 		   "type":["conference paper"],
 		   "url":"http://people.csail.mit.edu/emax/papers/chi2011-finders-keepers.pdf",
 		   "conference":"CHI 2011",		   
@@ -167,7 +167,7 @@
 	   {
 		   "id":"infoscraps",
 		   "title":"Information scraps: How and why information eludes our personal information management tools",
-		   "authors":["Michael Bernstein", "Max Van Kleek", "David Karger", "mc schraefel"],
+		   "authors":["Michael Bernstein", "Max Van Kleek", "David Karger", "m.c. schraefel"],
 		   "type":["conference paper"],
 		   "tags":["personal information management"],		   
 		   "journal_name":"TOIS",
@@ -200,7 +200,7 @@
 	   {
 		   "id":"atomate",
 		   "title":"Atomate it! end-user context-sensitive automation using heterogeneous information sources on the web",
-		   "authors":["Max Van Kleek","Brennan Moore", "Paul Andre", "David Karger", "mc schraefel"],
+		   "authors":["Max Van Kleek","Brennan Moore", "Paul Andre", "David Karger", "m.c. schraefel"],
 		   "type":["conference paper"],
 		   "conference":"WWW 2010",
 		   "year":2010,
@@ -211,7 +211,7 @@
 	   {
 		   "id":"listit-chi2009",
 		   "title":"Note-to-Self: Examining Personal Information-Keeping in a Lightweight Note-Taking Tool",
-		   "authors":["Max Van Kleek","Michael Bernstein","Greg Vargas", "Katrina Panovich", "David Karger", "mc schraefel"],
+		   "authors":["Max Van Kleek","Michael Bernstein","Greg Vargas", "Katrina Panovich", "David Karger", "m.c. schraefel"],
 		   "type":["conference paper"],
 		   "conference":"CHI 2009",
 		   "year":2009,
@@ -241,7 +241,7 @@
 	   {
 		   "id":"inky",
 		   "title":"Inky: A Sloppy Command Line for the Web with Rich Visual Feedback",
-		   "authors":["Victoria Chou", "Michael Bernstein", "Greg Little", "Max Van Kleek", "David Karger", "mc schraefel"],
+		   "authors":["Victoria Chou", "Michael Bernstein", "Greg Little", "Max Van Kleek", "David Karger", "m.c. schraefel"],
 		   "type":["conference paper"],
 		   "year":2008,
 		   "conference":"UIST 2008",
@@ -251,7 +251,7 @@
 	   {
 		   "id":"journo",
 		   "title":"GUI -- Phooey! The Case for Text Input.",
-		   "authors":["Max Van Kleek", "Michael Bernstein", "David Karger", "mc schraefel"],
+		   "authors":["Max Van Kleek", "Michael Bernstein", "David Karger", "m.c. schraefel"],
 		   "type":["conference paper"],
 		   "year":2007,
 		   "conference":"UIST 2007",
@@ -261,7 +261,7 @@
 	   {
 		   "id":"opf",
 		   "title":"OPF: A Distributed Context-Sensing Framework for Ubiquitous Computing Environments",
-		   "authors":["Max Van Kleek", "Michael Bernstein", "David Karger", "mc schraefel"],
+		   "authors":["Max Van Kleek", "Michael Bernstein", "David Karger", "m.c. schraefel"],
 		   "type":["conference paper"],
 		   "year":2006,
 		   "conference":"ISUC 2006",
