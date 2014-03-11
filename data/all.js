@@ -7,7 +7,8 @@
 		"personal info management",	
         "personal data stores",
 		"sensemaking",
-		"citizen science",		
+		"citizen science",
+		"self-tracking",		
 		"privacy",
 		"decentralized systems",
 		"ubiquitous computing",
@@ -333,7 +334,16 @@
 		   "year":2014,
 		   "conference":"ICWSM 2014",
 		   "categories":["citizen science"]
-		}
+		},
+        {
+		   "id":"editable",
+		   "title":"The Editable Self: A Workbench for Personal Activity Data",
+		   "authors":["Heathe Packer", "Gustavo Buzogany", "Daniel A. Smith", "Max Van Kleek", "Nigel R. Shadbolt"],
+		   "type":["short paper"],
+		   "year":2014,
+		   "conference":"CHI 2014",
+		   "categories":["self-tracking", "sensemaking"]
+		}		
    ],
 	"contact": [
 	   { "id": "blog-emax", "name":"the future is personal", "url":"http://thefutureispersonal.wordpress.com" },
