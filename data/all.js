@@ -329,7 +329,7 @@
         {
 		   "id":"aliens",
 		   "title":"Why Won't Aliens Talk to Us? Content and Community Dynamics in Online Citizen Science",
-		   "authors":["Markus Luczak-Rosch", "Ramine Tinati", "Elena Simperl", "Max Van Kleek", "Robsert Simpson", "Nigel R. Shadbolt"],
+		   "authors":["Markus Luczak-Rosch", "Ramine Tinati", "Elena Simperl", "Max Van Kleek", "Robert Simpson", "Nigel R. Shadbolt"],
 		   "type":["conference paper"],
 		   "year":2014,
 		   "conference":"ICWSM 2014",
@@ -338,8 +338,8 @@
         {
 		   "id":"editable",
 		   "title":"The Editable Self: A Workbench for Personal Activity Data",
-		   "authors":["Heathe Packer", "Gustavo Buzogany", "Daniel A. Smith", "Max Van Kleek", "Nigel R. Shadbolt"],
-		   "type":["work-in-progress"],
+		   "authors":["Heather Packer", "Gustavo Buzogany", "Daniel A. Smith", "Max Van Kleek", "Nigel R. Shadbolt"],
+		   "type":["conference paper"],
 		   "year":2014,
 		   "conference":"CHI 2014",
 		   "categories":["self-tracking", "sensemaking"]
