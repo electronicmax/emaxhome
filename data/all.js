@@ -156,7 +156,7 @@
 	   {
 		   "id": "carpedata",
 		   "title":"Carpe Data: Supporting Serendipitous Data Integration in Personal Information Management",
-		   "authors":["Max Van Kleek", "Daniel A. Smith", "Heather Packer", "James Skinner", "Nigel Shadbolt"],
+		   "authors":["Max Van Kleek", "Daniel A. Smith", "Heather Packer", "James Skinner", "Nigel R. Shadbolt"],
 		   "type":["conference paper"],
 		   "url":"http://people.csail.mit.edu/emax/papers/chi2013-carpe-data.pdf",
 		   "conference":"CHI 2013",		   
@@ -180,7 +180,7 @@
 	   {
 		   "id":"pim2012-webbox",
 		   "title":"A decentralized architecture for consolidating personal information ecosystems: The WebBox",
-		   "authors":["Max Van Kleek", "Daniel A. Smith", "Nigel Shadbolt", "m.c. schraefel"],
+		   "authors":["Max Van Kleek", "Daniel A. Smith", "Nigel R. Shadbolt", "m.c. schraefel"],
 		   "type":["conference paper"],
 		   "conference":"PIM 2012",
 		   "year":2012,
@@ -232,7 +232,7 @@
 	   {
 		   "id":"geordi",
 		   "title":"GEORDi: Supporting lightweight end-user authoring and exploration of Linked Data",
-		   "authors":["Igor Popov", "Daniel Smith","Max Van Kleek","m.c. schraefel", "Gianluca Correndo", "Nigel Shadbolt"],
+		   "authors":["Igor Popov", "Daniel Smith","Max Van Kleek","m.c. schraefel", "Gianluca Correndo", "Nigel R. Shadbolt"],
 		   "type":["tech report"],
 		   "year":2010,
 		   "url":"http://eprints.ecs.soton.ac.uk/21968",
