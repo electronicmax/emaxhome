@@ -334,9 +334,10 @@
 		   "conference":"ICWSM 2014",
 		   "categories":["citizen science"]
 		},
-        {
+		{
 		   "id":"editable",
 		   "title":"The Editable Self: A Workbench for Personal Activity Data",
+		   "url":"http://a.hip.cat/papers/w15socm14-vankleek.pdf",
 		   "authors":["Heather Packer", "Gustavo Buzogany", "Daniel A. Smith", "Max Van Kleek", "Nigel R. Shadbolt"],
 		   "type":["conference paper"],
 		   "year":2014,
