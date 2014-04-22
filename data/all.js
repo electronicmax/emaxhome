@@ -312,6 +312,7 @@
 		   "title":"7 Billion Telescopes: Observing Social Machines through Personal Data Stores",
 		   "authors":["Max Van Kleek", "Daniel A. Smith", "Ramine Tinati", "Kieron O'Hara", "Wendy Hall", "Nigel R. Shadbolt"],
 		   "type":["conference paper"],
+   		   "url":"http://a.hip.cat/papers/w15socm14-vankleek.pdf",
 		   "year":2014,
 		   "conference":"SOCM 2014",
 		   "categories":["personal data stores", "personal info management", "privacy", "lifelogging"]
@@ -337,9 +338,9 @@
 		{
 		   "id":"editable",
 		   "title":"The Editable Self: A Workbench for Personal Activity Data",
-		   "url":"http://a.hip.cat/papers/w15socm14-vankleek.pdf",
 		   "authors":["Heather Packer", "Gustavo Buzogany", "Daniel A. Smith", "Max Van Kleek", "Nigel R. Shadbolt"],
 		   "type":["conference paper"],
+		   "url":"http://a.hip.cat/papers/chi2014-padd-wip.pdf",
 		   "year":2014,
 		   "conference":"CHI 2014",
 		   "categories":["lifelogging", "sensemaking"]
