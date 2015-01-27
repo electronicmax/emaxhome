@@ -346,7 +346,7 @@
 		   "url":"http://a.hip.cat/papers/chi2014-padd-wip.pdf",
 		   "year":2014,
 		   "conference":"CHI 2014",
-		   "categories":["lifelogging", "sensemaking"]
+		   "categories":["lifelogging", "sensemaking", "personal data stores"]
 		},
 		{
 		   "id":"palimpsets",
@@ -356,14 +356,13 @@
 		   "url":"https://github.com/sociam/DEFChapter-Obfuscation/raw/master/yearbook-obscurity/DEF-Obfuscation.pdf",
 		   "year":2014,
 		   "conference":"DEF Yearbook 2014",
-		   "categories":["personal data store", "privacy"]
+		   "categories":["personal data stores", "privacy"]
 		},
 		{
 		   "id":"chi2015zoo",
 		   "title":"Designing for Citizen Data Analysis: A Cross-Sectional Case Study of a Citizen Science Platform",
 		   "authors":["Ramine Tinati", "Max Van Kleek", "Elena Simperl", "Markus Luczak-Rosch", "Robert Simpson", "Nigel R. Shadbolt"],
 		   "type":["conference paper"],
-		   // "url":"https://github.com/sociam/DEFChapter-Obfuscation/raw/master/yearbook-obscurity/DEF-Obfuscation.pdf",
 		   "year":2015,
 		   "conference":"CHI 2015",
 		   "categories":["citizen science"]
