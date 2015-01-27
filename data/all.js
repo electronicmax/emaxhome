@@ -2,7 +2,7 @@
 	"sections":[
 		"papers", "chairing", "active projects", "projects"
 	],
-	"resume_url":"http://hip.cat/resume.pdf",
+	"resume_url":"http://hip.cat/max_resume_2014.pdf",
 	"interests": [
 		"personal info management",	
         "personal data stores",
@@ -317,13 +317,15 @@
 		   "conference":"SOCM 2014",
 		   "categories":["personal data stores", "personal info management", "privacy", "lifelogging"]
 		},
-        {
+       {
 		   "id":"smartsocieties",
-		   "title":"The Future of Social is Personal: The Potential of the Personal Data Store",
+		   "title":"The Future of Social is Personal: the Potential of the Personal Data Store",
 		   "authors":["Max Van Kleek", "Kieron O'Hara"],
 		   "type":["book chapter"],
+                   "url":"https://github.com/sociam/social-intelligence-pds/raw/master/pds.pdf",
 		   "year":2014,
-		   "conference":"Smart Societies",
+		   "conference":"Social Collective Intelligence",
+                   "bookurl":"http://www.springer.com/computer/hci/book/978-3-319-08680-4",
 		   "categories":["personal data stores", "personal info management"]
 		},
         {
@@ -332,6 +334,7 @@
 		   "authors":["Markus Luczak-Rosch", "Ramine Tinati", "Elena Simperl", "Max Van Kleek", "Robert Simpson", "Nigel R. Shadbolt"],
 		   "type":["conference paper"],
 		   "year":2014,
+                   "url":"http://eprints.soton.ac.uk/363523/1/document.pdf",
 		   "conference":"ICWSM 2014",
 		   "categories":["citizen science"]
 		},
@@ -344,7 +347,27 @@
 		   "year":2014,
 		   "conference":"CHI 2014",
 		   "categories":["lifelogging", "sensemaking"]
-		}		
+		},
+		{
+		   "id":"palimpsets",
+		   "title":"Social Palimpsests - Clouding the Lens of the Personal Panopticon",
+		   "authors":["Dave Murray-Rust", "Max Van Kleek", "Laura Dragan", "Nigel R. Shadbolt"],
+		   "type":["book chapter"],
+		   "url":"https://github.com/sociam/DEFChapter-Obfuscation/raw/master/yearbook-obscurity/DEF-Obfuscation.pdf",
+		   "year":2014,
+		   "conference":"DEF Yearbook 2014",
+		   "categories":["personal data store", "privacy"]
+		},
+		{
+		   "id":"chi2015zoo",
+		   "title":"Designing for Citizen Data Analysis: A Cross-Sectional Case Study of a Citizen Science Platform",
+		   "authors":["Ramine Tinati", "Max Van Kleek", "Elena Simperl", "Markus Luczak-Rosch", "Robert Simpson", "Nigel R. Shadbolt"],
+		   "type":["conference paper"],
+		   // "url":"https://github.com/sociam/DEFChapter-Obfuscation/raw/master/yearbook-obscurity/DEF-Obfuscation.pdf",
+		   "year":2015,
+		   "conference":"CHI 2015",
+		   "categories":["citizen science"]
+		}
    ],
 	"contact": [
 	   { "id": "blog-emax", "name":"the future is personal", "url":"http://thefutureispersonal.wordpress.com" },
