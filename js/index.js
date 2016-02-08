@@ -45,7 +45,7 @@ angular
 		return {
 			restrict:'E',
 			scope:{val:'=data'},
-			template:"<a href='{{val.url}}' target='_new' ng-bind-unsafe='val.name'> {{ val.name }}</a>"
+			template:"<a href='{{val.url}}' target='_new' ng-bind-unsafe='val.name' rel='me'> {{ val.name }}</a>"
 		};
 	})
 	.directive('teaching', function() {

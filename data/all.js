@@ -457,6 +457,7 @@
 		}
    ],
 	"contact": [
+	   { "id": "dept", "name":"Max Van Kleek @ Oxford CS", "url":"https://www.cs.ox.ac.uk/people/max.vankleek/" },	
 	   { "id": "blog-emax", "name":"the future is personal", "url":"http://thefutureispersonal.wordpress.com" },
 	   { "id": "twitter-emax", "name": "twitter", "url": "http://twitter.com/emax" },
 	   { "id": "facebook-emax", "name": "fb", "url": "http://facebook.com/electronicmax" },
