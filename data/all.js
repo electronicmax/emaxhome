@@ -365,6 +365,28 @@
 		   "conference":"DEF Yearbook 2014",
 		   "categories":["personal data stores", "privacy"]
 		},
+		{
+		   "id":"spdses",
+		   "title":"Social Personal Data Stores: The Nuclei of Decentralised Social Machines",
+		   "authors":["Max Van Kleek", "Daniel Smith", "Dave Murray-Rust", "Amy Guy", "Kieron O'Hara", "Laura Dragan", "Nigel R. Shadbolt"],
+		   "type":["workshop paper"],
+		   "url":"http://hip.cat/emax/papers/socm2015___SPDSes.pdf",
+		   "year":2015,
+		   "conference":"SOCM2015",
+		   "categories":["personal data stores", "privacy"]
+		},
+		{
+		   "id":"annathesis",
+		   "title":"Measurements of engagement in mobile behavioural interventions?",
+		   "authors":["Anna Weston", "L Morrison", "Lucy Yardley", "Max Van Kleek"],
+		   "type":["conference poster"],
+		   "url":"http://hip.cat/emax/papers/Anna_Weston_ACMDH.pdf",
+		   "year":2015,
+		   "conference":"ACM Digital Health",
+		   "categories":["lifelogging"]
+		},
+
+
    {
        
            "id":"websci15",
