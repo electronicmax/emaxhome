@@ -1,3 +1,6 @@
+/* jshint strict: false */
+/* globals angular, _, $, console */
+
 angular
 	.module('emax', ['ui'])
 	.controller('TopLevel', function($scope, utils) {
@@ -10,7 +13,8 @@ angular
 		 	$sa(function() {
 				window._data = objs;
 				_($scope).extend(objs);
-				console.log('contac t>> ', objs.contact);
+				$scope.pub_by_year = d3.nest().key(function(d) { return d.year; }).entries($scope.publications);
+				console.log('contac t>> ', objs.contact, $scope.pub_by_year);
 			});
 		}).fail(function(err) { console.error(err);});
 		

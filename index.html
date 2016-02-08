@@ -34,8 +34,13 @@
 		  <div class="papers">
 			<h2 class="sec-title">selected papers</h2>
 			<ul class="listing">
-			  <li ng-repeat="p in publications | orderBy:'year':true">
-				<pub data="p"></pub>
+			  <li ng-repeat="y in pub_by_year | orderBy:'key':true" class='pubyear'>
+				<div class="year">{{ y.key }} ({{ y.values.length }})</div>
+				<ul>
+				  	<li ng-repeat="pp in y.values">
+						<pub data="pp"></pub>
+					</li>
+				</ul>
 			  </li>
 			</ul>
 		  </div>
@@ -100,7 +105,9 @@
   <script src="lib/underscore.min.js" type="text/javascript"></script>
   <script src="lib/backbone.min.js" type="text/javascript"></script>
   <script src="lib/bootstrap.min.js" type="text/javascript"></script>  
+  <script src="lib/d3.min.js" type="text/javascript"></script>
   <script type="text/javascript" src="js/index.js"></script>
   <!--<script type="text/javascript" src="js/google-spreadsheet-connector.js"></script>-->
   <script type="text/javascript" src="js/utils.js"></script>  
+
 </html>

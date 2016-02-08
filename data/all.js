@@ -394,7 +394,8 @@
 		   "year":2015,
 		   "conference":"CHI 2015",
 		   "categories":["citizen science"],
-                    "url":"http://users.ecs.soton.ac.uk/~mvk/chi2015-zooniverse.pdf"
+           "url":"http://users.ecs.soton.ac.uk/~mvk/chi2015-zooniverse.pdf",
+		   "embed_video_url":"https://www.youtube.com/embed/4H6RUMxO9tk"           
 		},
 		{
 		   "id":"chi2016qs",
