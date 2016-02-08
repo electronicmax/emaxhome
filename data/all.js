@@ -50,6 +50,13 @@
 		   "year":2015,
 		   "url":"http://chi2015.acm.org"
        },
+       {
+		   "id":"datachair-4",
+		   "title":"Data Chair",
+          "conference":"CHI 2016",
+		   "year":2016,
+		   "url":"http://chi2016.acm.org"
+       },
 	   {
 		   "id":"cscw2014",
 		   "title":"Technical Programme Area Chair (AC)",
@@ -358,6 +365,27 @@
 		   "conference":"DEF Yearbook 2014",
 		   "categories":["personal data stores", "privacy"]
 		},
+   {
+       
+           "id":"websci15",
+           "title":"Self Curation, Social Partitioning, Escaping from Prejudice + Harassment: The Many Dimensions of Lying Online",
+           "authors":["Max Van Kleek", "Dave Murray-Rust", "Amy Guy", "Daniel A. Smith", "Kieron O'Hara", "Nigel R. Shadbolt"],
+           "type":["conference paper"],
+           "year":2015,
+           "url":"https://github.com/sociam/lying-websci15/raw/master/lying-www2015.pdf",
+           "categories":["privacy"],
+           "conference":"WebSci 2015"
+   },
+       {
+           "id":"usewod15",
+           "title":"Not in My Castle: The Case for the Web, Not App Platforms, as a Model for Digital Home Ecosystems",
+           "authors":["Max Van Kleek"],
+           "type":["conference paper"],
+           "year":2015,
+           "url":"http://hip.cat/papers/USEWODposition-statement_NotInMyCastle.pdf",
+           "categories":["personal data stores", "internet of things"],
+           "conference":"USEWOD 2015"
+       },
 		{
 		   "id":"chi2015zoo",
 		   "title":"Designing for Citizen Data Analysis: A Cross-Sectional Case Study of a Citizen Science Platform",
@@ -365,7 +393,66 @@
 		   "type":["conference paper"],
 		   "year":2015,
 		   "conference":"CHI 2015",
-		   "categories":["citizen science"]
+		   "categories":["citizen science"],
+                    "url":"http://users.ecs.soton.ac.uk/~mvk/chi2015-zooniverse.pdf"
+		},
+		{
+		   "id":"chi2016qs",
+		   "title":"The Quantified Self in the Doctor's Office",
+		   "authors":["Peter West", "Richard Giordano", "Max Van Kleek", "Nigel R. Shadbolt"],
+		   "type":["conference paper"],
+		   "year":2016,
+		   "conference":"CHI 2016",
+		   "categories":["quantified self", "personal info management", "lifelogging"],
+		   "embed_video_url":"https://www.youtube.com/embed/fB2r7V105r8"
+		},
+		{
+		   "id":"chi2016prosocial",
+		   "title":"Computational Pro-Social Deception",
+		   "authors":["Max Van Kleek", "Dave Murray-Rust", "Amy Guy", "Kieron O'Hara", "Nigel R. Shadbolt"],
+		   "type":["conference paper"],
+		   "year":2016,
+		   "conference":"CHI 2016",
+		   "categories":["privacy", "personal data", "personal info management"],
+		   "embed_video_url":"https://www.youtube.com/embed/uNaBoYNfjzY"
+		},
+		{
+		   "id":"chi2016pim",
+		   "title":"The Long-Term Implications of the Increasing Loss of Control Over Our Personal Information",
+		   "authors":["Max Van Kleek", "Reuben Binns", "Jun Zhao", "Nigel R. Shadbolt"],
+		   "type":["workshop paper", "personal info management"],
+		   "year":2016,
+		   "conference":"PIM 2016",
+		   "categories":["personal info management", "privacy"],
+		   "url":"http://home.hip.cat/emax/papers/PIM2016___Loss_of_Control_and_Implications.pdf"
+		},
+		{
+		   "id":"socialrise",
+		   "title":"The Rise of Social Machines",
+		   "authors":["Nigel Shadbolt", "Max Van Kleek", "Reuben Binns"],
+		   "type":["magazine article", "human computation", "citizen science"],
+		   "year":2016,
+		   "publication":"IEEE Consumer Electronics",
+		   "categories":["social machines"]
+		},
+		{
+		   "id":"socm2016",
+		   "title":"Privacy Languages: Are we there yet to enable user controls?",
+		   "authors":["Jun Zhao", "Reuben Binns", "Max Van Kleek", "Nigel R. Shadbolt"],
+		   "type":["workshop paper"],
+		   "year":2016,
+		   "conference":"SOCM2016",
+		   "categories":["privacy", "personal data"]
+		},
+		{
+		   "id":"www2015crowd",
+		   "title":"Improving Paid Microtasks through Gamification and Adaptive Furtherance Incentives",
+		   "authors":["Seyi Feyistan", "Elena Simperl", "Max Van Kleek", "Nigel R. Shadbolt"],
+		   "type":["conference paper"],
+		   "year":2015,
+		   "conference":"WWW 2015",
+		   "categories":["crowdsourcing"],
+           "url":"http://hip.cat/papers/www2015-crowdsourcing.pdf"
 		}
    ],
 	"contact": [

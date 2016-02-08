@@ -1,8 +1,6 @@
-
-
 angular
 	.module('emax', ['ui'])
-	.controller('TopLevel', function($scope, googleSheet, utils) {
+	.controller('TopLevel', function($scope, utils) {
 		var $sa = function(fn) { return utils.safe_apply($scope, fn); };
 		$scope.getTypes = function() {
 			var data = $scope.works || [];
