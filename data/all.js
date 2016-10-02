@@ -2,7 +2,7 @@
 	"sections":[
 		"papers", "chairing", "active projects", "projects"
 	],
-	"resume_url":"http://hip.cat/max_resume_2014.pdf",
+	"resume_url":"http://hip.cat/stuff/emax_resume.pdf",
 	"interests": [
 		"personal info management",	
         "personal data stores",
@@ -57,6 +57,13 @@
 		   "year":2016,
 		   "url":"http://chi2016.acm.org"
        },
+	   {
+		   "id":"pimworkshop-chi16",
+		   "title":"Workshop Organizer",
+          "conference":"PIM2016",
+		   "year":2016,
+		   "url":"http://pimworkshop.org/2016"
+	   },
 	   {
 		   "id":"cscw2014",
 		   "title":"Technical Programme Area Chair (AC)",
@@ -319,7 +326,7 @@
 		   "title":"7 Billion Telescopes: Observing Social Machines through Personal Data Stores",
 		   "authors":["Max Van Kleek", "Daniel A. Smith", "Ramine Tinati", "Kieron O'Hara", "Wendy Hall", "Nigel R. Shadbolt"],
 		   "type":["conference paper"],
-   		   "url":"http://a.hip.cat/papers/w15socm14-vankleek.pdf",
+   		   "url":"http://hip.cat/papers/p915.pdf",
 		   "year":2014,
 		   "conference":"SOCM 2014",
 		   "categories":["personal data stores", "personal info management", "privacy", "lifelogging"]
@@ -350,7 +357,7 @@
 		   "title":"The Editable Self: A Workbench for Personal Activity Data",
 		   "authors":["Heather Packer", "Gustavo Buzogany", "Daniel A. Smith", "Max Van Kleek", "Nigel R. Shadbolt"],
 		   "type":["conference paper"],
-		   "url":"http://a.hip.cat/papers/chi2014-padd-wip.pdf",
+		   "url":"http://hip.cat/papers/chi2014-padd-wip.pdf",
 		   "year":2014,
 		   "conference":"CHI 2014",
 		   "categories":["lifelogging", "sensemaking", "personal data stores"]
@@ -421,13 +428,14 @@
 		},
 		{
 		   "id":"chi2016qs",
-		   "title":"The Quantified Self in the Doctor's Office",
+		   "title":"The Quantified Patient in the Doctor's Office",
 		   "authors":["Peter West", "Richard Giordano", "Max Van Kleek", "Nigel R. Shadbolt"],
 		   "type":["conference paper"],
 		   "year":2016,
 		   "conference":"CHI 2016",
 		   "categories":["quantified self", "personal info management", "lifelogging"],
-		   "embed_video_url":"https://www.youtube.com/embed/fB2r7V105r8"
+		   "embed_video_url":"https://www.youtube.com/embed/fB2r7V105r8",
+		    "url":"http://dl.acm.org/citation.cfm?doid=2858036.2858445"
 		},
 		{
 		   "id":"chi2016prosocial",
@@ -437,7 +445,8 @@
 		   "year":2016,
 		   "conference":"CHI 2016",
 		   "categories":["privacy", "personal data", "personal info management"],
-		   "embed_video_url":"https://www.youtube.com/embed/uNaBoYNfjzY"
+		   "embed_video_url":"https://www.youtube.com/embed/uNaBoYNfjzY",
+		    "url":"http://dl.acm.org/citation.cfm?doid=2858036.2858060"
 		},
 		{
 		   "id":"chi2016pim",
@@ -447,7 +456,7 @@
 		   "year":2016,
 		   "conference":"PIM 2016",
 		   "categories":["personal info management", "privacy"],
-		   "url":"http://home.hip.cat/emax/papers/PIM2016___Loss_of_Control_and_Implications.pdf"
+		   "url":"http://hip.cat/emax/papers/PIM2016___Loss_of_Control_and_Implications.pdf"
 		},
 		{
 		   "id":"socialrise",
@@ -456,7 +465,18 @@
 		   "type":["magazine article", "human computation", "citizen science"],
 		   "year":2016,
 		   "publication":"IEEE Consumer Electronics",
-		   "categories":["social machines"]
+		   "categories":["social machines"],
+		    "url":"http://hip.cat/emax/papers/07450779.pdf"
+		},
+		{
+		   "id":"pim2016",
+		   "title":"For Richer, for Poorer, in Sickness or in Health... The Long-Term Management of Personal Information",
+		   "authors":["William Jones", "Max Van Kleek", "others"],
+		   "type":["workshop paper"],
+		   "year":2016,
+		   "publication":"ACM",
+		   "categories":["personal information management"],
+  	            "url":"http://hip.cat/emax/papers/chi16-pim.pdf"
 		},
 		{
 		   "id":"socm2016",
@@ -465,7 +485,8 @@
 		   "type":["workshop paper"],
 		   "year":2016,
 		   "conference":"SOCM2016",
-		   "categories":["privacy", "personal data"]
+		   "categories":["privacy", "personal data"],
+		    "url":"http://hip.cat/emax/papers/p799.pdf"
 		},
 		{
 		   "id":"www2015crowd",
