@@ -3,5 +3,5 @@
   <div class='conf' ng-bind='val.when'></div>  
   <div class='description' ui-if='val.description' ng-bind='val.description.slice(0,200)'></div>
   <a class='institution' ui-if='val.institution_url' href='{{val.institution_url}}' ng-bind='val.institution'></a>
-  <span ui-if='!val.institution_url' class='institution' ng-bind='{{ val.institution }}'></span>  
+  <span ui-if='!val.institution_url' class='institution' ng-bind='val.institution'></span>  
 </div>

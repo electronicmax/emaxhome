@@ -1,0 +1,13 @@
+<div class='pub' data-categories='{{ catsjoined }}'>
+  <div ng-if='val.url' class='title'><a href='{{val.url}}' ng-bind='val.title'></a></div>
+  <div ng-if='!val.url' class='title' ng-bind='val.title'></div>
+  <div class='conf' ng-if="val.type == 'conference paper'">{{ val.conference }} </div>
+  <div class='video-button' ng-if="val.embed_video_url !== undefined" ng-click="show[val.id]=!show[val.id]"><i class='icon-facetime-video'></i></div>  
+  <div class='authors'>
+	<author ng-repeat='a in val.authors' data='a'></author>
+  </div>
+
+	<div class='video squishable' squishif="!show[val.id]">
+	  <iframe width="320" height="240" src="{{val.embed_video_url}}" frameborder="0" allowfullscreen></iframe>
+	</div>  
+</div>

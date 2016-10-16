@@ -1,9 +1,9 @@
 /* jshint strict: false */
-/* globals angular, _, $, console */
+/* globals angular, _, $, console, d3 */
 
 angular
-	.module('emax', ['ui'])
-	.controller('TopLevel', function($scope, utils) {
+	.module('emax', [])
+	.controller('TopLevel', function($scope, $sce, utils) {
 		var $sa = function(fn) { return utils.safe_apply($scope, fn); };
 		$scope.getTypes = function() {
 			var data = $scope.works || [];
@@ -12,8 +12,16 @@ angular
 		$.getJSON('data/all.js').then(function(objs) {
 		 	$sa(function() {
 				window._data = objs;
-				_($scope).extend(objs);
+				objs.publications.map(function(p) {
+					if (p.embed_video_url) { 
+						console.log('video url ', p.embed_video_url);
+						p.embed_video_url = p.embed_video_url && $sce.trustAsResourceUrl(p.embed_video_url) || undefined;
+						console.log('result of $sce ', p.embed_video_url);						
+					}
+				});
+				_.extend($scope,objs);
 				$scope.pub_by_year = d3.nest().key(function(d) { return d.year; }).entries($scope.publications);
+
 				console.log('contac t>> ', objs.contact, $scope.pub_by_year);
 			});
 		}).fail(function(err) { console.error(err);});
@@ -106,6 +114,7 @@ angular
 			scope:{val:'=data'},
 			templateUrl:"partials/pub.html",
 			controller:function($scope) {
+				$scope.show = {};
 				$scope.catsjoined = ($scope.val.categories || []).join(";");
 			}
 		};
