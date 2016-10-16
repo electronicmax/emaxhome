@@ -512,4 +512,100 @@
 	"people": [
 		{ "id":"Daniel A. Smith", "homepage":"https://danielsmith.eu", "photo":"" }
 	]
+	"projects":[
+		{
+			id:'geordi',
+			title:'GEORDI',
+			subtitle:'Making Large Datasets Explorable',
+			description:'<p>A singular problem with large datasets, including the many that have been released in Open Data initiatives around the world, is the challenge of allowing potential users to quickly understand what the data contains, and how the data are represented and stored.  Being able to interrogate data quickly and easily is an essential part of deducing its potential utility, and thus is an absolutely essential part of making such data sets useful. <p> The GEORDi interface was a schema-less real-time exploration framework was a Web based front-end to the cluster-based triplestore 4Store, that allowed anyone interested in particular datasets to immediately start looking all the kinds of data that were stored in the dataset',
+			fullimage:'',
+			startDate:"2011-01-01"
+			endDate:"2012-01-01"
+		},
+		{
+			id:'listit',
+			title:'List-It',
+			subtitle:'',
+			description:'',
+			fullimage:'',
+			startDate:"2013-01-01"
+			endDate:"2014-01-01"
+		},
+		{
+			id:'dataPalette',
+			title:'DataPalette',
+			subtitle:'Integration, Exploration and Sensemaking over Heterogeneous REST APIs',
+			description:'',
+			fullimage:'',
+			startDate:"2013-01-01"
+			endDate:"2014-01-01"
+		},		
+		{
+			id:'atomate',
+			title:'Atomate',
+			subtitle:'',
+			description:'',
+			fullimage:'',
+			startDate:"2013-01-01"
+			endDate:"2014-01-01"
+		},
+		{
+			id:'dayta',
+			title:'Dayta',
+			subtitle:'Data for your Day',
+			description:'',
+			fullimage:'',
+			startDate:"2013-01-01"
+			endDate:"2014-01-01"
+		},
+		{
+			id:'lifecourse',
+			title:'LifeCourse',
+			subtitle:'Patient-led self management of chronic conditions',
+			description:'',
+			fullimage:'',
+			startDate:"2013-01-01"
+			endDate:"2014-01-01"
+		},
+		{
+			id:'pdploxford',
+			title:'Personal Data & Privacy Lab',
+			subtitle:'',
+			description:'',
+			fullimage:'',
+			startDate:"2015-10-01"
+		},
+		{
+			id:'dogma95',
+			title:'Ethical Data Initiative',
+			subtitle:'',
+			description:'',
+			fullimage:'',
+			startDate:"2015-10-01"
+		},
+		{
+			id:'lieCloud',
+			title:'lieCloud',
+			subtitle:'',
+			description:'',
+			fullimage:'',
+			startDate:"2015-10-01"
+		},
+		{
+			id:'identify',
+			title:'Understanding Identity and Self-Curation Online',
+			subtitle:'',
+			description:'',
+			fullimage:'',
+			startDate:"2015-10-01"
+		},
+		{
+			id:'indx',
+			title:'INDX',
+			subtitle:'Social Personal Data Stores',
+			description:'',
+			fullimage:'',
+			startDate:"2015-10-01"
+		}
+	]
 }
