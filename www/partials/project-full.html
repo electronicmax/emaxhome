@@ -1,0 +1,20 @@
+<div class="project-full">
+	<div class="imgframe">
+		<div class="helper"></div>
+		<img class="main" ng-src="$ctrl.project.fullimage">
+	</div>
+	<div class="textframe">
+		<div class="helper"></div>
+		<div class="core">
+			<div class="title" ng-bind="$ctrl.project.title"></div>
+			<div class="subtitle" ng-bind="$ctrl.project.subtitle"></div>
+			<div class="dates" ng-if="$ctrl.project.startDate"><span class="$ctrl.project.startDate | toYear"></span> - <span ng-if="$ctrl.project.endDate" class="$ctrl.project.endDate | toYear"></span></div>		
+			<div class="links" ng-if="$ctrl.project.url || $ctrl.project.github_url || $ctrl.project.video_url">
+				<div ng-if="$ctrl.project.url" ng-href="$ctrl.project.activeURL" target="_blank">Project Site</div>
+				<div ng-if="$ctrl.project.github_url" ng-href="$ctrl.project.github_url" target="_blank">GitHub Repo</div>
+				<div ng-if="$ctrl.project.video_url" ng-href="$ctrl.project.video_url" target="_blank">Video</div>
+			</div>
+			<div class="description" ng-bind="$ctrl.project.description"></div>
+		</div>
+	</div>		
+</div>

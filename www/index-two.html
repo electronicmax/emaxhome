@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>max van kleek :: research scientist, university of oxford </title>
+	<link rel="stylesheet/less" type="text/css" href="css/index.less"/>
+	<link rel="stylesheet/less" type="text/css" href="css/project.less"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  </head>
+  <body ng-app='emax' ng-cloak ng-animate ng-controller="two">
+  	<div class="main">
+	  <div class="topblock">
+		<div class="nameblock">
+		  <div class="name">
+			max van kleek
+		  </div>
+		  <div class="title">
+			<div>senior research fellow</div>
+			<div><a href="http://sociam.org">sociam project</a>, <a href="http://www.cs.ox.ac.uk/">department of computer science</a></div>
+			<div><a href="http://www.ox.ac.uk">university of oxford</a>, uk</div>		  
+		  </div>
+		</div>
+		<div class="linkblock">
+		  <div class='top-contact' ng-repeat='c in contact'>
+			<contact data='c'></contact>
+		  </div>
+		</div>
+	  </div>
+	<div class="core">
+		<div ui-view></div>
+	</div>
+ 	</div>
+  </body>
+  <script src="lib/less/dist/less.min.js" type="text/javascript"></script>
+  <script src="lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+  <script src="lib/angular/angular.min.js" type="text/javascript"></script>
+  <script src="lib/angular-ui-router/release/angular-ui-router.min.js" type="text/javascript"></script>
+  <script src="lib/lodash/dist/lodash.min.js" type="text/javascript"></script>
+  <script src="lib/d3/d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/utils.js"></script>  
+</html>
