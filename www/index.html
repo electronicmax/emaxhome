@@ -31,6 +31,12 @@
 		  <interest ng-repeat='i in interests' data='i' data='i'></interest>		  
 		</div>
 		<div class="column-sec">
+		  <div class="projects">
+		  	<h2 class="sec-title">projects</h2>
+		  	<ul class="projlisting">
+			  <project-small ng-reppeat="pr in projects | orderBy:'startDate':true" class='pubyear'></project-small>
+			</ul>
+		  </div>
 		  <div class="papers">
 			<h2 class="sec-title">selected papers</h2>
 			<ul class="listing">
@@ -100,6 +106,7 @@
   <script src="lib/less/dist/less.min.js" type="text/javascript"></script>
   <script src="lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
   <script src="lib/angular/angular.min.js" type="text/javascript"></script>
+  <script src="lib/angular-ui-router/release/angular-ui-router.min.js" type="text/javascript"></script>
   <script src="lib/lodash/dist/lodash.min.js" type="text/javascript"></script>
   <script src="lib/d3/d3.min.js" type="text/javascript"></script>
   <script type="text/javascript" src="js/index.js"></script>

@@ -2,7 +2,7 @@
 /* globals angular, _, $, console, d3 */
 
 angular
-	.module('emax', [])
+	.module('emax', ['ui.router'])
 	.controller('TopLevel', function($scope, $sce, utils) {
 		var $sa = function(fn) { return utils.safe_apply($scope, fn); };
 		$scope.getTypes = function() {
@@ -118,7 +118,68 @@ angular
 				$scope.catsjoined = ($scope.val.categories || []).join(";");
 			}
 		};
+	}).config(function($stateProvider, $urlRouterProvider) { 
+		// $urlRouterProvider.otherwise('main');
+		$stateProvider.state({
+		    name: 'main',
+		    url: '/main',
+		    template: 'hello',
+		    controller:function($scope) {console.log('main');}
+	  	});
+
+		$stateProvider.state({
+		    name: 'project', 
+		    url: '/project/{id}', 
+		    component: 'projectfull',
+		    // template:'project - yo',
+		    // controller:function() { 
+		    // 	console.log('project');
+		    // },
+		    resolve: {
+		    	project:function(all, $transition$) { 
+		    		var pid = $transition$.params().id;
+		    		console.log('got pid ', pid);
+		    		return all.getData().then(function(data) {
+		    			return data.projects.filter((x) => x.id === pid)[0];
+		    		});
+		    	}
+		    }
+	  	});	  	
+	}).factory('all',function($http, $sce) { 
+		return { 
+			getData:function() { 
+				console.log('get Data ');
+				return $http.get('data/all.js').then(function(objs) {
+					objs = objs.data;
+					console.info('objs ', objs);
+					objs.publications.map(function(p) {
+						if (p.embed_video_url) { 
+							console.log('video url ', p.embed_video_url);
+							p.embed_video_url = p.embed_video_url && $sce.trustAsResourceUrl(p.embed_video_url) || undefined;
+							console.log('result of $sce ', p.embed_video_url);						
+						}
+					});
+					return objs;
+				}).catch(function(err) { console.error(err);});
+			}
+		};
+	}).controller('two', function($scope, all) { 
+		// $scope.pub_by_year = d3.nest().key(function(d) { return d.year; }).entries($scope.publications);
+		console.log('hello');
+		all.getData().then((x) => { window.x = x; });
+	}).component('projectSmall', {
+		  templateUrl: 'partials/project-small.html',
+		  // controller: function() { 	var ctrl = this;  },
+		  bindings: { project: '<' }
+	}).component('projectfull', {
+		  templateUrl: 'partials/project-full.html',
+		  controller: function($scope) { 	
+		  	console.log('project full', this.project);		  	
+		  	var ctrl = this; 
+		  },
+		  bindings: { project: '<' }
 	});
+
 
 
 			// link: function (scope, element, attrs) {
