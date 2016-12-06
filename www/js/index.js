@@ -31,7 +31,7 @@ angular
 		var setw = function() {
 			$('.interests').css('width', $('.main').width() - 20);
 			var v = (Math.max(10,$('.interests').height() || 0) + 8) + 'px' + ' 14px 20px 14px';
-			$('.restblock').css('padding', v);			
+			// $('.restblock').css('padding', v);			
 		};
 		document.addEventListener('scroll', function(e) {
 			window.scrollY >= origOffsetY ? header.classList.add('sticky') : header.classList.remove('sticky');

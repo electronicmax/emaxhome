@@ -8,7 +8,7 @@
   <body ng-app='emax' ng-cloak ng-animate>
 	<div class="background"></div>
 	<div class="container-fluid main" ng-controller="TopLevel">
-	  <div class="topblock">
+<!-- 	  <div class="topblock">
 		<candy></candy>
 		<div class="nameblock">
 		  <div class="name">
@@ -26,10 +26,42 @@
 		  </div>
 		</div>
 	  </div>
-	  <div class="restblock">		  
-		<div class="interests">
+ -->	  
+ 		<div class="restblock">		  
+
+ 		<h1 class="nametitle">max van kleek</h1>
+ 		<h4 class="nametitle">senior researcher, <a href="http://www.cs.ox.ac.uk" top="_blank">department of computer science</a>, <a href="http://www.ox.ac.uk" top="_blank">university of oxford</a></h4>
+
+ 		<div class='bio'>
+	 		<p>
+	 			I do research in <a href="https://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction" target="_blank">human-computer interaction</a>, focusing on identifying, researching, and solving problems people have in managing and making effective use of data, in everyday life.
+	 		</p>
+	 		<p>
+		 		A key problem with the <a href="http://www.motionpub.com/titles/the-age-of-the-platform/" target="_blank">age of the platforms</a> is a growing dichotomy between the capability at the edges (<i>i.e.</i> what end-users can do with data) versus at the centres (<i>i.e.</i> what large institutions can do with data). This has come from the constant investment in technologies to empower entities at the centre, and a comparatively small investment in tools for empowering and protecting the interests of people at the edges. Where interests between the centre and the edges do not align or diverge, gaps form, and such gaps can threaten the very benefits that digital technology has granted. Examples of such gaps include the inability for people to move data effectively between platforms, the lack of tools available for letting people effectively keep data safe and available over a long term, the inability for people to control what information is being collected about them by apps and services. Indeed, most of the new capabilities that people enjoy have been carefully designed to benefit the centre to an equal or greater extent than users themselves.
+	 		</p>
+	 		<p>
+	 			A healthy digital future requires people to be able to effectively control and navigate a diverse ecosystem comprised of a plurality of services and platforms, and to be able to identify when their interests are not being served. This requires more than better tools for end-users; it requires a fundamental re-thinking of the relationships between services and people to one that grants users autonomy and flexibility, instead of one of dependence for the purposes of retention.
+	 		</p>
+	 		<p>
+	 			In my research, I work on identifying concrete examples where platforms and people's needs
+	 			fail to align.  Recently, this work has included interfaces and systems for letting end-users 
+	 			integrate data across platforms, tools for empowering users to liberate and archive their
+	 			personal health data, and work studying information flows out of smartphone apps.
+	 		</p>
+		</div>
+		<div class="right">
+			<ul>
+			<li><a href="https://www.cs.ox.ac.uk/people/max.vankleek/">Max's CS Home Page</a></li>
+			<li><a href="https://scholar.google.co.uk/citations?user=bknlzZwAAAAJ">Max on Google Scholar</a></li>
+			<li><a href="http://twitter.com/emax">eMax on Twitter</a></li>
+			</ul>
+		</div>
+	 		
+
+  		<div class="interests" ng-show='false'>
 		  <interest ng-repeat='i in interests' data='i' data='i'></interest>		  
 		</div>
+
 		<div class="column-sec">
 		  <div class="papers">
 			<h2 class="sec-title">selected papers</h2>
