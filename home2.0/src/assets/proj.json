@@ -1,0 +1,48 @@
+{
+    "projects": [{
+            "id": "qpatient",
+            "name": "The Quantified Patient",
+            "description": "",
+            "pubs": ["west2016quantified"]
+        },
+        {
+            "id": "appxray",
+            "name": "App X-Ray",
+            "description": "Although people rely on smartphone apps many times every day, people have no idea what these apps are actually doing, such as where the app is sending their data, or using their bandwidth. \n The App X-Ray project consists of a series of efforts around increasing the transparency of apps to end-users. It includes the App Observatory, a new research tool that automatically downloads, disassembles, analyses, and aggregates analyses of apps from app marketplaces around the world, providing convenient APIs for popular data science frameworks."
+
+        },
+        {
+            "id": "dci",
+            "name": "Data Controller Indicators",
+            "images": [],
+            "description": "Data Controller Indicators (DCI) are a type of visualisation of the places and app sends data. It was designed to help people rflect on and understand such destinations so that poeple could make better informed decisions about the use of smartphone apps",
+            "pubs": ["van2017better"]
+        },
+        {
+            "id": "refine",
+            "name": "X-Ray Refine",
+            "description": "X-Ray Refine enables users of smartphone apps to see and gain an in-depth understanding of how their information is shared and used by entities around the world."
+        },
+        {
+            "id": "algomod",
+            "name": "Algorithmic Moderation",
+            "theme": "MLHCI",
+            "pubs": ["binns2017like"],
+            "description": "Algorithmic content moderation of user-generated content, such as for the purpose of identifying illegal or abusive content, has been touted as an approach to more effectively keep online spaces safe and legal.  However, when notions of \"offence\" such approaches run the risk of introducing biases"
+        },
+        {
+            "id": "sociam",
+            "name": "Social Machines",
+            "pubs": [""]
+        },
+        {
+            "id": "pda",
+            "name": "Personal Data Architectures",
+            "theme": "empowerment"
+        },
+        {
+            "id": "dtou",
+            "name": "Data Terms of Use"
+        }
+    ]
+}

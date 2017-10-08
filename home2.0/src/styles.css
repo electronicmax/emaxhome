@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    font-weight: 100;
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    transition: all 0.2s;
+    text-decoration: none;
+    /* color: #888; */
+    color: #888;
+}
+
+a:hover {
+    /* font-weight: bold; */
+    color: #00bbff;
+}

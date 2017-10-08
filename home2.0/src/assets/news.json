@@ -1,0 +1,15 @@
+{
+    "news": [{
+        "id": "start",
+        "datestr": "2017-10-02",
+        "summary": "Started post as Substantive Associate Professor of Human-Computer Interaction"
+    }, {
+        "id": "retips",
+        "datestr": "2017-11-01",
+        "summary": "Launching <a href=\"https://www.petrashub.org\">EPSRC PETRAS</a> project <a href=\"https://www.petrashub.org/portfolio-item/respectful-things-in-private-spaces-investigating-ethical-data-handling-for-very-personal-devices-retips/\">ReTiPS: Responsible Things in Private Spaces</a>"
+    }, {
+        "id": "start",
+        "datestr": "2017-09-01",
+        "summary": "Published <a class=\"title\" href=\"https://arxiv.org/abs/1707.01477\">Like Trainer Like Bot</a> in Social Informatics"
+    }]
+}
