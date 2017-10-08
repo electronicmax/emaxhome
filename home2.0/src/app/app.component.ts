@@ -7,15 +7,11 @@ import { LoaderService, NewsItem, Project } from 'app/loader.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  title = 'app';
   news: NewsItem[];
   projects: Project[];
 
   constructor(private loader: LoaderService) {
     this.loader.getNews().then(n => this.news = n);
     this.loader.getProjects().then(p => this.projects = p);
-
-    (window as any)._a = this;
   }
 }

@@ -1,39 +1,47 @@
 {
-    "projects": [{
+    "projects": [
+        {
             "id": "qpatient",
             "name": "The Quantified Patient",
-            "description": "",
-            "pubs": ["west2016quantified"]
+            "summary": "While the Quantified Self and personal informatics fields have focused on the individual's use of self-logged data about themselves, the same kinds of data could, in theory, be used to improve diagnosis and care planning. In this paper, we seek to understand both the opportunities and bottlenecks in the use of self-logged data for differential diagnosis and care planning during patient visits to both primary and secondary care. We first conducted a literature review to identify potential factors influencing the use of self-logged data in clinical settings. This informed the design of our experiment, in which we applied a vignette-based role-play approach with general practitioners and hospital specialists in the US and UK, to elicit reflections on and insights about using patient self-logged data. Our analysis reveals multiple opportunities for the use of self-logged data in the differential diagnosis workflow, identifying capture, representational, and interpretational challenges that are potentially preventing self-logged data from being effectively interpreted and applied by clinicians to derive a patient's prognosis and plan of care.",
+            "pubs": [
+                "west2016quantified"
+            ]
         },
         {
             "id": "appxray",
             "name": "App X-Ray",
-            "description": "Although people rely on smartphone apps many times every day, people have no idea what these apps are actually doing, such as where the app is sending their data, or using their bandwidth. \n The App X-Ray project consists of a series of efforts around increasing the transparency of apps to end-users. It includes the App Observatory, a new research tool that automatically downloads, disassembles, analyses, and aggregates analyses of apps from app marketplaces around the world, providing convenient APIs for popular data science frameworks."
-
+            "summary": "Although people rely on smartphone apps many times every day, people have no idea what these apps are actually doing, such as where the app is sending their data, or using their bandwidth. \n The App X-Ray project consists of a series of efforts around increasing the transparency of apps to end-users. It includes the App Observatory, a new research tool that automatically downloads, disassembles, analyses, and aggregates analyses of apps from app marketplaces around the world, providing convenient APIs for popular data science frameworks."
         },
         {
             "id": "dci",
             "name": "Data Controller Indicators",
             "images": [],
-            "description": "Data Controller Indicators (DCI) are a type of visualisation of the places and app sends data. It was designed to help people rflect on and understand such destinations so that poeple could make better informed decisions about the use of smartphone apps",
-            "pubs": ["van2017better"]
+            "summary": "Data Controller Indicators (DCI) are a type of visualisation of the places and app sends data. It was designed to help people rflect on and understand such destinations so that poeple could make better informed decisions about the use of smartphone apps",
+            "pubs": [
+                "van2017better"
+            ]
         },
         {
             "id": "refine",
             "name": "X-Ray Refine",
-            "description": "X-Ray Refine enables users of smartphone apps to see and gain an in-depth understanding of how their information is shared and used by entities around the world."
+            "summary": "X-Ray Refine enables users of smartphone apps to see and gain an in-depth understanding of how their information is shared and used by entities around the world."
         },
         {
             "id": "algomod",
             "name": "Algorithmic Moderation",
             "theme": "MLHCI",
-            "pubs": ["binns2017like"],
-            "description": "Algorithmic content moderation of user-generated content, such as for the purpose of identifying illegal or abusive content, has been touted as an approach to more effectively keep online spaces safe and legal.  However, when notions of \"offence\" such approaches run the risk of introducing biases"
+            "pubs": [
+                "binns2017like"
+            ],
+            "summary": "Algorithmic content moderation of user-generated content, such as for the purpose of identifying illegal or abusive content, has been touted as an approach to more effectively keep online spaces safe and legal.  However, when notions of \"offence\" such approaches run the risk of introducing biases"
         },
         {
             "id": "sociam",
             "name": "Social Machines",
-            "pubs": [""]
+            "pubs": [
+                ""
+            ]
         },
         {
             "id": "pda",

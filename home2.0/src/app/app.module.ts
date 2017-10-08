@@ -9,33 +9,31 @@ import { ErrorComponent } from './error/error.component';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { LoaderService } from 'app/loader.service';
 import { HttpModule } from '@angular/http';
+import { ProjectComponent } from './project/project.component';
 
 
 const appRoutes: Routes = [
   {
-    path: '/home',
+    path: 'home',
     component: HomeComponent
   },
   {
-    path: '/news',
+    path: 'news',
     component: ListPageComponent,
     data: { type: 'news', title: 'news' }
   },
   {
-    path: '/projects',
-    component: ListPageComponent,
-    data: { type: 'projects', title: 'projects' }
+    path: 'projects/:id',
+    component: ProjectComponent
   },
   {
     component: ListPageComponent,
-    path: '/publications',
+    path: 'publications',
     data: { type: 'publications', title: 'publications' }
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: ErrorComponent, data: { message: 'page not found' } }
 ];
-
-
 
 @NgModule({
   declarations: [
@@ -43,10 +41,15 @@ const appRoutes: Routes = [
     HomeComponent,
     ListComponent,
     ListPageComponent,
-    ErrorComponent
+    ErrorComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    ),
     HttpModule,
     Ng2PageScrollModule
   ],

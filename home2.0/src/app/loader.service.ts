@@ -46,6 +46,8 @@ export class Project {
   images: string[];
   headimg: string;
   color: string;
+  summary: string;
+  summaryHtml: SafeHtml;
 }
 
 export class NewsItem {
@@ -80,6 +82,7 @@ export class LoaderService {
     }).then((ps) => {
       ps.map((p) => {
         p.color = d3.interpolateRainbow(1.0 * ps.indexOf(p)/ps.length);
+        p.summaryHtml = this.sanitiser.bypassSecurityTrustHtml(p.summary);
         (window as any).d3 = d3;
       });
       return ps;
