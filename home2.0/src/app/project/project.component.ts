@@ -6,15 +6,17 @@ import { Subscription } from "rxjs/Subscription";
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css']
+  styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent implements OnInit {
 
   p: Project;
   sub: Subscription;
+  projects: Project[];
 
   constructor(private route: ActivatedRoute, private loader: LoaderService) {
     (window as any)._w = this;
+    this.loader.getProjects().then(p => this.projects = p);
   }
 
   ngOnInit() {

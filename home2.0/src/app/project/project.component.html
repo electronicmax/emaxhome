@@ -1,6 +1,16 @@
 <div class="section first">
-  <div class="sectionbody">
+  <div class="sectitle">
+
+    <a routerLink='/home'><div>home</div></a>
+
+    <div> projects</div>
+    <ul>
+      <a *ngFor="let pr of projects" [routerLink]='["/projects/", pr.id]'><li class="project" [style.color]="pr.color" [style.borderColor]="pr.color" >{{ pr.name }}</li></a>      
+    </ul>
+  </div>
+  <div class="secbody">
+    <div class="square" [style.backgroundColor]='p?.color'></div>      
     <h3>{{p?.name}}</h3>
-    <div class="secbody" [innerHtml]='p?.summaryHtml'></div>
+    <div [innerHtml]='p?.summaryHtml'></div>
   </div>
 </div> 
