@@ -1,0 +1,29 @@
+
+.section {
+    .sectitle {
+        text-align:right;
+        font-size:12pt;
+
+        div { font-weight: 200;  padding: 1em 0px; }
+
+        ul li {
+            font-size:11pt;
+            margin-bottom:1em;
+            &.active {
+                font-weight:bold;
+            }
+        }
+
+    }
+    .square {
+        margin-top:25px;
+        width:80px;
+        height:80px;
+        // margin-left:120px;
+        // height:180px;
+        border:1px solid #eee;
+    }
+    .secbody {
+        padding-top:20px;
+    }
+}
