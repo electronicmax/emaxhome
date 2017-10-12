@@ -10,6 +10,7 @@ import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { LoaderService } from 'app/loader.service';
 import { HttpModule } from '@angular/http';
 import { ProjectComponent } from './project/project.component';
+import { PublicationComponent } from './publication/publication.component';
 
 
 const appRoutes: Routes = [
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
     ListComponent,
     ListPageComponent,
     ErrorComponent,
-    ProjectComponent
+    ProjectComponent,
+    PublicationComponent
   ],
   imports: [
     BrowserModule,

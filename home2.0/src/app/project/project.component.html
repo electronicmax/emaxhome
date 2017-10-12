@@ -19,6 +19,9 @@
 
     <div *ngIf="p?.pubs && p?.pubs.length > 0">
       <h4>publications</h4>
+      <ul>
+        <li *ngFor="let pub of p?.pubsbibtex"><app-publication [p]='pub'></app-publication></li>
+      </ul>
     </div>
 
     <div *ngIf="p?.vids && p?.vids.length > 0">
