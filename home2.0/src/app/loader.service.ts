@@ -43,6 +43,7 @@ export class Project {
   title: string;
   theme: string;
   pubs: string[];
+  pubsbibtex: BibEntry[];
   images: string[];
   headimg: string;
   color: string;
@@ -64,6 +65,7 @@ export class LoaderService {
 
   constructor(private httpM: HttpModule, private http: Http, private sanitiser: DomSanitizer) { }
 
+  @memoize((x) => x)
   getPubs(): Promise<BibEntry[]> {
     return this.http.get('assets/bibtex.json').toPromise().then(response => {
       return response.json().map(this._inPub);
@@ -71,21 +73,35 @@ export class LoaderService {
   }
 
   _inPub(ii): BibEntry {
-    return _.mapKeys(ii, (k) => {
+    return _.mapKeys(ii, (v, k) => {
       return _.map(k.split('-'), (kword, i) => i > 0 ? kword.toUpperCase() : kword).join('');
     }) as BibEntry;
   }
 
   getProjects(): Promise<Project[]> {
-    return this.http.get('assets/proj.json').toPromise().then(response => {
-      return response.json().projects as Project[];
-    }).then((ps) => {
-      ps.map((p) => {
-        p.color = d3.interpolateRainbow(1.0 * ps.indexOf(p)/ps.length);
-        p.summaryHtml = this.sanitiser.bypassSecurityTrustHtml(p.summary);
-        (window as any).d3 = d3;
+    return this.getPubs().then((pubs) => {
+
+      const by_bibid = pubs.reduce((obj, p) => {
+        obj[p.id] = p;
+        return obj;
+      }, {});
+
+      return this.http.get('assets/proj.json').toPromise().then(response => {
+        return response.json().projects as Project[];
+      }).then((ps) => {
+        ps.map((p) => {
+          p.color = d3.interpolateRainbow(1.0 * ps.indexOf(p)/ps.length);
+          if (p.summary) { 
+            p.summary = ['<p>', p.summary.replace(/\n/g, '</p><p>'), '</p>'].join('');
+            p.summaryHtml = this.sanitiser.bypassSecurityTrustHtml(p.summary);
+          }
+          if (p.pubs) { 
+            p.pubsbibtex = p.pubs.map((pubid) => by_bibid[pubid] || undefined).filter((x) => x);
+          }
+          (window as any).d3 = d3;
+        });
+        return ps;
       });
-      return ps;
     });
   }
 

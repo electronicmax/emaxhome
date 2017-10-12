@@ -1,16 +1,28 @@
 <div class="section first">
   <div class="sectitle">
-
-    <a routerLink='/home'><div>home</div></a>
-
-    <div> projects</div>
     <ul>
-      <a *ngFor="let pr of projects" [routerLink]='["/projects/", pr.id]'><li class="project" [style.color]="pr.color" [style.borderColor]="pr.color" >{{ pr.name }}</li></a>      
+      <li><a routerLink='/home'>home</a></li>
+      <li> <div>projects</div>
+        <ul>
+          <a *ngFor="let pr of projects" [routerLink]='["/projects/", pr.id]' routerActive='active'><li class="project" [style.color]="pr.color" [style.borderColor]="pr.color" >{{ pr.name }}</li></a>      
+        </ul>
+      </li>
+      <li> <a routerLink="/pubs" routerActive='active'>publications</a></li>
     </ul>
   </div>
   <div class="secbody">
     <div class="square" [style.backgroundColor]='p?.color'></div>      
-    <h3>{{p?.name}}</h3>
-    <div [innerHtml]='p?.summaryHtml'></div>
+
+    <h3 class="title" [style.color]='p?.color'>{{p?.name}}</h3>
+
+    <div class="description" [innerHtml]='p?.summaryHtml'></div>
+
+    <div *ngIf="p?.pubs && p?.pubs.length > 0">
+      <h4>publications</h4>
+    </div>
+
+    <div *ngIf="p?.vids && p?.vids.length > 0">
+      <h4>videos</h4>
+    </div>      
   </div>
 </div> 

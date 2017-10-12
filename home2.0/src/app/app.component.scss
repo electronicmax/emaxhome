@@ -72,11 +72,12 @@ $left_thresh: 180px;
         border-top: 1px solid #eee;
         padding-top:0px;
     }
-    margin: 0px 0px 0px $padleft;
+    margin: 0px 0px 0px 0px;
+    
     background-color: white;
     position: relative;
-    width: 100%;
-    padding: 20px 0px;
+    // width: 100%;
+    padding: 20px 0px 20px $padleft;
     position: relative;
     
     .sectitle {
@@ -100,7 +101,7 @@ $left_thresh: 180px;
         font-size: 11pt;
         // padding: 0px 200px 0px $left_thresh;
         padding: 0px 200px 0px 20px;
-        max-width: 640px;
+        max-width: 540px;
         line-height: 1.3em;
         p {
             margin: 0px 0px;
