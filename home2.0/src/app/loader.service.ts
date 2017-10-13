@@ -5,6 +5,7 @@ import { mapValues, keys, mapKeys, values, trim, uniq, toPairs } from 'lodash';
 import { DomSanitizer, SafeResourceUrl, SafeHtml } from '@angular/platform-browser';
 import * as _ from 'lodash';
 import * as d3 from 'd3';
+import * as bibtexParser from 'bibtex-parser';
 
 // can be customised to be sensitive to target.
 // pass in function that will generate keys for the cache:
@@ -28,14 +29,26 @@ export class Author {
   family: string;
   given: string;
 }
+
+enum EntryType {
+  article, // = 'ARTICLE',
+  inproc, // .. = 'INPROCEEDINGS',
+  misc, // = 'MISC',
+  techreport, // = 'TECHREPORT',
+  phdthesis//  = 'PHDTHESIS'
+}
+
 export class BibEntry {
-  id: string;
   author: Author[];
+  entrytype: EntryType;
   title: string;
+  booktitle?: string;
+  year?: string;
+  organization?: string;
   publisher?: string;
-  type: string;
-  containerTitle?: string;
-  issued?: ({ [key: string]: number[][] });
+  // type: string;
+  // containerTitle?: string;
+  // issued?: ({ [key: string]: number[][] });
 }
 
 export class Project {
@@ -63,7 +76,9 @@ export class NewsItem {
 @Injectable()
 export class LoaderService {
 
-  constructor(private httpM: HttpModule, private http: Http, private sanitiser: DomSanitizer) { }
+  constructor(private httpM: HttpModule, private http: Http, private sanitiser: DomSanitizer) {
+    this.getBibTex();
+  }
 
   @memoize((x) => x)
   getPubs(): Promise<BibEntry[]> {
@@ -72,6 +87,44 @@ export class LoaderService {
     });
   }
 
+  @memoize((x) => x)
+  getBibTex(): Promise<{[x: string]: BibEntry}> {
+    return this.http.get('assets/bibtex.bib').toPromise().then(response => {
+      let parsed = bibtexParser(response.text()) as {[key: string]: BibEntry};
+      _.mapValues(parsed, (p) => {
+        if (p.AUTHOR) {
+          // split authors
+          p.AUTHOR = p.AUTHOR.split(' and ').map((name) => ({ family: name.split(',')[0], given: name.split(', ')[1] }));
+        }
+      });
+      parsed = _.mapKeys(parsed, (v, k) => {
+        return k.toLowerCase();
+      });
+      parsed = _.mapValues(parsed, (v, k) => {
+        v = _.mapKeys(v, (vv, kk) => kk.toLowerCase());
+        return _.mapValues(v, (vv, kk) => {
+          if (typeof vv === 'string') {
+              // gets rid of accents in values
+              return vv.replace(/\{\\\'(.)\}/g, '$1').replace(/\\(.)/g, '$1');
+          }
+          // now let's get rid of accents in authors, like paul andré <3
+          if (kk === 'author') {
+              return vv.map((author) => _.mapValues(author, (vva, kka) => vva && vva.replace(/\{\\\'(.)\}/g || '', '$1')));
+          }
+          if (kk === 'title') {
+            if ('.?!'.indexOf(kk.slice(-1)[0]) < 0) {
+              return vv + '.';
+            }
+          }
+          return vv;
+        });
+      });
+      console.log(parsed);
+      return parsed;
+    });
+  }
+
+
   _inPub(ii): BibEntry {
     return _.mapKeys(ii, (v, k) => {
       return _.map(k.split('-'), (kword, i) => i > 0 ? kword.toUpperCase() : kword).join('');
@@ -79,13 +132,7 @@ export class LoaderService {
   }
 
   getProjects(): Promise<Project[]> {
-    return this.getPubs().then((pubs) => {
-
-      const by_bibid = pubs.reduce((obj, p) => {
-        obj[p.id] = p;
-        return obj;
-      }, {});
-
+    return this.getBibTex().then((by_bibid) => {
       return this.http.get('assets/proj.json').toPromise().then(response => {
         return response.json().projects as Project[];
       }).then((ps) => {
@@ -95,7 +142,7 @@ export class LoaderService {
             p.summary = ['<p>', p.summary.replace(/\n/g, '</p><p>'), '</p>'].join('');
             p.summaryHtml = this.sanitiser.bypassSecurityTrustHtml(p.summary);
           }
-          if (p.pubs) { 
+          if (p.pubs) {
             p.pubsbibtex = p.pubs.map((pubid) => by_bibid[pubid] || undefined).filter((x) => x);
           }
           (window as any).d3 = d3;

@@ -1,2 +1,2 @@
 <a class='pub' *ngIf="p.url" href="p.url?">{{ names }}. {{ p.title }}</a>
-<span *ngIf="!p.url" class='pub'>{{ names }}. <i>{{ p.title }}</i> {{ p?.containerTITLE  }}</span>
+<div *ngIf="!p.url" class='pub'>{{ names }}. <span class="title">{{ p.title }}</span> <span class="booktitle" *ngIf="p?.booktitle">{{ p?.booktitle }}.</span><span class="organization" *ngIf="p?.organization"> {{ p?.organization }} </span><span class="year" *ngIf="p?.year"> ({{ p?.year }})</span></div>
