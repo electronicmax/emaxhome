@@ -73,11 +73,16 @@ export class NewsItem {
 }
 
 
+export class CrossRefItem {
+}
+
+
 @Injectable()
 export class LoaderService {
 
   constructor(private httpM: HttpModule, private http: Http, private sanitiser: DomSanitizer) {
-    this.getBibTex();
+    // this.getBibTex();
+    this.getCrossRef().then((x) => console.log('crossref ', x));
   }
 
   @memoize((x) => x)
@@ -87,6 +92,27 @@ export class LoaderService {
     });
   }
 
+  // CrossRef Loader
+  @memoize((x) => x)
+  getCrossRef(): Promise<{[x: string]: CrossRefItem}> {
+    return this.http.get('assets/crossref.json').toPromise().then(response => {
+      const rj = response.json();
+      return rj && rj.message && rj.message.items;
+    }).then((items) => {
+      console.log('items', items);
+      const mine = items.filter((item) =>
+        item.author.filter((a) => a && a.given && a.given.toLowerCase().trim() === 'max' && a.family && a.family.trim().toLowerCase().match(/van[\W]*kleek/)).length > 0);
+      console.log('mine ', mine.length, mine.map((x) => x.title[0]));
+      return mine.reduce((obj, a) =>  {
+          const key = a.DOI;
+          if (!key) { console.log('no DOI for ', a); }
+          obj[key] = a;
+          return obj;
+        }, {});
+    })
+  }
+
+  // BibTex loader
   @memoize((x) => x)
   getBibTex(): Promise<{[x: string]: BibEntry}> {
     return this.http.get('assets/bibtex.bib').toPromise().then(response => {
