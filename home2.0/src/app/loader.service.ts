@@ -73,8 +73,36 @@ export class NewsItem {
 }
 
 
-export class CrossRefItem {
+export class CrossRefAuthor {
+  given: string;
+  family: string;
+  affiliation: string;
 }
+export class CrossRefDate {
+  timestamp: number;
+  datetime: string;
+  dateparts: number[];
+}
+export class CrossRefEvent {
+  acronym: string;
+  location: string;
+  name: string;
+  start: CrossRefDate[];
+}
+export class CrossRefItem {
+  author: CrossRefAuthor[];
+  DOI: string;
+  type: string;
+  title: string[];
+  created: CrossRefDate;
+  containerTitle: string[];
+  ISBN: string[];
+  url: string;
+  linkUrl: string;
+  event: CrossRefEvent;
+  publishedprint: CrossRefDate[];
+}
+
 
 
 @Injectable()
@@ -100,9 +128,22 @@ export class LoaderService {
       return rj && rj.message && rj.message.items;
     }).then((items) => {
       console.log('items', items);
-      const mine = items.filter((item) =>
+      let mine = items.filter((item) =>
         item.author.filter((a) => a && a.given && a.given.toLowerCase().trim() === 'max' && a.family && a.family.trim().toLowerCase().match(/van[\W]*kleek/)).length > 0);
-      console.log('mine ', mine.length, mine.map((x) => x.title[0]));
+      // console.log('mine ', mine.length, mine.map((x) => x.title[0]));
+
+      mine = mine.map((item) => {
+        const top = this.undashifyKeys(item);
+        let l1 = _.mapValues(top, this.undashifyKeys);
+
+        l1 = this.unzeroObj(l1);
+
+        if (l1.link && l1.link.URL) {
+          l1.linkURL = l1.link.URL;
+        }
+        return l1;
+      }); // xform  keys like 'foo-bar' -> 'foobar'
+
       return mine.reduce((obj, a) =>  {
           const key = a.DOI;
           if (!key) { console.log('no DOI for ', a); }
@@ -110,6 +151,10 @@ export class LoaderService {
           return obj;
         }, {});
     })
+  }
+
+  unzeroObj(o: any) {
+    return _.mapValues(o, (v, key) => v && typeof v === 'object' && v[0] ? v[0] : v);
   }
 
   // BibTex loader
@@ -149,6 +194,14 @@ export class LoaderService {
       return parsed;
     });
   }
+
+  undashifyKeys(ii) {
+    if (typeof ii !== 'object') { return ii; }
+    return _.mapKeys(ii, (v, k) => {
+      return k.split('-').map((x) => x.trim()).join('');
+    });
+  }
+
 
 
   _inPub(ii): BibEntry {
