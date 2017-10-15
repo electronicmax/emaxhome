@@ -55,8 +55,8 @@ export class Project {
   id: string;
   title: string;
   theme: string;
-  pubs: string[];
-  pubsbibtex: BibEntry[];
+  pubids: string[];
+  pubs: BibEntry[] | CrossRefItem[];
   images: string[];
   headimg: string;
   color: string;
@@ -110,7 +110,12 @@ export class LoaderService {
 
   constructor(private httpM: HttpModule, private http: Http, private sanitiser: DomSanitizer) {
     // this.getBibTex();
-    this.getCrossRef().then((x) => console.log('crossref ', x));
+    this.getCrossRef().then((library) => { 
+      console.log('crossref ', library);
+      _.map(library, (pub, doi) => {
+          console.log(doi, ' => ', pub.title, pub.publishedprint && pub.publishedprint[0] && pub.publishedprint[0].datetime);
+      });
+    });
   }
 
   @memoize((x) => x)
@@ -190,8 +195,9 @@ export class LoaderService {
           return vv;
         });
       });
-      console.log(parsed);
-      return parsed;
+      // console.log(parsed);
+
+      return _.mapValues(parsed, (pp, key) => new BibEntry(pp));
     });
   }
 
@@ -221,8 +227,8 @@ export class LoaderService {
             p.summary = ['<p>', p.summary.replace(/\n/g, '</p><p>'), '</p>'].join('');
             p.summaryHtml = this.sanitiser.bypassSecurityTrustHtml(p.summary);
           }
-          if (p.pubs) {
-            p.pubsbibtex = p.pubs.map((pubid) => by_bibid[pubid] || undefined).filter((x) => x);
+          if (p.pubids) {
+            p.pubs = p.pubids.map((pubid) => by_bibid[pubid] || undefined).filter((x) => x);
           }
           (window as any).d3 = d3;
         });
