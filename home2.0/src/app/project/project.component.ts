@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Project, LoaderService } from "app/loader.service";
-import { Subscription } from "rxjs/Subscription";
+import { Project, LoaderService } from 'app/loader.service';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-project',

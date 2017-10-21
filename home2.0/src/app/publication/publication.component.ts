@@ -19,9 +19,8 @@ export class PublicationComponent implements OnInit, OnChanges {
   isCrossRef(x) {  console.log('foo2! ', x, x instanceof CrossRefItem);  return x instanceof CrossRefItem;  }
 
   ngOnChanges() {
-    console.log('onchanges ', this.p);
-    
-    if (this.p && (this.p instanceof BibEntry || this.p instanceof CrossRefItem) && this.p.author) {
+    console.log('onchanges ', this.p);    
+    if (this.p && (this.p instanceof BibEntry || this.p instanceof CrossRefItem) && this.p.author && this.p.author[0]) {
       if (this.p.author.length > 1) {
         this.names = this.p.author.slice(0, -1).map((x) => [x.given, x.family].join(' ')).join(', ');
         this.names += ', and ';

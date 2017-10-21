@@ -39,6 +39,7 @@ enum EntryType {
 }
 
 export class BibEntry {
+
   author: Author[];
   entrytype: EntryType;
   title: string;
@@ -46,9 +47,38 @@ export class BibEntry {
   year?: string;
   organization?: string;
   publisher?: string;
-  // type: string;
-  // containerTitle?: string;
-  // issued?: ({ [key: string]: number[][] });
+  type: string;
+  containerTitle?: string;
+  issued?: ({ [key: string]: number[][] });
+
+  constructor(raw_src_json: any) {
+    if (raw_src_json)  {
+      raw_src_json = _.clone(raw_src_json);
+      if (raw_src_json.AUTHOR) {
+        // split authors
+        raw_src_json.AUTHOR = raw_src_json.AUTHOR.split(' and ')
+          .map((name) => ({ family: name.split(',')[0], given: name.split(', ')[1] }));
+      }
+      raw_src_json = _.mapKeys(raw_src_json, (vv, kk) => kk.toLowerCase().split('-').map((x) => x.trim()).join(''));
+      raw_src_json = _.mapValues(raw_src_json, (vv, kk) => {
+        if (typeof vv === 'string') {
+            // gets rid of accents in values
+            return vv.replace(/\{\\\'(.)\}/g, '$1').replace(/\\(.)/g, '$1');
+        }
+        // now let's get rid of accents in authors, like paul andré <3
+        if (kk === 'author') {
+            return vv.map((author) => _.mapValues(author, (vva, kka) => vva && vva.replace(/\{\\\'(.)\}/g || '', '$1')));
+        }
+        if (kk === 'title') {
+          if ('.?!'.indexOf(kk.slice(-1)[0]) < 0) {
+            return vv + '.';
+          }
+        }
+        return vv;
+      });
+      _.extend((this as any), raw_src_json);
+    }
+  }
 }
 
 export class Project {
@@ -56,7 +86,7 @@ export class Project {
   title: string;
   theme: string;
   pubids: string[];
-  pubs: BibEntry[] | CrossRefItem[];
+  pubs: (BibEntry | CrossRefItem)[];
   images: string[];
   headimg: string;
   color: string;
@@ -90,39 +120,64 @@ export class CrossRefEvent {
   start: CrossRefDate[];
 }
 export class CrossRefItem {
+
   author: CrossRefAuthor[];
   DOI: string;
   type: string;
   title: string[];
   created: CrossRefDate;
-  containerTitle: string[];
+  containertitle: string[];
   ISBN: string[];
   url: string;
   linkUrl: string;
   event: CrossRefEvent;
   publishedprint: CrossRefDate[];
+
+  constructor(loader: LoaderService, raw_src: any) {
+    if (raw_src) {
+      // src is incoming raw json
+      const top = loader.undashifyKeys(raw_src);
+      let l1 = _.mapValues(top, loader.undashifyKeys);
+      l1 = loader.unzeroObj(l1);
+      if (l1.link && l1.link.URL) {
+        this.linkUrl = l1.link.URL;
+      }
+      _.extend((this as any), l1);
+    }
+  }
 }
-
-
-
 @Injectable()
 export class LoaderService {
 
   constructor(private httpM: HttpModule, private http: Http, private sanitiser: DomSanitizer) {
-    // this.getBibTex();
-    this.getCrossRef().then((library) => { 
-      console.log('crossref ', library);
+
+    // debug only ================================>
+    this.getBibTex().then((library) => console.log('bibtex debug ', library));
+    this.getCrossRef().then((library) => {
+      console.log('crossref debug ', library);
       _.map(library, (pub, doi) => {
           console.log(doi, ' => ', pub.title, pub.publishedprint && pub.publishedprint[0] && pub.publishedprint[0].datetime);
       });
     });
+    // 
   }
 
+  // @memoize((x) => x)
+  // getPubs(): Promise<BibEntry[]> {
+  //   return this.http.get('assets/bibtex.json').toPromise().then(response => {
+  //     return response.json().map(this._inPub);
+  //   });
+  // }
+
+  // mixin'
   @memoize((x) => x)
-  getPubs(): Promise<BibEntry[]> {
-    return this.http.get('assets/bibtex.json').toPromise().then(response => {
-      return response.json().map(this._inPub);
-    });
+  getPubs(): Promise<{[x: string]: BibEntry|CrossRefItem}> {
+    return Promise.all(
+      [
+        this.getBibTex(),
+        this.getCrossRef()
+      ]
+    ).then(libraries => _.extend(libraries[0], libraries[1]));
   }
 
   // CrossRef Loader
@@ -134,24 +189,14 @@ export class LoaderService {
     }).then((items) => {
       console.log('items', items);
       let mine = items.filter((item) =>
-        item.author.filter((a) => a && a.given && a.given.toLowerCase().trim() === 'max' && a.family && a.family.trim().toLowerCase().match(/van[\W]*kleek/)).length > 0);
-      // console.log('mine ', mine.length, mine.map((x) => x.title[0]));
+        item.author.filter((a) => a && a.given && a.given.toLowerCase().trim() === 'max' &&
+          a.family && a.family.trim().toLowerCase().match(/van[\W]*kleek/)).length > 0);
 
-      mine = mine.map((item) => {
-        const top = this.undashifyKeys(item);
-        let l1 = _.mapValues(top, this.undashifyKeys);
-
-        l1 = this.unzeroObj(l1);
-
-        if (l1.link && l1.link.URL) {
-          l1.linkURL = l1.link.URL;
-        }
-        return l1;
-      }); // xform  keys like 'foo-bar' -> 'foobar'
+      mine = mine.map((item) => new CrossRefItem(this, item));
 
       return mine.reduce((obj, a) =>  {
           const key = a.DOI;
-          if (!key) { console.log('no DOI for ', a); }
+          if (!key) { console.error('no DOI for ', a, ' -- skipping'); return obj; }
           obj[key] = a;
           return obj;
         }, {});
@@ -159,57 +204,28 @@ export class LoaderService {
   }
 
   unzeroObj(o: any) {
-    return _.mapValues(o, (v, key) => v && typeof v === 'object' && v[0] ? v[0] : v);
+    return _.mapValues(o, (v, key) => {
+      if (key === 'author') { return v; };
+      return v && typeof v === 'object' && (!_.isArray(v) || v.length == 1) && v[0] ? v[0] : v;
+    });
   }
 
   // BibTex loader
   @memoize((x) => x)
   getBibTex(): Promise<{[x: string]: BibEntry}> {
     return this.http.get('assets/bibtex.bib').toPromise().then(response => {
-      let parsed = bibtexParser(response.text()) as {[key: string]: BibEntry};
-      _.mapValues(parsed, (p) => {
-        if (p.AUTHOR) {
-          // split authors
-          p.AUTHOR = p.AUTHOR.split(' and ').map((name) => ({ family: name.split(',')[0], given: name.split(', ')[1] }));
-        }
-      });
-      parsed = _.mapKeys(parsed, (v, k) => {
-        return k.toLowerCase();
-      });
-      parsed = _.mapValues(parsed, (v, k) => {
-        v = _.mapKeys(v, (vv, kk) => kk.toLowerCase());
-        return _.mapValues(v, (vv, kk) => {
-          if (typeof vv === 'string') {
-              // gets rid of accents in values
-              return vv.replace(/\{\\\'(.)\}/g, '$1').replace(/\\(.)/g, '$1');
-          }
-          // now let's get rid of accents in authors, like paul andré <3
-          if (kk === 'author') {
-              return vv.map((author) => _.mapValues(author, (vva, kka) => vva && vva.replace(/\{\\\'(.)\}/g || '', '$1')));
-          }
-          if (kk === 'title') {
-            if ('.?!'.indexOf(kk.slice(-1)[0]) < 0) {
-              return vv + '.';
-            }
-          }
-          return vv;
-        });
-      });
-      // console.log(parsed);
-
-      return _.mapValues(parsed, (pp, key) => new BibEntry(pp));
+      let parsed = bibtexParser(response.text()) as {[key: string]: any};
+      parsed = _.mapKeys(parsed, (v, k) => k.toLowerCase());
+      return _.mapValues(parsed, (v, k) => new BibEntry(v));
     });
   }
 
   undashifyKeys(ii) {
-    if (typeof ii !== 'object') { return ii; }
+    if (_.isArray(ii) || typeof ii !== 'object') { return ii; }
     return _.mapKeys(ii, (v, k) => {
       return k.split('-').map((x) => x.trim()).join('');
     });
   }
-
-
-
   _inPub(ii): BibEntry {
     return _.mapKeys(ii, (v, k) => {
       return _.map(k.split('-'), (kword, i) => i > 0 ? kword.toUpperCase() : kword).join('');
@@ -217,7 +233,7 @@ export class LoaderService {
   }
 
   getProjects(): Promise<Project[]> {
-    return this.getBibTex().then((by_bibid) => {
+    return this.getPubs().then((by_bibid) => {
       return this.http.get('assets/proj.json').toPromise().then(response => {
         return response.json().projects as Project[];
       }).then((ps) => {

@@ -14,6 +14,8 @@
             "name": "App X-Ray",
             "summary": "Although people rely on smartphone apps many times every day, people have no idea what these apps are actually doing, such as where the app is sending their data, or using their bandwidth. \n The App X-Ray project consists of a series of efforts around increasing the transparency of apps to end-users. It includes the App Observatory, a new research tool that automatically downloads, disassembles, analyses, and aggregates analyses of apps from app marketplaces around the world, providing convenient APIs for popular data science frameworks.",
             "pubids": [
+                "10.1145/3025453.3025556",
+                "10.1145/3027063.3053255",
                 "van2017better",
                 "binns2017my"
             ]            
