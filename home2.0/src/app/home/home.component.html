@@ -6,10 +6,10 @@
           Personal computing has already changed the most basic activites of daily life&mdash;and is now at the cusp of changing the very ways people learn, think, and live. As digital technology becomes increasingly integrated and pervasive, design choices made in the process of developing such technologies start to have significant and visible effects on people's lives.
       </p>
 
-      <p>
+      <!-- <p>
           Good design does not stop at the interface, nor the design of a "front-end" for a system. Instead, it involves considering and addressing fundamental challenges of how to support the needs of all those that might interact with a system, in ways that best helps their particular situations. Good design also involves anticipating future needs, constraints, and uses, to ensure that lasting effects of design choices made in the short-term will accommodate those, as well as potentially unanticipated
           future needs as well.
-      </p>
+      </p> -->
 
       <p>
           In my research, I study how the design affordances of the tools people rely on daily meet or fail to meet their needs, and the sometimes profound effects that seemingly small features or flaws have, when amplified over time. Small changes of important
@@ -26,9 +26,8 @@
 <div class="sectitle">research</div>
 <div class="secbody">
     <p>
-        My research primarily falls within <a href="https://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction" target="_blank">
-        human-computer interaction</a>, in particular the <a href="http://chi2018.acm.org/" target="_blank">CHI</a>, research community, 
-        organised by <a href="http://www.acm.org" target="_blank">ACM</a>'s  <a href="https://sigchi.org/" target="_blank">Special Interest Group on Computer-Human Interaction, SIGCHI</a>. 
+        My research falls under <a href="https://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction" target="_blank">
+        human-computer interaction</a>, in particular, I volunteer with the <a href="http://www.acm.org" target="_blank">ACM</a>'s  <a href="https://sigchi.org/" target="_blank">Special Interest Group on Computer-Human Interaction, SIGCHI</a>. 
         I've served as committee and PC member of many SIGCHI conferences, including CHI, CSCW, UIST, UBICOMP, IUI among others.
         </p>
         
@@ -83,23 +82,10 @@
 <div class="section" id="#publications">
 <div class="sectitle">publications</div>
 <div class="secbody">
-    <h4>2017</h4>
-    <ul>
-        <li> ultricies mi eget mauris pharetra et ultrices neque ornare. In </li>
-        <li> ultricies mi eget mauris pharetra et ultrices neque ornare. In </li>
-        <li> ultricies mi eget mauris pharetra et ultrices neque ornare. In </li>
-        <li> ultricies mi eget mauris pharetra et ultrices neque ornare. In </li>
-    </ul>
-    <h4>2016</h4>
-    <ul>
-        <li> ultricies mi eget mauris pharetra et ultrices neque ornare. In </li>
-        <li> ultricies mi eget mauris pharetra et ultrices neque ornare. In </li>
-        <li> ultricies mi eget mauris pharetra et ultrices neque ornare. In </li>
-        <li> ultricies mi eget mauris pharetra et ultrices neque ornare. In </li>
-        <li> ultricies mi eget mauris pharetra et ultrices neque ornare. In </li>
-        <li> ultricies mi eget mauris pharetra et ultrices neque ornare. In </li>
-        <li> ultricies mi eget mauris pharetra et ultrices neque ornare. In </li>
-        <li> ultricies mi eget mauris pharetra et ultrices neque ornare. In </li>
-    </ul>
-</div>
+    <div *ngFor="let py of pyreverse?.slice(0,2) || []">
+        <h4>{{py.year}}</h4>
+        <ul>j
+            <li *ngFor="let pub of py.pubs"><app-publication [p]='pub'></app-publication></li>
+        </ul>
+    </div>
 </div>

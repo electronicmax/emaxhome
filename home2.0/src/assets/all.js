@@ -155,7 +155,8 @@
 		   "conference":"CHI 2012",
 		   "year":2012,
 		   "categories":["human computation"],
-		   "embed_video_url":"http://www.youtube.com/embed/NR2w_ng6-VA"
+		   "embed_video_url":"http://www.youtube.com/embed/NR2w_ng6-VA",
+		   "DOI":"10.1145/2207676.2208530"
 	   },
 	   {
 		   "id": "finderskeepers",
@@ -169,14 +170,15 @@
 	   },	   
 	   {
 		   "id": "carpedata",
-		   "title":"Carpe Data: Supporting Serendipitous Data Integration in Personal Information Management",
+		   "title":"Carpé Data: Supporting Serendipitous Data Integration in Personal Information Management",
 		   "authors":["Max Van Kleek", "Daniel A. Smith", "Heather Packer", "James Skinner", "Nigel R. Shadbolt"],
 		   "type":["conference paper"],
 		   "url":"http://people.csail.mit.edu/emax/papers/chi2013-carpe-data.pdf",
 		   "conference":"CHI 2013",		   
 		   "year":2013,
 		   "categories":["personal info management", "sensemaking"],
-		   "embed_video_url":"http://www.youtube.com/embed/YwG3jNuDNjg"
+		   "embed_video_url":"http://www.youtube.com/embed/YwG3jNuDNjg",
+		   "DOI":"10.1145/2470654.2481324"
 	   },
 	   {
 		   "id":"infoscraps",
@@ -188,6 +190,7 @@
 		   "conference":"TOIS",
 		   "year":2008,
 		   "doi":"http://dl.acm.org/citation.cfm?doid=1402256.1402263",
+		   "DOI":"http://dx.doi.org/10.1145/1402256.1402263",
 		   "url":"http://people.csail.mit.edu/emax/papers/TOIS-infoscraps-cameraready.pdf",
 		   "categories":["personal information management", "list-it", "field studies"]		   
 	   },
@@ -201,6 +204,12 @@
 		   "url":"http://users.ecs.soton.ac.uk/~mvk/webbox-pim.pdf",
 		   "categories":["decentralized systems", "privacy", "personal data stores"]		   
 	   },	   
+	   { 
+		   "id":"btd2017",
+		   "preview_video_embed":"https://www.youtube.com/embed/PYVDQZDZbV",
+		   "embed_video_url":"https://www.youtube.com/embed/PYVDQZDZbV",
+		   "DOI":"10.1145/3025453.3025556"
+	   },
 	   {
 		   "id":"eyebrowse",
 		   "title":"Eyebrowse: real-time web activity sharing and visualization",
@@ -209,7 +218,8 @@
 		   "conference":"CHI 2010",
 		   "year":2010,
 		   "url":"http://people.csail.mit.edu/emax/papers/eyebrowse-wip299-vankleek.pdf",
-		   "categories":["lifelogging", "privacy"]		   		   
+		   "categories":["lifelogging", "privacy"],
+		   "DOI":"10.1145/1753846.1754032"
 	   },
 	   {
 		   "id":"atomate",
@@ -220,7 +230,8 @@
 		   "year":2010,
 		   "url":"http://people.csail.mit.edu/emax/papers/atomate-www2010-camera.pdf",
 		   "doi":"http://dl.acm.org/citation.cfm?doid=1772690.1772787",
-		   "categories":["lifelogging", "personal info management"]
+		   "categories":["lifelogging", "personal info management"],
+		   "DOI":"10.1145/1772690.1772787"
 	   },	   
 	   {
 		   "id":"listit-chi2009",
@@ -231,6 +242,7 @@
 		   "year":2009,
 		   "url":"http://people.csail.mit.edu/emax/papers/listit-chi2009.pdf",
 		   "dpi":"http://dl.acm.org/citation.cfm?doid=1518701.1518924",
+		   "embed_video_url":"https://www.youtube.com/embed/VbR5uP9aPX8"
 		   "categories":["personal information management"]
 	   },
 	   {
@@ -259,6 +271,7 @@
 		   "type":["conference paper"],
 		   "year":2008,
 		   "conference":"UIST 2008",
+		   "DOI":"10.1145/1449715.1449737",
 		   "url":"http://people.csail.mit.edu/emax/papers/uist08-inky/uist08-inky.pdf",
 		   "categories":["interaction design"]		   
 	   },
@@ -270,7 +283,8 @@
 		   "year":2007,
 		   "conference":"UIST 2007",
 		   "url":"http://people.csail.mit.edu/emax/papers/guiPhooey-UIST-eprints.pdf",
-		   "categories":["personal information management", "interaction design"]
+		   "categories":["personal information management", "interaction design"],
+		   "DOI":"10.1145/1294211.1294247"
 	   },
 	   {
 		   "id":"opf",
@@ -279,6 +293,7 @@
 		   "type":["conference paper"],
 		   "year":2006,
 		   "conference":"ISUC 2006",
+		   "DOI":"10.1007/11890348_7",
 		   "categories":["ubiquitous computing", "decentralized systems"]
 	   },
 	   {
@@ -286,6 +301,7 @@
 		   "title":"Virtual Mouse Vision-Based Interface",
 		   "authors":["Paul Robertson", "Robert Laddaga", "Max Van Kleek"],
 		   "type":["conference paper"],
+		   "DOI":"10.1145/964442.964476",		   
 		   "year":2004,
 		   "conference":"IUI 2004",
 		   "categories":["ubiquitous computing", "interaction design"],
@@ -297,6 +313,7 @@
 		   "authors":["Alice Oh", "Harold Fox", "Max Van Kleek", "Aaron Adler", "Louis-Phillipe Morency", "Krzysztof Gajos", "Trevor Darrell"],
 		   "type":["conference paper"],
 		   "year":2002,
+		   "DOI":"10.1145/506443.506528",
 		   "conference":"CHI 2002", 
 		   "categories":["ubiquitous computing"],
 		   "url":"http://people.csail.mit.edu/emax/papers/ltt_chi2002.pdf"
@@ -309,6 +326,7 @@
 		   "year":2001,
 		   "conference":"CHI 2001",
 		   "categories":["ubiquitous computing"],
+		   "DOI":"10.1145/365024.365105",
 		   "url":"http://people.csail.mit.edu/emax/papers/connexus.pdf"
 	   },
 	   {
@@ -329,14 +347,16 @@
    		   "url":"http://hip.cat/papers/p915.pdf",
 		   "year":2014,
 		   "conference":"SOCM 2014",
-		   "categories":["personal data stores", "personal info management", "privacy", "lifelogging"]
+		   "categories":["personal data stores", "personal info management", "privacy", "lifelogging"],
+		   "DOI":"10.1145/2567948.2578840"
 		},
        {
 		   "id":"smartsocieties",
 		   "title":"The Future of Social is Personal: the Potential of the Personal Data Store",
 		   "authors":["Max Van Kleek", "Kieron O'Hara"],
 		   "type":["book chapter"],
-                   "url":"https://github.com/sociam/social-intelligence-pds/raw/master/pds.pdf",
+				   "url":"https://github.com/sociam/social-intelligence-pds/raw/master/pds.pdf",
+		   "DOI":"10.1007/978-3-319-08681-1_7",
 		   "year":2014,
 		   "conference":"Social Collective Intelligence",
                    "bookurl":"http://www.springer.com/computer/hci/book/978-3-319-08680-4",
@@ -360,6 +380,7 @@
 		   "url":"http://hip.cat/papers/chi2014-padd-wip.pdf",
 		   "year":2014,
 		   "conference":"CHI 2014",
+		   "DOI":"10.1145/2559206.2581283",
 		   "categories":["lifelogging", "sensemaking", "personal data stores"]
 		},
 		{
@@ -380,7 +401,8 @@
 		   "url":"http://hip.cat/emax/papers/socm2015___SPDSes.pdf",
 		   "year":2015,
 		   "conference":"SOCM2015",
-		   "categories":["personal data stores", "privacy"]
+		   "categories":["personal data stores", "privacy"],
+		   "DOI":"10.1145/2740908.2743975"
 		},
 		{
 		   "id":"annathesis",
@@ -391,8 +413,7 @@
 		   "year":2015,
 		   "conference":"ACM Digital Health",
 		   "categories":["lifelogging"]
-		},
-
+		}
 
    {
        
@@ -403,7 +424,8 @@
            "year":2015,
            "url":"https://github.com/sociam/lying-websci15/raw/master/lying-www2015.pdf",
            "categories":["privacy"],
-           "conference":"WebSci 2015"
+		   "conference":"WebSci 2015",
+		   "DOI":"10.1145/2740908.2745940"
    },
        {
            "id":"usewod15",
@@ -423,8 +445,9 @@
 		   "year":2015,
 		   "conference":"CHI 2015",
 		   "categories":["citizen science"],
-           "url":"http://users.ecs.soton.ac.uk/~mvk/chi2015-zooniverse.pdf",
-		   "embed_video_url":"https://www.youtube.com/embed/4H6RUMxO9tk"           
+           "url":"https://dl.acm.org/citation.cfm?id=2702420",
+		   "embed_video_url":"https://www.youtube.com/embed/4H6RUMxO9tk",
+		   "DOI":"10.1145/2702123.2702420"
 		},
 		{
 		   "id":"chi2016qs",
@@ -435,18 +458,20 @@
 		   "conference":"CHI 2016",
 		   "categories":["quantified self", "personal info management", "lifelogging"],
 		   "embed_video_url":"https://www.youtube.com/embed/fB2r7V105r8",
-		    "url":"http://dl.acm.org/citation.cfm?doid=2858036.2858445"
+			"url":"http://dl.acm.org/citation.cfm?doid=2858036.2858445",
+			"DOI":"10.1145/2858036.2858445"
 		},
 		{
 		   "id":"chi2016prosocial",
-		   "title":"Computational Pro-Social Deception",
+		   "title":"Computationally-Mediated Pro-Social Deception",
 		   "authors":["Max Van Kleek", "Dave Murray-Rust", "Amy Guy", "Kieron O'Hara", "Nigel R. Shadbolt"],
 		   "type":["conference paper"],
 		   "year":2016,
 		   "conference":"CHI 2016",
 		   "categories":["privacy", "personal data", "personal info management"],
 		   "embed_video_url":"https://www.youtube.com/embed/uNaBoYNfjzY",
-		    "url":"http://dl.acm.org/citation.cfm?doid=2858036.2858060"
+		    "url":"http://dl.acm.org/citation.cfm?doid=2858036.2858060",
+		    "DOI":"10.1145/2858036.2858060"						
 		},
 		{
 		   "id":"chi2016pim",
@@ -479,6 +504,14 @@
   	            "url":"http://hip.cat/emax/papers/chi16-pim.pdf"
 		},
 		{
+			"id":"infoscrapCHIEA07",
+			"title":"Management of Personal Information Scraps",
+			"authors":["Michael S. Bernstein", "Max Van Kleek", "mc schraefel", "David R. Karger"],
+			"year":2007
+			"conference":"CHI 2007",
+			"DOI":"10.1145/1240866.1240995"
+		},
+		{
 		   "id":"socm2016",
 		   "title":"Privacy Languages: Are we there yet to enable user controls?",
 		   "authors":["Jun Zhao", "Reuben Binns", "Max Van Kleek", "Nigel R. Shadbolt"],
@@ -486,7 +519,9 @@
 		   "year":2016,
 		   "conference":"SOCM2016",
 		   "categories":["privacy", "personal data"],
-		    "url":"http://hip.cat/emax/papers/p799.pdf"
+			"url":"http://hip.cat/emax/papers/p799.pdf",
+			"DOI":"10.1145/2872518.2890590"
+			
 		},
 		{
 		   "id":"www2015crowd",
@@ -496,7 +531,8 @@
 		   "year":2015,
 		   "conference":"WWW 2015",
 		   "categories":["crowdsourcing"],
-           "url":"http://hip.cat/papers/www2015-crowdsourcing.pdf"
+		   "url":"http://hip.cat/papers/www2015-crowdsourcing.pdf",
+		   "DOI":"10.1145/2736277.2741639"
 		}
    ],
 	"contact": [

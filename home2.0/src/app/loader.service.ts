@@ -38,21 +38,33 @@ enum EntryType {
   phdthesis//  = 'PHDTHESIS'
 }
 
-export class BibEntry {
+abstract class CommonPub {
+  abstract get id(): string;
+  abstract get title(): string;
+  abstract get year(): number | undefined;
+  abstract get pubtype(): string;
+}
 
+export class BibEntry extends CommonPub {
+
+  id: string;
   author: Author[];
   entrytype: EntryType;
   title: string;
   booktitle?: string;
-  year?: string;
+  year: number;
   organization?: string;
   publisher?: string;
   type: string;
   containerTitle?: string;
   issued?: ({ [key: string]: number[][] });
+  pubtype = 'bibentry';
+  bibentry = true;
 
-  constructor(raw_src_json: any) {
-    if (raw_src_json)  {
+  constructor(raw_src_json: any, bibkey: string) {
+    super();
+    if (raw_src_json && bibkey)  {
+      this.id = bibkey;
       raw_src_json = _.clone(raw_src_json);
       if (raw_src_json.AUTHOR) {
         // split authors
@@ -69,14 +81,38 @@ export class BibEntry {
         if (kk === 'author') {
             return vv.map((author) => _.mapValues(author, (vva, kka) => vva && vva.replace(/\{\\\'(.)\}/g || '', '$1')));
         }
-        if (kk === 'title') {
-          if ('.?!'.indexOf(kk.slice(-1)[0]) < 0) {
-            return vv + '.';
-          }
-        }
         return vv;
       });
       _.extend((this as any), raw_src_json);
+      if (raw_src_json.subtitle) {
+        this.title += ' ' + raw_src_json.subtitle;
+        // if ('.?!'.indexOf(this.title.slice(-1)[0]) < 0) {
+        //   this.title += '.';
+        // }
+      }
+    }
+  }
+
+}
+
+
+export class CuratedPub extends CommonPub {
+  id: string;
+  title: string;
+  type: string[];
+  authors: string[];
+  url: string;
+  year: number;
+  categories: string[];
+  pubtype = 'curated';
+  curated = true;
+  ref ?: CrossRefItem;
+
+  constructor(raw_src: any, xrefs: { [doi:string]: CrossRefItem }) {
+    super();
+    _.extend(this as any, raw_src);
+    if (raw_src.DOI && xrefs[raw_src.DOI]) {
+      this.ref = xrefs[raw_src.DOI];
     }
   }
 }
@@ -102,7 +138,6 @@ export class NewsItem {
   summaryHtml: SafeHtml;
 }
 
-
 export class CrossRefAuthor {
   given: string;
   family: string;
@@ -119,21 +154,25 @@ export class CrossRefEvent {
   name: string;
   start: CrossRefDate[];
 }
-export class CrossRefItem {
+export class CrossRefItem extends CommonPub {
+  pubtype = 'crossref';
+  crossref = true;
 
   author: CrossRefAuthor[];
   DOI: string;
   type: string;
-  title: string[];
+  title: string;
   created: CrossRefDate;
   containertitle: string[];
   ISBN: string[];
   url: string;
   linkUrl: string;
   event: CrossRefEvent;
-  publishedprint: CrossRefDate[];
+  publishedprint: CrossRefDate;
+  
 
   constructor(loader: LoaderService, raw_src: any) {
+    super();
     if (raw_src) {
       // src is incoming raw json
       const top = loader.undashifyKeys(raw_src);
@@ -145,6 +184,15 @@ export class CrossRefItem {
       _.extend((this as any), l1);
     }
   }
+
+  get id(): string {
+    return this.DOI;
+  }
+
+  get year(): number | undefined {
+    return this.publishedprint && this.publishedprint.dateparts && this.publishedprint.dateparts[0] || undefined;
+  }
+
 }
 @Injectable()
 export class LoaderService {
@@ -152,14 +200,18 @@ export class LoaderService {
   constructor(private httpM: HttpModule, private http: Http, private sanitiser: DomSanitizer) {
 
     // debug only ================================>
-    this.getBibTex().then((library) => console.log('bibtex debug ', library));
+    // this.getBibTex().then((library) => console.log('bibtex debug ', library));
     this.getCrossRef().then((library) => {
       console.log('crossref debug ', library);
       _.map(library, (pub, doi) => {
           console.log(doi, ' => ', pub.title, pub.publishedprint && pub.publishedprint[0] && pub.publishedprint[0].datetime);
       });
     });
-    // 
+
+    this.getMergedPubs().then(merged => {
+      (window as any)._pubs = merged;
+      console.log('merged ', merged);
+    });
   }
 
   // @memoize((x) => x)
@@ -180,9 +232,42 @@ export class LoaderService {
     ).then(libraries => _.extend(libraries[0], libraries[1]));
   }
 
+  // mixin'
+  @memoize((x) => x)
+  getMergedPubs(): Promise<{[x: string]: CuratedPub|CrossRefItem}> {
+    return this.getCurated().then(curated => {
+      return this.getCrossRef().then(xref => {
+        const c_dois = _.values(curated).map(cpub => cpub.DOI).filter(x => x),
+          missing_dois = _(xref).keys().without(c_dois).value(),
+          picked = _.pick(xref, missing_dois);
+        return _.extend(curated, picked);
+      });
+    });
+  }
+
+  // mixin'
+  @memoize((x) => x)
+  getCurated(): Promise<{[x: string]: CuratedPub} > {
+    return this.getCrossRef()
+      .then(xrefs => {
+        return this.http.get('assets/all.json').toPromise().then(response => {
+          const rj = response.json();
+          return rj && rj.publications;
+        }).then((pubs) => {
+          return pubs.map(pub => new CuratedPub(pub, xrefs));
+        }).then((cpublist) => {
+          return cpublist.reduce((o, p) => {
+            o[p.id] = p;
+            return o;
+          }, {});
+        });
+      });
+  }
+
+
   // CrossRef Loader
   @memoize((x) => x)
-  getCrossRef(): Promise<{[x: string]: CrossRefItem}> {
+  getCrossRef(): Promise <{[x: string]: CrossRefItem}> {
     return this.http.get('assets/crossref.json').toPromise().then(response => {
       const rj = response.json();
       return rj && rj.message && rj.message.items;
@@ -203,6 +288,9 @@ export class LoaderService {
     })
   }
 
+  // Curated Loader
+
+
   unzeroObj(o: any) {
     return _.mapValues(o, (v, key) => {
       if (key === 'author') { return v; };
@@ -212,11 +300,11 @@ export class LoaderService {
 
   // BibTex loader
   @memoize((x) => x)
-  getBibTex(): Promise<{[x: string]: BibEntry}> {
+  getBibTex(): Promise <{[x: string]: BibEntry} > {
     return this.http.get('assets/bibtex.bib').toPromise().then(response => {
       let parsed = bibtexParser(response.text()) as {[key: string]: any};
       parsed = _.mapKeys(parsed, (v, k) => k.toLowerCase());
-      return _.mapValues(parsed, (v, k) => new BibEntry(v));
+      return _.mapValues(parsed, (v, k) => new BibEntry(v, k));
     });
   }
 
@@ -232,14 +320,14 @@ export class LoaderService {
     }) as BibEntry;
   }
 
-  getProjects(): Promise<Project[]> {
+  getProjects(): Promise<Project[] > {
     return this.getPubs().then((by_bibid) => {
       return this.http.get('assets/proj.json').toPromise().then(response => {
         return response.json().projects as Project[];
       }).then((ps) => {
         ps.map((p) => {
-          p.color = d3.interpolateRainbow(1.0 * ps.indexOf(p)/ps.length);
-          if (p.summary) { 
+          p.color = d3.interpolateRainbow(1.0 * ps.indexOf(p) / ps.length);
+          if (p.summary) {
             p.summary = ['<p>', p.summary.replace(/\n/g, '</p><p>'), '</p>'].join('');
             p.summaryHtml = this.sanitiser.bypassSecurityTrustHtml(p.summary);
           }
@@ -253,7 +341,7 @@ export class LoaderService {
     });
   }
 
-  getNews(): Promise<NewsItem[]> {
+  getNews(): Promise < NewsItem[] > {
     return this.http.get('assets/news.json').toPromise().then(response => {
       return response.json().news as NewsItem[];
     }).then((news) => {
