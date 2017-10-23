@@ -11,6 +11,8 @@ import { LoaderService } from 'app/loader.service';
 import { HttpModule } from '@angular/http';
 import { ProjectComponent } from './project/project.component';
 import { PublicationComponent } from './publication/publication.component';
+import { PunctuatePipe } from './punctuate.pipe';
+import { TitlecasePipe } from './titlecase.pipe';
 
 
 const appRoutes: Routes = [
@@ -44,7 +46,9 @@ const appRoutes: Routes = [
     ListPageComponent,
     ErrorComponent,
     ProjectComponent,
-    PublicationComponent
+    PublicationComponent,
+    PunctuatePipe,
+    TitlecasePipe
   ],
   imports: [
     BrowserModule,
