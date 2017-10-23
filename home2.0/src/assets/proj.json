@@ -15,9 +15,7 @@
             "summary": "Although people rely on smartphone apps many times every day, people have no idea what these apps are actually doing, such as where the app is sending their data, or using their bandwidth. \n The App X-Ray project consists of a series of efforts around increasing the transparency of apps to end-users. It includes the App Observatory, a new research tool that automatically downloads, disassembles, analyses, and aggregates analyses of apps from app marketplaces around the world, providing convenient APIs for popular data science frameworks.",
             "pubids": [
                 "10.1145/3025453.3025556",
-                "10.1145/3027063.3053255",
-                "van2017better",
-                "binns2017my"
+                "10.1145/3027063.3053255"
             ]            
         },
         {
@@ -32,8 +30,14 @@
         {
             "id": "sociam",
             "name": "Social Machines",
+            "summary":"The next generation of systems will do more than connect people' they will invisibly orchestrate our social processes and help us achieve the previously impossible. Consumer electronics in their current form of smartphones, wearables, and sensors, along with other devices yet to be envisioned, will power this next generation of systems, providing the key mechanisms that people will use to leverage a new type of social computational power. We refer to these as social machines.",
             "pubids": [
-                ""
+                "10.1109/mce.2016.2516179",
+                "10.1145/2740908.2745940",
+                "10.1145/2702123.2702420",
+                "10.1145/2736277.2741639",
+                "10.1145/2808797.2809393",
+                "10.1145/2786451.2786461"
             ]
         },
         {
