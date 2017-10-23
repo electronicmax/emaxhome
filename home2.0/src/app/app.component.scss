@@ -70,7 +70,7 @@ $left_thresh: 180px;
     &.first {
         margin-top: $padtop + 88px;
         border-top: 1px solid #eee;
-        padding-top:0px;
+        padding-top:10px;
     }
     margin: 0px 0px 0px 0px;
     
@@ -105,8 +105,8 @@ $left_thresh: 180px;
         max-width: 540px;
         line-height: 1.3em;
         p {
-            margin: 0px 0px;
-            padding: 0.8em 0px;
+            margin: 0px;
+            padding: 0px 0px 10px 0px;
         }
     }
     .secbody.fullwidth {

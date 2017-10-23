@@ -178,10 +178,10 @@ export class CrossRefItem extends CommonPub {
       if (l1.link && l1.link.URL) {
         this.linkUrl = l1.link.URL;
       }
-      if (l1.subtitle) {
-        this.title += ' ' + l1.subtitle;
-      }
       _.extend((this as any), l1);
+      if (l1.subtitle) {
+        this.title += ': ' + l1.subtitle;
+      }
     }
   }
 

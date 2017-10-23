@@ -4,7 +4,8 @@ div.pub, a.pub {
 }
 .title {
     /* font-weight:bold; */
-    color:blue;
+    /* color:blue; */
+    font-weight:500;
 }
 .booktitle {
     font-style:italic;

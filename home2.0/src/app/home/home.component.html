@@ -57,7 +57,7 @@
 
 <div class="section" id="#projects">
 <div class="sectitle">projects</div>
-<div class="projects">
+<div class="secbody projects">
     <a *ngFor="let p of projects" [routerLink]='["/projects/", p.id]'><div class="project" [style.color]="p.color" [style.borderColor]="p.color" >{{ p.name }}</div></a>
 </div>
 </div>
