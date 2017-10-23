@@ -84,18 +84,9 @@ export class BibEntry extends CommonPub {
         return vv;
       });
       _.extend((this as any), raw_src_json);
-      if (raw_src_json.subtitle) {
-        this.title += ' ' + raw_src_json.subtitle;
-        // if ('.?!'.indexOf(this.title.slice(-1)[0]) < 0) {
-        //   this.title += '.';
-        // }
-      }
     }
   }
-
 }
-
-
 export class CuratedPub extends CommonPub {
   id: string;
   title: string;
@@ -113,6 +104,12 @@ export class CuratedPub extends CommonPub {
     _.extend(this as any, raw_src);
     if (raw_src.DOI && xrefs[raw_src.DOI]) {
       this.ref = xrefs[raw_src.DOI];
+      if (this.ref && this.ref.year) {
+        this.year = this.ref.year;
+      };
+      if (this.ref && this.ref.title) {
+        this.title = this.ref.title;
+      }
     }
   }
 }
@@ -169,7 +166,7 @@ export class CrossRefItem extends CommonPub {
   linkUrl: string;
   event: CrossRefEvent;
   publishedprint: CrossRefDate;
-  
+  publisher: string;
 
   constructor(loader: LoaderService, raw_src: any) {
     super();
@@ -181,6 +178,9 @@ export class CrossRefItem extends CommonPub {
       if (l1.link && l1.link.URL) {
         this.linkUrl = l1.link.URL;
       }
+      if (l1.subtitle) {
+        this.title += ' ' + l1.subtitle;
+      }
       _.extend((this as any), l1);
     }
   }
@@ -190,7 +190,7 @@ export class CrossRefItem extends CommonPub {
   }
 
   get year(): number | undefined {
-    return this.publishedprint && this.publishedprint.dateparts && this.publishedprint.dateparts[0] || undefined;
+    return this.publishedprint && this.publishedprint.dateparts && this.publishedprint.dateparts[0][0] || undefined;
   }
 
 }
@@ -204,13 +204,13 @@ export class LoaderService {
     this.getCrossRef().then((library) => {
       console.log('crossref debug ', library);
       _.map(library, (pub, doi) => {
-          console.log(doi, ' => ', pub.title, pub.publishedprint && pub.publishedprint[0] && pub.publishedprint[0].datetime);
+          // console.log(doi, ' => ', pub.title, pub.publishedprint && pub.publishedprint[0] && pub.publishedprint[0].datetime);
       });
     });
 
     this.getMergedPubs().then(merged => {
       (window as any)._pubs = merged;
-      console.log('merged ', merged);
+      console.log('merged ', merged, _.keys(merged).length);
     });
   }
 
@@ -238,8 +238,10 @@ export class LoaderService {
     return this.getCurated().then(curated => {
       return this.getCrossRef().then(xref => {
         const c_dois = _.values(curated).map(cpub => cpub.DOI).filter(x => x),
-          missing_dois = _(xref).keys().without(c_dois).value(),
+          missing_dois = _(xref).keys().difference(c_dois).value(),
           picked = _.pick(xref, missing_dois);
+        console.log('picked > ', picked);
+        console.log( 'curated dois ', c_dois.length, ' xref original ', _.values(xref).length, ' missing_dois ', missing_dois.length, ' result ', picked, _(picked).values().length);
         return _.extend(curated, picked);
       });
     });
@@ -274,10 +276,16 @@ export class LoaderService {
     }).then((items) => {
       console.log('items', items);
       let mine = items.filter((item) =>
-        item.author.filter((a) => a && a.given && a.given.toLowerCase().trim() === 'max' &&
+        item.author.filter((a) => a && a.given && (a.given.toLowerCase().trim().indexOf('max') === 0 || a.given.toLowerCase().trim().indexOf('m.') === 0) &&
           a.family && a.family.trim().toLowerCase().match(/van[\W]*kleek/)).length > 0);
 
       mine = mine.map((item) => new CrossRefItem(this, item));
+
+      const acms = mine.filter(x => x.DOI && x.DOI.startsWith('10.1145/')),
+        acm_uniq = _.uniqBy(acms, p => p.DOI.slice(p.DOI.lastIndexOf('.') + 1)),
+        all_merged = mine.filter(x => !x.DOI || !x.DOI.startsWith('10.1145/')).concat(acm_uniq);
+
+      mine = all_merged;
 
       return mine.reduce((obj, a) =>  {
           const key = a.DOI;

@@ -1,19 +1,17 @@
-* {
-    font-size:10pt;
-}
 div.pub, a.pub {
     padding:0px 0px 1em 0px;
     line-height:1.2em;
 }
 .title {
-    font-weight:bold;
+    /* font-weight:bold; */
+    color:blue;
 }
 .booktitle {
     font-style:italic;
 }
-.organization {
-    color:#888;
-}
-.year {
-    color:#888;
+.reflinks {
+    /* text-align:right; */
+    font-size:10pt;
+    padding: 0px 0px 10px 0px;
+    font-weight:500;
 }

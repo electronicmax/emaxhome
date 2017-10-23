@@ -47,9 +47,9 @@
 <div class="secbody">
     <table class="news">
         <tr *ngFor="let n of news">
-            <td>{{ n.date.toISOString().split('T')[0] }}</td>
+            <td class="newsdate">{{ n.date.toISOString().split('T')[0] }}</td>
             <td>&mdash;</td>
-            <td [innerHtml]="n.summaryHtml"></td>
+            <td class="newsitem" [innerHtml]="n.summaryHtml"></td>
         </tr>
     </table>
 </div>
@@ -82,9 +82,9 @@
 <div class="section" id="#publications">
 <div class="sectitle">publications</div>
 <div class="secbody">
-    <div *ngFor="let py of pyreverse?.slice(0,2) || []">
+    <div *ngFor="let py of by_year || []" [hidden]="!py.pubs">
         <h4>{{py.year}}</h4>
-        <ul>j
+        <ul>
             <li *ngFor="let pub of py.pubs"><app-publication [p]='pub'></app-publication></li>
         </ul>
     </div>

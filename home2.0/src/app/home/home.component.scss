@@ -3,7 +3,7 @@
 div.projects {
     line-height: 0em;
     // margin: 10px 0px 0px (0px - $padleft);
-    display:inline-block;
+    display:inlinksboxne-block;
     padding: 0px;
     margin: 10px 0px 0px 20px; // $left_thresh;
     max-width: 640px;
@@ -21,4 +21,21 @@ div.projects {
         vertical-align: top;
         border:2px solid #eee;
     }
+}
+
+.news {
+    td {
+        vertical-align:top;
+        padding:0px 0px 10px 0px;
+        // margin:0px 0px 10px 0px;
+    }
+    td.newsitem {
+        padding-left: 10px;
+    }
+    td.newsdate {
+        padding:0px;
+        // font-size:11pt;
+        min-width:90px;
+    }
+
 }

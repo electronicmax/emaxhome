@@ -91,14 +91,15 @@ $left_thresh: 180px;
         // font-style: italic;
         color: black;
         // border: 1px solid #eee;
-        padding-right: 50px;
-        padding: 10px 0px 0px 0px; // $left_thresh;
+        // padding-right: 50px;
+        padding:0px;
+        // padding: 10px 0px 0px 0px; // $left_thresh;
     }
     .secbody {
         display:inline-block;
         vertical-align:top;
         // box-shadow: inset 0px 11px 8px -10px #CCC, inset 0px -11px 8px -10px #CCC;
-        font-size: 11pt;
+        font-size: 12pt;
         // padding: 0px 200px 0px $left_thresh;
         padding: 0px 200px 0px 20px;
         max-width: 540px;

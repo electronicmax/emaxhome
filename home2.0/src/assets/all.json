@@ -252,6 +252,7 @@
 		   "type":["conference paper"],
 		   "conference":"UBICOMM 2008",
 		   "year":2008,
+		   "DOI": "10.1109/UBICOMM.2008.21",
 		   "url":"http://people.csail.mit.edu/emax/papers/UBICOMM%20audio%20context%20sensing%202008.pdf",
 		   "categories":["ubiquitous computing"]		   
 	   },
@@ -368,7 +369,7 @@
 		   "authors":["Markus Luczak-Rosch", "Ramine Tinati", "Elena Simperl", "Max Van Kleek", "Robert Simpson", "Nigel R. Shadbolt"],
 		   "type":["conference paper"],
 		   "year":2014,
-                   "url":"http://eprints.soton.ac.uk/363523/1/document.pdf",
+           "url":"http://eprints.soton.ac.uk/363523/1/document.pdf",
 		   "conference":"ICWSM 2014",
 		   "categories":["citizen science"]
 		},
@@ -490,7 +491,8 @@
 		   "year":2016,
 		   "publication":"IEEE Consumer Electronics",
 		   "categories":["social machines"],
-		    "url":"http://hip.cat/emax/papers/07450779.pdf"
+			"url":"http://hip.cat/emax/papers/07450779.pdf",
+			"DOI":"10.1109/mce.2016.2516179"
 		},
 		{
 		   "id":"pim2016",
