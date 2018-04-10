@@ -2,11 +2,6 @@ $linkblue: #00bbff;
 $padtop: 3vh;
 $padleft: 5vw;
 
-body, body *, ::ng-deep * {
-    font-family: "helvetica neue", helvetica;
-    font-weight:200;
-}
-
 // thing on the right
 .links, ::ng-deep div.links {
     z-index: 1000;
@@ -37,9 +32,10 @@ body, body *, ::ng-deep * {
 
 .main {
     // width:100%;
-    max-width:1350px;
+    // max-width:1350px;
+    // width:100%;
     margin-left:auto; margin-right:auto;
-    padding:30px 120px 30px $padleft;
+    padding:30px 100px 30px $padleft;
     position:relative;
     .namebox {
         text-align: left;
@@ -50,6 +46,7 @@ body, body *, ::ng-deep * {
         .title {
             font-size: 12pt;
         }
+        margin-bottom:10px;
     }    
     // .left-menu {
     //     ul { 
@@ -68,6 +65,26 @@ body, body *, ::ng-deep * {
     //     width:180px;
     //     text-align:right;
     // }
+    .intro {
+        // max-width:900px;
+        display:flex;
+        flex-direction: row;        
+        font-size:10pt;
+        
+        .col1, .col2 {
+            p { font-weight:500 !important; }
+            line-height:1.4;
+            flex-basis:300px;
+            flex-grow:1.0;
+            margin-right:2.5vw;
+            text-align:justify;
+            // text-justify:inter-word;
+            p {
+                margin:20px 0px;
+                padding:0px;
+            }
+        }
+    }
     router-outlet {
         width:100%;
     }

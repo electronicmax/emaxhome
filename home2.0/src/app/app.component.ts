@@ -13,6 +13,7 @@ export class AppComponent {
   news: NewsItem[];
   projects: Thing[];
   elScroll: 0;
+  email = 'max.van.kleek@cs.ox.ac.uk';
   constructor(private loader: LoaderService, private router: Router) {
     this.loader.getNews().then(n => this.news = n);
     this.loader.getThings().then(p => this.projects = p);
