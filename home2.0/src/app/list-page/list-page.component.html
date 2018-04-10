@@ -7,12 +7,8 @@
           </ul>
           <ul class="imgs">
             <li *ngFor="let pub of py.pubs">
-              <div *ngIf='pub.preview_video_embed'>
-                <iframe [src]="pub.preview_video_embed_safe" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-              </div>
-              <div *ngIf='pub.embed_video_url'>
-                  <iframe [src]="pub.embed_video_url_safe" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-              </div>                
+                <iframe *ngIf='pub.preview_video_embed_safe' [src]="pub.preview_video_embed_safe" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe *ngIf='pub.embed_video_url_safe' [src]="pub.embed_video_url_safe" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </li>
           </ul>
         </div>        

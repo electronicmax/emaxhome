@@ -155,7 +155,7 @@
 		   "conference":"CHI 2012",
 		   "year":2012,
 		   "categories":["human computation"],
-		   "embed_video_url":"http://www.youtube.com/embed/NR2w_ng6-VA",
+		   "embed_video_url":"https://www.youtube.com/embed/NR2w_ng6-VA",
 		   "DOI":"10.1145/2207676.2208530"
 	   },
 	   {
@@ -177,7 +177,7 @@
 		   "conference":"CHI 2013",		   
 		   "year":2013,
 		   "categories":["personal info management", "sensemaking"],
-		   "embed_video_url":"http://www.youtube.com/embed/YwG3jNuDNjg",
+		   "embed_video_url":"https://www.youtube.com/embed/YwG3jNuDNjg",
 		   "DOI":"10.1145/2470654.2481324"
 	   },
 	   {

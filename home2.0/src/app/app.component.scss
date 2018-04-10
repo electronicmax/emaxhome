@@ -29,26 +29,91 @@ $padleft: 5vw;
     position: absolute;
     text-align: right;
 }
+@media only screen and (min-width:670px) {
+    .main {
+        max-width:1080px;
+        margin-left:auto; margin-right:auto;
+        padding:30px 130px 30px $padleft;
+        position:relative;
+        .namebox {
+            text-align: left;
+            font-size: 36pt;
+            .name {
+                font-size: 18pt;
+            }
+            .title {
+                font-size: 12pt;
+            }
+            margin-bottom:10px;
+        }    
+        .intro {
+            // max-width:900px;
+            display:flex;
+            flex-direction: row;        
+            font-size:10.7pt;
+            
+            .col1 {
+                margin-right:2.3vw;
+            }
+            .col1, .col2 {
+                p { font-weight:500 !important; }
+                line-height:1.4;
+                flex-basis:300px;
+                flex-grow:1.0;
+                text-align:justify;
+                // text-justify:inter-word;
+                p {
+                    margin:20px 0px;
+                    padding:0px;
+                }
+            }
+        }
+        router-outlet { width:100%;  }
+    }
+}
+@media only screen and (max-width:669px) {
+    .links, ::ng-deep div.links {
+        right: 3px;
+        transform:scale(0.8);
+    }
+    
+    .main {
+        padding:30px 70px 30px 30px;
+        position:relative;
+        .namebox {
+            text-align: left;
+            font-size: 36pt;
+            .name {
+                font-size: 18pt;
+            }
+            .title {
+                font-size: 12pt;
+            }
+            margin-bottom:10px;
+        }    
+        .intro {
+            display:block;
+            font-size:10.7pt;
+            
+            .col1 {
+                margin-right:2.3vw;
+            }
+            .col1, .col2 {
+                p { font-weight:500 !important; }
+                line-height:1.4;
+                text-align:justify;
+                p {
+                    margin:20px 0px;
+                    padding:0px;
+                }
+            }
+        }
+        router-outlet { width:100%;  }
+    }
+}
 
-.main {
-    // width:100%;
-    // max-width:1350px;
-    // width:100%;
-    margin-left:auto; margin-right:auto;
-    padding:30px 100px 30px $padleft;
-    position:relative;
-    .namebox {
-        text-align: left;
-        font-size: 36pt;
-        .name {
-            font-size: 18pt;
-        }
-        .title {
-            font-size: 12pt;
-        }
-        margin-bottom:10px;
-    }    
-    // .left-menu {
+
+// .left-menu {
     //     ul { 
     //         color:black;
     //         margin:0px; padding:0px;
@@ -65,30 +130,6 @@ $padleft: 5vw;
     //     width:180px;
     //     text-align:right;
     // }
-    .intro {
-        // max-width:900px;
-        display:flex;
-        flex-direction: row;        
-        font-size:10.7pt;
-        
-        .col1, .col2 {
-            p { font-weight:500 !important; }
-            line-height:1.4;
-            flex-basis:300px;
-            flex-grow:1.0;
-            margin-right:2.5vw;
-            text-align:justify;
-            // text-justify:inter-word;
-            p {
-                margin:20px 0px;
-                padding:0px;
-            }
-        }
-    }
-    router-outlet {
-        width:100%;
-    }
-}
 
 @mixin vertical-align {
     position: relative;
