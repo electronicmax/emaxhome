@@ -2,9 +2,9 @@
 $coefficient: 0.70;
 
 div.lpc {
-    // max-width:700px;
+    margin:0px; padding:0px;
     font-weight:300;
-    h4 { margin-top: 50px; margin-bottom:0px; }
+    h4 { margin-top: 50px; margin-bottom:0px; &:first-child { margin-top:0px; }}
     ul {
         list-style-type:none;
         padding-left:0;    
@@ -13,9 +13,10 @@ div.lpc {
     div.lr {
         display:flex;
         flex-direction:row;
+        width:100%;
         
         ul.text {
-            flex-basis:700px;
+            flex-basis:50%;
             flex-grow:1.0;
         }
 
@@ -26,6 +27,7 @@ div.lpc {
             div { 
                 display: inline-block; 
                 iframe {
+                    // width:100%;
                     width:$coefficient*560px; // 448px; // 560px;
                     height:$coefficient*315px; // 252px; // 315px;
                 }
