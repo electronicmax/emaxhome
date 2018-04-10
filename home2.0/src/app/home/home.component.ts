@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoaderService, NewsItem, Project, BibEntry, CuratedPub, CrossRefItem } from "app/loader.service";
+import { LoaderService, NewsItem, Thing, BibEntry, CuratedPub, CrossRefItem } from "app/loader.service";
 import * as _ from 'lodash';
 
 
@@ -16,12 +16,12 @@ class YearPubs {
 })
 export class HomeComponent implements OnInit {
   news: NewsItem[];
-  projects: Project[];
+  Things: Thing[];
   by_year: YearPubs[];
 
   constructor(private loader: LoaderService) {
     this.loader.getNews().then(n => this.news = n);
-    this.loader.getProjects().then(p => this.projects = p);
+    this.loader.getThings().then(p => this.Things = p);
     this.loader.getMergedPubs().then((pubs) => {
       const byyr = _.values(pubs).reduce((all, p) => {
         const yr = p.year;

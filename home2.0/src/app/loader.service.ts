@@ -30,7 +30,7 @@ export class Author {
   given: string;
 }
 
-enum EntryType {
+enum PubType {
   article, // = 'ARTICLE',
   inproc, // .. = 'INPROCEEDINGS',
   misc, // = 'MISC',
@@ -43,13 +43,15 @@ abstract class CommonPub {
   abstract get title(): string;
   abstract get year(): number | undefined;
   abstract get pubtype(): string;
+  abstract toString(): string;
 }
 
+// converted from bibtex
 export class BibEntry extends CommonPub {
 
   id: string;
   author: Author[];
-  entrytype: EntryType;
+  entrytype: PubType;
   title: string;
   booktitle?: string;
   year: number;
@@ -86,6 +88,11 @@ export class BibEntry extends CommonPub {
       _.extend((this as any), raw_src_json);
     }
   }
+  toString(): string {
+    const authors = this.author.map(a => `${a.given && a.given[0] || ''} ${a.family}`).join(',');
+    return `${authors}. ${this.title} ${this.publisher} ${this.year}`;
+  }
+
 }
 export class CuratedPub extends CommonPub {
   id: string;
@@ -95,11 +102,15 @@ export class CuratedPub extends CommonPub {
   url: string;
   year: number;
   categories: string[];
+  preview_video_embed?: string;
+  preview_video_embed_safe?: any;
+  embed_video_url ?: string;
+  embed_video_url_safe ?: any;
   pubtype = 'curated';
   curated = true;
   ref ?: CrossRefItem;
 
-  constructor(raw_src: any, xrefs: { [doi:string]: CrossRefItem }) {
+  constructor(raw_src: any, xrefs: { [doi: string]: CrossRefItem }) {
     super();
     _.extend(this as any, raw_src);
     if (raw_src.DOI && xrefs[raw_src.DOI]) {
@@ -112,12 +123,17 @@ export class CuratedPub extends CommonPub {
       }
     }
   }
+  toString(): string {
+    const authors = this.authors.join(',');
+    return `${authors}. ${this.title} ${this.year}`;
+  }
 }
 
-export class Project {
+export class Thing {
   id: string;
   title: string;
   theme: string;
+  type: string;
   pubids: string[];
   pubs: (BibEntry | CrossRefItem)[];
   images: string[];
@@ -191,6 +207,11 @@ export class CrossRefItem extends CommonPub {
 
   get year(): number | undefined {
     return this.publishedprint && this.publishedprint.dateparts && this.publishedprint.dateparts[0][0] || undefined;
+  }
+
+  toString(): string {
+    const authors = this.author.map(a => `${a.given && a.given[0] || ''} ${a.family}`).join(',');
+    return `${authors}. ${this.title} ${this.publisher} ${this.year}`;
   }
 
 }
@@ -302,7 +323,7 @@ export class LoaderService {
   unzeroObj(o: any) {
     return _.mapValues(o, (v, key) => {
       if (key === 'author') { return v; };
-      return v && typeof v === 'object' && (!_.isArray(v) || v.length == 1) && v[0] ? v[0] : v;
+      return v && typeof v === 'object' && (!_.isArray(v) || v.length === 1) && v[0] ? v[0] : v;
     });
   }
 
@@ -328,10 +349,11 @@ export class LoaderService {
     }) as BibEntry;
   }
 
-  getProjects(): Promise<Project[] > {
+  @memoize((x) => x)
+  getThings(): Promise<Thing[] > {
     return this.getPubs().then((by_bibid) => {
       return this.http.get('assets/proj.json').toPromise().then(response => {
-        return response.json().projects as Project[];
+        return response.json().things as Thing[];
       }).then((ps) => {
         ps.map((p) => {
           p.color = d3.interpolateRainbow(1.0 * ps.indexOf(p) / ps.length);
@@ -345,7 +367,27 @@ export class LoaderService {
           (window as any).d3 = d3;
         });
         return ps;
+      }).then(ps => {
+        // convert and concatenate
+        const pubThings = Object.entries(by_bibid).map( pubentry => {
+          const [pid, pub] = pubentry;
+          return Object.assign(new Thing(), pub, ({ id: pid, type: 'pub', summary: pub.toString(), pubs: [pub], pubids: [pid] }));
+        });
+        return ps.concat(pubThings);
       });
+    });
+  }
+
+  @memoize((x) => x)
+  getThingsByID(): Promise<{[x: string]: Thing}> {
+    return this.getThings().then(ps => {
+      return ps.reduce((obj, x) => { obj[x.id] = x; return obj; }, {});
+    });
+  }
+  @memoize((x) => x)
+  getThingsByType(): Promise<{[x: string]: Thing}> {
+    return this.getThings().then(ps => {
+      return ps.reduce((obj, x) => { obj[x.type || 'other'] = (obj[x.type || 'other'] || []).concat([obj]); return obj; }, {});
     });
   }
 

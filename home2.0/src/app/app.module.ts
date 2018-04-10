@@ -13,28 +13,38 @@ import { ProjectComponent } from './project/project.component';
 import { PublicationComponent } from './publication/publication.component';
 import { PunctuatePipe } from './punctuate.pipe';
 import { TitlecasePipe } from './titlecase.pipe';
+import { OverviewComponent } from './overview/overview.component';
+import { ThingComponent } from './thing/thing.component';
 
 
 const appRoutes: Routes = [
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'news',
-    component: ListPageComponent,
-    data: { type: 'news', title: 'news' }
-  },
-  {
-    path: 'projects/:id',
-    component: ProjectComponent
-  },
+  // {
+  //   path: 'home',
+  //   component: HomeComponent
+  // },
+  // {
+  //   path: 'news',
+  //   component: ListPageComponent,
+  //   data: { type: 'news', title: 'news' }
+  // },
+  // {
+  //   path: 'projects/:id',
+  //   component: ProjectComponent
+  // },
+  // {
+  //   path: 'overview/:type',
+  //   component: OverviewComponent
+  // },
+  // {
+  //   path: 'overview',
+  //   component: OverviewComponent
+  // },
   {
     component: ListPageComponent,
     path: 'publications',
     data: { type: 'publications', title: 'publications' }
   },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/publications', pathMatch: 'full' },
   { path: '**', component: ErrorComponent, data: { message: 'page not found' } }
 ];
 
@@ -48,7 +58,9 @@ const appRoutes: Routes = [
     ProjectComponent,
     PublicationComponent,
     PunctuatePipe,
-    TitlecasePipe
+    TitlecasePipe,
+    OverviewComponent,
+    ThingComponent
   ],
   imports: [
     BrowserModule,

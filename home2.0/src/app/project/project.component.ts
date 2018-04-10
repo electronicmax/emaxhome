@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Project, LoaderService } from 'app/loader.service';
+import { Thing, LoaderService } from 'app/loader.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
@@ -10,22 +10,19 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class ProjectComponent implements OnInit {
 
-  p: Project;
+  p: Thing;
   sub: Subscription;
-  projects: Project[];
+  things: Thing[];
 
   constructor(private route: ActivatedRoute, private loader: LoaderService) {
     (window as any)._w = this;
-    this.loader.getProjects().then(p => this.projects = p);
+    this.loader.getThings().then(p => this.things = p);
   }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
         const id = params['id']; // (+) converts string 'id' to a number
-        this.loader.getProjects()
-        .then((ps) => ps.filter((p) => p.id === id)[0])
-        .then((p) => this.p = p);
-        // console.log('id is ', id);
+        this.loader.getThingsByID().then(byid => this.p = byid[id]);
     });
   }
 }

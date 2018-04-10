@@ -1,5 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { LoaderService } from "app/loader.service";
+import { LoaderService, NewsItem, Thing, CrossRefItem, CuratedPub } from 'app/loader.service';
+import * as _ from 'lodash';
+
+class YearPubs {
+  year: number;
+  pubs: (CrossRefItem | CuratedPub)[];
+};
 
 @Component({
   selector: 'app-list',
@@ -12,9 +18,10 @@ export class ListComponent implements OnInit {
   @Input() groupBy: string;
   @Input() limit: number;
 
-  constructor(private loader: LoaderService) { }
-
   ngOnInit() {
+  }
+
+  constructor(private loader: LoaderService) {
   }
 
 }

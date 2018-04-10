@@ -1,32 +1,27 @@
 <!--The whole content below can be removed with the new code.-->
-<div class="menubar">
-    <!-- <ol class="menu">
-        <li routerLink="/about" routerLinkActive="active"> news </li>
-        <li routerLink="/news" routerLinkActive="active"> news </li>
-        <li routerLink="/projects" routerLinkActive="active">projects</li>
-        <li routerLink="/publications" routerLinkActive="active">publications</li>
-    </ol> -->
-    <!-- <ol class="menu">
-        <li routerLink="/about" routerLinkActive="active"> news </li>
-        <li routerLink="/news" routerLinkActive="active"> news </li>
-        <li routerLink="/projects" routerLinkActive="active">projects</li>
-        <li routerLink="/publications" routerLinkActive="active">publications</li>
-    </ol> -->
+<div class="sectiontop">
 </div>
-
 <div class="links">
     <a href="https://scholar.google.co.uk/citations?user=bknlzZwAAAAJ" target="_blank"><img src="assets/scholar.png" width="20"></a><br>
     <a href="https://twitter.com/emax" target="_blank"><img src="assets/twitter.png" width="20"></a> <br>
     <a href="https://thefutureispersonal.wordpress.com/" target="_blank"><img src="assets/blog.png" width="20"></a>
 </div>
-
-
-<div class="sectiontop">
+<div class="main">
     <div class="namebox">
         <div class="name">Max Van Kleek</div>
         <div class="title">Associate Professor of Human-Computer Interaction</div>
         <div class="title"><a href="http://www.cs.ox.ac.uk" target="_blank">Department of Computer Science</a>, <a href="http://www.ox.ac.uk" target="_blank">University of Oxford</a></div>
         <!-- <div class="title">Governing Body Fellow, <a href="http://www.kellogg.ox.ac.uk">Kellogg College</a>, Oxford</div> -->
     </div>
+            
+    <!-- <div class="left-menu">
+        <ul>
+            <li><a routerLink="/about" routerLinkActive="active"> about</a>
+            <li><a routerLink="/overview" routerLinkActive="active">all</a>
+            <li><a routerLink="/overview/news" routerLinkActive="active">news</a>
+            <li><a routerLink="/overview/project" routerLinkActive="active">projects</a>   
+            <li><a routerLink="/publications" routerLinkActive="active">publications</a>
+        </ul>
+    </div> -->
+    <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>

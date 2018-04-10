@@ -206,10 +206,130 @@
 	   },	   
 	   { 
 		   "id":"btd2017",
-		   "preview_video_embed":"https://www.youtube.com/embed/PYVDQZDZbV",
-		   "embed_video_url":"https://www.youtube.com/embed/PYVDQZDZbV",
+		   "foo_preview_video_embed":"https://www.youtube.com/embed/PYVDQZDZbV",
+		   "embed_video_url":"https://www.youtube.com/embed/Hr4-tUi6gLg",
 		   "DOI":"10.1145/3025453.3025556"
 	   },
+	   { 
+		"id":"chi08-refine",
+		"title":"X-Ray Refine: Supporting the Exploration and Refinement of Information Exposure Resulting from Smartphone Apps",
+		"authors":["Max Van Kleek", "Reuben Binns", "Jun Zhao", "Adam Slack", "Sauyon Lee", "Dean Ottewell", "Nigel Shadbolt"],
+		"type":["conference paper"],
+		"conference":"CHI 2018",	 
+		"conference_url":"http://chi2018.acm.org",	 
+		"preview_video_embed":"https://www.youtube.com/embed/II5x8D4xd-Q",
+		"url":"https://hip.cat/papers/chi2018-xray-refine-final-CR.pdf",
+		"DOI":"10.1145/3173574.3173967",
+		"date": "April 21-26, 2018",		
+		"location": "Montreal, Canada",		
+		"year":2018
+	   },
+	   { 
+		"id":"chi08-explanations",
+		"title":"'It's Reducing a Human Being to a Percentage'; Perceptions of Justice in Algorithmic Decisions",
+		"authors":["Reuben Binns", "Max Van Kleek", "Michael Veale", "Ulrik Lyngs", "Jun Zhao", "Nigel Shadbolt"],
+		"type":["conference paper"],
+		"conference":"CHI 2018",	 
+		"preview_video_embed":"https://www.youtube.com/embed/tmnTWy6jyac",
+		"url":"https://hip.cat/papers/chi2018-reducing-human-percentage.pdf",
+		"date": "April 21-26, 2018",
+		"location": "Montreal, Canada",		
+		"year":2018
+	   },
+	   { 
+		"id":"chi18-pgd",
+		"title":"Common Barriers to the Use of Patient-Generated Data in Clinical Settings",
+		"authors":["Peter West", "Max Van Kleek", "Richard Giordano", "Mark Weal", "Nigel Shadbolt"],
+		"type":["conference paper"],
+		"conference":"CHI 2018", 
+		"url":"https://hip.cat/papers/CHI_18___Patient_Generated_Data.pdf",
+		"DOI":"10.1145/3173574.3174058",
+		"date": "April 21-26, 2018",		
+		"location": "Montreal, Canada",
+		"year":2018
+	   },	   
+	   { 
+		"id":"chi18-stakes",
+		"title":"Fairness and Accountability Design Needs in High-Stakes Public Sector Decision Making",
+		"authors":["Michael Veale", "Max Van Kleek", "Reuben Binns"],
+		"type":["conference paper"],
+		"conference":"CHI 2018", 
+		"url":"https://hip.cat/papers/1802.01029.pdf",
+		"DOI":"10.1145/3173574.3174058",
+		"location": "Montreal, Canada",		
+		"date": "April 21-26, 2018",						
+		"preview_video_embed":"https://www.youtube.com/embed/_rRFyWnxLkA",
+		"year":2018
+	   },	   	   
+	   { 
+		"id":"chi18-altchi",
+		"title":"So, Tell Me What Users Want, What They Really, Really Want!",
+		"authors":["Ulrik Lyngs", "Reuben Binns", "Max Van Kleek", "Nigel Shadbolt"],
+		"type":["conference paper"],
+		"conference":"alt.chi 2018", 
+		"url":"https://hip.cat/papers/1803.02065.pdf",
+		"location": "Montreal, Canada",		
+		"date": "April 21-26, 2018",						
+		"year":2018
+	   },
+	   { 
+		"id":"chi18workshop-sense",
+		"title":"The Need for Sensemaking in Networked Privacy and Algorithmic Systems", 
+		"authors":["Max Van Kleek", "William Seymour", "Michael Veale", "Reuben Binns", "Nigel Shadbolt"],
+		"type":["conference paper"],
+		"conference":"Sensemaking at CHI 2018", 
+		"url":"https://hip.cat/papers/sensemaking-networked-privacy.pdf",
+		"location": "Montreal, Canada",		
+		"date": "April 21-26, 2018",						
+		"year":2018
+	   },	   
+	   { 
+		"id":"chi18workshop-gdpr",
+		"title":"Some HCI priorities for GDPR-Compliant Machine Learning", 
+		"authors":["Michael Veale", "Reuben Binns", "Max Van Kleek"],
+		"type":["conference paper"],
+		"conference":"CHI-GDPR 2018",	 
+		"url":"https://hip.cat/papers/1803.06174.pdf",
+		"year":2018
+	   },	   
+	   {
+		   "id":"aamas-sociograms",
+		   "title":"Social Machines for All",
+		   "authors":["Petros Papapanagiotou", "Alan Davoust", "Dave Murray-Rust", "Areti Manataki", "Max Van Kleek", "Nigel Shadbolt", "David Robertson"],
+		   "conference":"AAMAS 2018, Blue Sky Track",
+		   "location":"Stockholm, Sweden",
+		   "year":2018,
+		   "url":"https://hip.cat/papers/aamas-social-machines.pdf"
+	   },
+	   {
+		"id":"graphs-sociograms",
+		"title":"Towards Executable Representations of Social Machines",
+		"authors":["Dave Murray-Rust", "Alan Davoust", "Petros Papapanagiotou", "Areti Manataki", "Max Van Kleek", "Nigel Shadbolt", "David Robertson"],
+		"conference":"DIAGRAMS 2018 Poster",
+		"location":"Edinburgh, Scotland",
+		"year":2018,
+		"url":"https://hip.cat/papers/DIAGRAMS2018-executable-representations-sociall-machines.pdf"
+	},
+	
+	   { 
+		"id":"petras-iet-respect",
+		"title":"Respectful Things: Adding Social Intelligence to Smart Devices",
+		"authors":["Max Van Kleek", "William Seymour", "Reuben Binns", "Nigel Shadbolt"],
+		"type":["conference paper"],
+		"conference":"PETRAS IET Living in the Internet of Things",	 
+		"url":"https://hip.cat/papers/petras-iet-respectful-things.pdf",
+		"year":2018
+	   },
+	   { 
+		"id":"qchallenges",
+		"authors":["Peter West", "Max Van Kleek", "Richard Giordano", "Mark Weal", "Nigel Shadbolt"],
+		"title":"Information Quality Challenges of Patient-Generated Data in Clinical Practice",
+		"journal_name":"Frontiers in Public Health",
+		"year":2017,
+		"url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5701635/",
+		"type":["journal paper"],
+		"DOI":"10.3389/fpubh.2017.00284"
+		},	
 	   {
 		   "id":"eyebrowse",
 		   "title":"Eyebrowse: real-time web activity sharing and visualization",
@@ -274,6 +394,7 @@
 		   "conference":"UIST 2008",
 		   "DOI":"10.1145/1449715.1449737",
 		   "url":"http://people.csail.mit.edu/emax/papers/uist08-inky/uist08-inky.pdf",
+		   "preview_video_embed":"https://www.youtube.com/embed/6mEZLkh-P40",
 		   "categories":["interaction design"]		   
 	   },
 	   {
@@ -285,6 +406,7 @@
 		   "conference":"UIST 2007",
 		   "url":"http://people.csail.mit.edu/emax/papers/guiPhooey-UIST-eprints.pdf",
 		   "categories":["personal information management", "interaction design"],
+		   "preview_video_embed":"https://www.youtube.com/embed/GAz2_Vx3QW",
 		   "DOI":"10.1145/1294211.1294247"
 	   },
 	   {
