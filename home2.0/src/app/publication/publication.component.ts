@@ -27,7 +27,7 @@ export class PublicationComponent implements OnInit, OnChanges {
   ngOnChanges() {
     this.valp = this.p;
     if (this.p instanceof CuratedPub && this.p.ref) {
-      this.valp = this.p.ref;
+      this.valp = this.p.ref; // new Object.assign({}, this.p, this.p.ref); // this.p.ref;
     }
     // deal with names
     if (!this.valp) {

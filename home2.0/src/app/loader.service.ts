@@ -222,12 +222,12 @@ export class LoaderService {
 
     // debug only ================================>
     // this.getBibTex().then((library) => console.log('bibtex debug ', library));
-    this.getCrossRef().then((library) => {
-      console.log('crossref debug ', library);
-      _.map(library, (pub, doi) => {
-          // console.log(doi, ' => ', pub.title, pub.publishedprint && pub.publishedprint[0] && pub.publishedprint[0].datetime);
-      });
-    });
+    // this.getCrossRef().then((library) => {
+    //   console.log('crossref debug ', library);
+    //   _.map(library, (pub, doi) => {
+    //       // console.log(doi, ' => ', pub.title, pub.publishedprint && pub.publishedprint[0] && pub.publishedprint[0].datetime);
+    //   });
+    // });
 
     this.getMergedPubs().then(merged => {
       (window as any)._pubs = merged;

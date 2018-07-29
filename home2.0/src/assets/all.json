@@ -467,7 +467,7 @@
 		   "title":"7 Billion Telescopes: Observing Social Machines through Personal Data Stores",
 		   "authors":["Max Van Kleek", "Daniel A. Smith", "Ramine Tinati", "Kieron O'Hara", "Wendy Hall", "Nigel R. Shadbolt"],
 		   "type":["conference paper"],
-   		   "url":"http://hip.cat/papers/p915.pdf",
+   		   "url":"https://hip.cat/papers/p915.pdf",
 		   "year":2014,
 		   "conference":"SOCM 2014",
 		   "categories":["personal data stores", "personal info management", "privacy", "lifelogging"],
@@ -500,7 +500,7 @@
 		   "title":"The Editable Self: A Workbench for Personal Activity Data",
 		   "authors":["Heather Packer", "Gustavo Buzogany", "Daniel A. Smith", "Max Van Kleek", "Nigel R. Shadbolt"],
 		   "type":["conference paper"],
-		   "url":"http://hip.cat/papers/chi2014-padd-wip.pdf",
+		   "url":"https://hip.cat/papers/chi2014-padd-wip.pdf",
 		   "year":2014,
 		   "conference":"CHI 2014",
 		   "DOI":"10.1145/2559206.2581283",
@@ -521,7 +521,7 @@
 		   "title":"Social Personal Data Stores: The Nuclei of Decentralised Social Machines",
 		   "authors":["Max Van Kleek", "Daniel Smith", "Dave Murray-Rust", "Amy Guy", "Kieron O'Hara", "Laura Dragan", "Nigel R. Shadbolt"],
 		   "type":["workshop paper"],
-		   "url":"http://hip.cat/emax/papers/socm2015___SPDSes.pdf",
+		   "url":"https://hip.cat/emax/papers/socm2015___SPDSes.pdf",
 		   "year":2015,
 		   "conference":"SOCM2015",
 		   "categories":["personal data stores", "privacy"],
@@ -532,7 +532,7 @@
 		   "title":"Measurements of engagement in mobile behavioural interventions?",
 		   "authors":["Anna Weston", "L Morrison", "Lucy Yardley", "Max Van Kleek"],
 		   "type":["conference poster"],
-		   "url":"http://hip.cat/emax/papers/Anna_Weston_ACMDH.pdf",
+		   "url":"https://hip.cat/papers/Anna_Weston_ACMDH.pdf",
 		   "year":2015,
 		   "conference":"ACM Digital Health",
 		   "categories":["lifelogging"]
@@ -555,7 +555,7 @@
            "authors":["Max Van Kleek"],
            "type":["conference paper"],
            "year":2015,
-           "url":"http://hip.cat/papers/USEWODposition-statement_NotInMyCastle.pdf",
+           "url":"https://hip.cat/papers/USEWODposition-statement_NotInMyCastle.pdf",
            "categories":["personal data stores", "internet of things"],
            "conference":"USEWOD 2015"
        },
@@ -603,7 +603,7 @@
 		   "year":2016,
 		   "conference":"PIM 2016",
 		   "categories":["personal info management", "privacy"],
-		   "url":"http://hip.cat/emax/papers/PIM2016___Loss_of_Control_and_Implications.pdf"
+		   "url":"https://hip.cat/emax/papers/PIM2016___Loss_of_Control_and_Implications.pdf"
 		},
 		{
 		   "id":"socialrise",
@@ -613,7 +613,7 @@
 		   "year":2016,
 		   "publication":"IEEE Consumer Electronics",
 		   "categories":["social machines"],
-			"url":"http://hip.cat/emax/papers/07450779.pdf",
+			"url":"https://hip.cat/emax/papers/07450779.pdf",
 			"DOI":"10.1109/mce.2016.2516179"
 		},
 		{
@@ -624,7 +624,7 @@
 		   "year":2016,
 		   "publication":"ACM",
 		   "categories":["personal information management"],
-  	            "url":"http://hip.cat/emax/papers/chi16-pim.pdf"
+  	            "url":"https://hip.cat/emax/papers/chi16-pim.pdf"
 		},
 		{
 			"id":"infoscrapCHIEA07",
@@ -642,7 +642,7 @@
 		   "year":2016,
 		   "conference":"SOCM2016",
 		   "categories":["privacy", "personal data"],
-			"url":"http://hip.cat/emax/papers/p799.pdf",
+			"furl":"https://hip.cat/emax/papers/p799.pdf",
 			"DOI":"10.1145/2872518.2890590"
 			
 		},
@@ -654,7 +654,7 @@
 		   "year":2015,
 		   "conference":"WWW 2015",
 		   "categories":["crowdsourcing"],
-		   "url":"http://hip.cat/papers/www2015-crowdsourcing.pdf",
+		   "url":"https://hip.cat/papers/www2015-crowdsourcing.pdf",
 		   "DOI":"10.1145/2736277.2741639"
 		}
    ],
