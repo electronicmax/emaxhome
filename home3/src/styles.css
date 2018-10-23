@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* You can add global styles to this file, and also import other style files */
+
+/* @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo'); */
+/* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+/* @font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+} */
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Thin.ttf') format('truetype');
+    font-weight: 100;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    /* font-family: 'Nanum Myeongjo', 'helvetica neue', helvetica neue, sans-serif; */
+    font-family: 'Roboto', 'helvetica neue', helvetica neue, sans-serif;
+    font-weight:100;
+    /* font-weight: 300; */
+    /* font-weight:400; */
+    padding: 0px;
+    margin: 0px;
+    transition: all 0.2s;
+}
+
+a {
+    transition: all 0.2s;
+    text-decoration: none;
+    /* color: #888; */
+    /* color: #888; */
+    color: #002288;
+    
+}
+
+a:hover {
+    /* font-weight: bold; */
+    color: #00bbff;
+}
+
+p { 
+    padding:0px 0px 10px 0px;
+}
