@@ -1,0 +1,39 @@
+<!--The whole content below can be removed with the new code.-->
+<div class="sectiontop">
+</div>
+<div class="links">
+    <a href="https://scholar.google.co.uk/citations?user=bknlzZwAAAAJ" target="_blank"><img src="assets/scholar.png" width="20"></a><br>
+    <a href="https://twitter.com/emax" target="_blank"><img src="assets/twitter.png" width="20"></a> <br>
+    <a href="https://thefutureispersonal.wordpress.com/" target="_blank"><img src="assets/blog.png" width="20"></a>
+</div>
+<div class="main">
+
+
+    <div class="sidebar">
+        <div class="routename">
+            <div class="topcorner"></div>
+            <div class="name">{{ name }}</div>
+            <div class="bottomcorner"><br></div>
+        </div>                
+            
+        <ul class="mainbody">
+            <a routerLink="/about" routerLinkActive='active'><li>ABOUT</li></a>
+            <a routerLink="/students" routerLinkActive='active'><li>STUDENTS</li></a>
+            <a routerLink="/publications" routerLinkActive='active'><li>PAPERS</li></a>
+            <a routerLink="/teaching" routerLinkActive='active'><li>TEACHING</li></a>
+        </ul>
+
+        <div class='sidetitle'>PROJECTS</div>
+        <ul>
+            <a routerLink="/projects/xray" routerLinkActive='active'><li>PRIVACY X-RAY</li></a>
+            <a routerLink="/projects/aretha" routerLinkActive='active'><li>ARETHA</li></a>
+            <a routerLink="/projects/respect" routerLinkActive='active'><li>RESPECTFUL AI</li></a>
+            <a routerLink="/projects/qspatient" routerLinkActive='active'><li>QUANTIFIED PATIENTS</li></a>
+            <a routerLink="/projects/explanations" routerLinkActive='active'><li>EXPLAINABLE AI</li></a>
+            <a routerLink="/projects/intervening" routerLinkActive='active'><li>MENTAL HEALTH BOTS</li></a>
+        </ul>
+    </div>
+    <div class="body">
+        <router-outlet></router-outlet>
+    </div>
+</div>

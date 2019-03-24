@@ -1,0 +1,230 @@
+{ "students": [
+        {
+          "name": "WILL SEYMOUR",
+          "degree": "DPHIL",
+          "programme": "CS",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "ULRIK LYNGS",
+          "degree": "DPHIL W/ N SHADBOLT",
+          "programme": "CS",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "NITIN AGRAWAL",
+          "degree": "DPHIL W/ N SHADBOLT",
+          "programme": "CS",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "KONRAD KOLLNIG",
+          "degree": "MSC",
+          "programme": "CS",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "JAMES PATERSON",
+          "degree": "MSC",
+          "programme": "CS",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "ADAM HARE",
+          "degree": "MSC",
+          "programme": "CS",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "SHOKOUFEH AJAMI",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "GABRIEL BUENO DE MORAES FIOR",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "MACIEJ CAPUTA",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "CHRISTOPHER COOPER",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "OLADIPUPO DISU",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "WESLEY DOWLING",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "THOMAS DUNST",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "MOHAMED GHANDOUR",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "PATRICK HECK",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "KAI HENSSEN",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "JOSEFINE HINKELMANN",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "SREEVIDYA KETINENI",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "BOLATZHAN KUMALAKOV",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "XIAO LIU",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "DANIEL LOZANO ",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "TUMELO MAKGAKA",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "VALERIA MALIEVA",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "DANIELA MERZ-LANDER ",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "KYLE MILLER",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "HARRY PODCIBORSKI",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "NAVID SADAT-RAZAVI",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "ABU SALIM",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "PAWEL SAWICZ",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "SERGEJ SCHETLE",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "CLARK SIRL",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "MAKSIM SOLOVJOV",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "JANANI SRINATH",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "NATARAJAN VISWANATHAN",
+          "degree": "MSC",
+          "programme": "SEP",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "DANIEL KARANDIKAR",
+          "degree": "MSC",
+          "programme": "CS",
+          "status": "ALUMNI"
+        },
+        {
+          "name": "LILLIO MOK",
+          "degree": "MSC",
+          "programme": "CS",
+          "status": "ALUMNI"
+        },
+        {
+          "name": "ABDEL TURKMANI",
+          "degree": "MSC",
+          "programme": "CS",
+          "status": "ALUMNI"
+        },
+        {
+          "name": "STIRLING POON",
+          "degree": "MSC",
+          "programme": "CS",
+          "status": "ALUMNI"
+        }
+       ]}

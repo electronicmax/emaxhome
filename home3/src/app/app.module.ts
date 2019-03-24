@@ -43,7 +43,7 @@ const appRoutes: Routes = [
   {
     component: ListPageComponent,
     path: 'publications',
-    data: { type: 'publications', title: 'publications' }
+    data: { itemtype: 'publications', title: 'publications' }
   },
   { path: '', redirectTo: '/publications', pathMatch: 'full' },
   { path: '**', component: ErrorComponent, data: { message: 'page not found' } }

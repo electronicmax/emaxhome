@@ -1,0 +1,67 @@
+{
+    "things":[
+        {
+            "id": "stc",
+            "title": "Semantic Technologies (STC)",
+            "summary": "I taught Semantic Technologies (STC) for the Software Engineering Programme, which covered new and updated material pertaining to linked data and associated technologies.",
+            "updated":"2018-03-01"        
+        },
+        {
+            "id": "qpatient",
+            "title": "The Quantified Patient",
+            "summary": "While the Quantified Self and personal informatics fields have focused on the individual's use of self-logged data about themselves, the same kinds of data could, in theory, be used to improve diagnosis and care planning. \n In this project, we seek to understand both the opportunities and bottlenecks in the use of self-logged data for differential diagnosis and care planning during patient visits to both primary and secondary care.  \n  Included in the work we have done in this project are literature reviews to identify potential factors influencing the use of self-logged data in clinical settings, interview, and role-play studies, in which we applied a vignette-based role-play approach with general practitioners and hospital specialists in the US and UK, to elicit reflections on and insights about using patient self-logged data. Our analysis reveals multiple opportunities for the use of self-logged data in the differential diagnosis workflow, identifying capture, representational, and interpretational challenges that are potentially preventing self-logged data from being effectively interpreted and applied by clinicians to derive a patient's prognosis and plan of care.",
+            "pubids": [
+                "10.3389/fpubh.2017.00284",
+                "west2016quantified",
+                "weston2015measurements"
+            ],
+            "updated":"2018-01-01",
+            "type":"project"
+        },
+        {
+            "id": "appxray",
+            "title": "Privacy X-Ray",
+            "type": "project",
+            "summary": "Although people rely on smartphone apps many times every day, people have no idea what these apps are actually doing, such as where the app is sending their data, or using their bandwidth. \n The App X-Ray project consists of a series of efforts around increasing the transparency of apps to end-users. It includes the App Observatory, a new research tool that automatically downloads, disassembles, analyses, and aggregates analyses of apps from app marketplaces around the world, providing convenient APIs for popular data science frameworks.",
+            "pubids": [
+                "10.1145/3025453.3025556",
+                "10.1145/3027063.3053255"
+            ],
+            "updated":"2018-01-01"                    
+        },
+        {
+            "id": "algomod",
+            "title": "Algorithmic Moderation",
+            "type":"topic",
+            "theme": "MLHCI",
+            "pubids": [
+                "binns2017like"
+            ],
+            "summary": "The use of Machine Learning (ML) driven algorithms for the moderation of user-generated content, such as for the purpose of identifying illegal or abusive content, algorithms has been touted as an approach to more effectively keep online spaces safe and legal.  However, when notions of \"offence\" such approaches run the risk of introducing biases"
+        },
+        {
+            "id": "sociam",
+            "title": "Social Machines",
+            "type":"topic",
+            "summary":"The next generation of systems will do more than connect people' they will invisibly orchestrate our social processes and help us achieve the previously impossible. Consumer electronics in their current form of smartphones, wearables, and sensors, along with other devices yet to be envisioned, will power this next generation of systems, providing the key mechanisms that people will use to leverage a new type of social computational power. We refer to these as social machines.",
+            "pubids": [
+                "10.1109/mce.2016.2516179",
+                "10.1145/2740908.2745940",
+                "10.1145/2702123.2702420",
+                "10.1145/2736277.2741639",
+                "10.1145/2808797.2809393",
+                "10.1145/2786451.2786461"
+            ]
+        },
+        {
+            "id": "pda",
+            "title": "Personal Data Architectures",
+            "theme": "empowerment"
+        },
+        {
+            "id": "dtou",
+            "title": "Data Terms of Use",
+            "type":"project"
+        }
+    ]
+}

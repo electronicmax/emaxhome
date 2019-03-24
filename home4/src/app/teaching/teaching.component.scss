@@ -1,0 +1,30 @@
+.main {
+    font-weight:bold;
+    max-width:600px;
+    font-weight:bold;
+    font-size:12pt;
+    h1, h2 { 
+        margin:1em 0px;
+        font-size:14pt;
+    }
+    .course:first-child h1, .course:first-child h1 h2 {
+        padding-top:0px;
+        margin-top:0px;
+    }
+    .course {
+        margin:2em 0px;
+        &:first-child {
+            margin:0px;
+        }
+        .sched {
+            font-size:10pt;
+            margin:0.2em 0em;
+            table, table tr, table tr td { padding:0px; margin:0px; }
+            table { border: none; }
+        }
+        .desc {
+            margin:1em 0px;
+            font-weight:500;
+        }
+    }
+}

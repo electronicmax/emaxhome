@@ -1,0 +1,17 @@
+.main {
+    font-weight:bold;
+    max-width:600px;
+}
+.namebox {
+    margin:0px 0px 20px 0px;
+    text-align: left;
+    font-size: 36pt;
+    border-bottom:1px solid #eee;
+    padding:0px 0px 20px 0px;
+    .name {
+        font-size: 18pt;
+    }
+    .title {
+        font-size: 12pt;
+    }
+}    

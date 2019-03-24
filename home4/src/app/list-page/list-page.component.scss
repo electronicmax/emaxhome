@@ -1,0 +1,50 @@
+
+$coefficient: 0.70;
+
+div.lpc {
+    max-width:800px;
+    margin:0px; padding:0px;
+    font-weight:300;
+    h4 { margin-top: 50px; margin-bottom:0px; &:first-child { margin-top:0px; }}
+    ul {
+        list-style-type:none;
+        padding-left:0;    
+    }
+
+    @media only screen and (min-width:1000px) {
+        div.lr {
+            display:flex;
+            flex-direction:row;
+            width:100%;
+            
+            ul.text {
+                flex-basis:50%;
+                flex-grow:1.0;
+            }
+
+            ul.imgs {
+                margin-left:50px;
+                flex-basis:500px;
+                flex-grow:1.0;
+                iframe {
+                    width:100%;
+                    min-height:300px;
+                    // width:$coefficient*560px; // 448px; // 560px;
+                    // height:$coefficient*315px; // 252px; // 315px;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width:999px) {
+        div.lr {
+            display:block;
+            ul.imgs {
+                iframe {
+                    width:100%;
+                    min-height:300px;
+                }
+            }
+        }
+    }
+    
+}

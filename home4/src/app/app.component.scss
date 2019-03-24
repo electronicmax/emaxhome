@@ -1,0 +1,298 @@
+$linkblue: #00bbff;
+$padtop: 3vh;
+$padleft: 5vw;
+
+.main {
+    padding:100px 0px;
+    display:flex;
+    flex-direction: row;        
+    .sidebar {
+        padding:0px 0px 0px 5vw;
+        flex-grow:0;
+        width:200px;
+        // * { font-size:12pt; } 
+        .routename {
+            margin:0px 0px 10vh 0px;
+            position: relative;
+            padding: 4px 3px;
+
+            width:108px; // dependent on padding and name width
+            
+            .topcorner {
+                position:absolute;
+                left:0px; top:0px; 
+                border-top: solid 3px #555;
+                border-left: solid 3px #555;
+                height: 15px;
+                width: 15px;
+            }
+            .name {
+                width:100px;
+                font-size:12pt;
+                font-weight:900;
+                text-align:center;
+                // margin:10px 0px;
+                padding:8px 4px;
+            }
+            .bottomcorner {
+                position:absolute;
+                right:0px; bottom:0px;
+                border-bottom: solid 3px #555;
+                border-right: solid 3px #555;
+                height: 15px;
+                width: 15px;
+            }
+        }
+        font-weight:bold;
+        text-align:left;
+        .sidetitle {
+            padding:0.2em 0px;
+        }
+        ul {
+            list-style-type:none;
+            padding:0px;
+            li { color: #022; }
+            a.active li { 
+                text-decoration:underline;
+                font-weight:900;
+                // color:#00bbff;
+            }
+        }
+    }
+    .body {
+        // max-width:800px;
+        padding:0px 138px 0px 0px;
+        flex-grow:0;
+    }
+}
+
+// // thing on the right
+.links, ::ng-deep div.links {
+    z-index: 1000;
+    position: fixed;
+    right: 30px;
+    top: 40vh;
+    left: auto;
+    width: 50px;
+    // border: 1px solid #eee;
+    padding: 20px 10px;
+    // only on top
+    transition: all 0.8s;
+    img {
+        width: 30px;
+        padding: 9px;
+        border: 2px solid #efefef;
+        border-radius: 50px;
+        &:hover {
+            border: 2px solid $linkblue;
+            // background-color: rgba(255, 255, 0, 0.2); //  #888;
+            opacity: 0.9;
+        }
+    }
+    font-size: 11pt;
+    position: absolute;
+    text-align: right;
+}
+// @media only screen and (min-width:670px) {
+//     .main {
+//         max-width:1080px;
+//         margin-left:auto; margin-right:auto;
+//         padding:30px 130px 30px $padleft;
+//         position:relative;
+//         .namebox {
+//             text-align: left;
+//             font-size: 36pt;
+//             .name {
+//                 font-size: 18pt;
+//             }
+//             .title {
+//                 font-size: 12pt;
+//             }
+//             margin-bottom:10px;
+//         }    
+//         .intro {
+//             // max-width:900px;
+//             display:flex;
+//             flex-direction: row;        
+//             font-size:10.7pt;
+            
+//             .col1 {
+//                 margin-right:2.3vw;
+//             }
+//             .col1, .col2 {
+//                 p { font-weight:500 !important; }
+//                 line-height:1.4;
+//                 flex-basis:300px;
+//                 flex-grow:1.0;
+//                 text-align:justify;
+//                 // text-justify:inter-word;
+//                 p {
+//                     margin:20px 0px;
+//                     padding:0px;
+//                 }
+//             }
+//         }
+//         router-outlet { width:100%;  }
+//     }
+// }
+// @media only screen and (max-width:669px) {
+//     .links, ::ng-deep div.links {
+//         right: 3px;
+//         transform:scale(0.8);
+//     }
+    
+//     .main {
+//         padding:30px 70px 30px 30px;
+//         position:relative;
+//         .namebox {
+//             text-align: left;
+//             font-size: 36pt;
+//             .name {
+//                 font-size: 18pt;
+//             }
+//             .title {
+//                 font-size: 12pt;
+//             }
+//             margin-bottom:10px;
+//         }    
+//         .intro {
+//             display:block;
+//             font-size:10.7pt;
+            
+//             .col1 {
+//                 margin-right:2.3vw;
+//             }
+//             .col1, .col2 {
+//                 p { font-weight:500 !important; }
+//                 line-height:1.4;
+//                 text-align:justify;
+//                 p {
+//                     margin:20px 0px;
+//                     padding:0px;
+//                 }
+//             }
+//         }
+//         router-outlet { width:100%;  }
+//     }
+// }
+
+
+// // .left-menu {
+//     //     ul { 
+//     //         color:black;
+//     //         margin:0px; padding:0px;
+//     //         font-weight:0;
+//     //         // font-style:italic;
+//     //         font-size:110%;
+//     //         list-style-type:none; 
+//     //         li { 
+//     //             margin:0px 0px 10px 0px;
+//     //         }
+//     //     }
+//     //     position:absolute;
+//     //     left:20px;
+//     //     width:180px;
+//     //     text-align:right;
+//     // }
+
+// @mixin vertical-align {
+//     position: relative;
+//     top: 50%;
+//     -webkit-transform: translateY(-50%);
+//     -ms-transform: translateY(-50%);
+//     transform: translateY(-50%);
+// }
+
+// .sectiontop {
+//     background-color: white;
+//     position: relative;
+//     width: 100%;
+//     padding: 0px;
+//     // old version
+//     // position: fixed;
+//     // left: 0px;
+//     // right: 0px;
+//     // top: 0px;
+//     padding-top:$padtop;
+//     .namebox {
+//         padding-left: $padleft;
+//         // height: 100%;
+//         text-align: left;
+//         // @include vertical-align();
+//         font-size: 36pt;
+//         .name {
+//             font-size: 18pt;
+//         }
+//         .title {
+//             font-size: 12pt;
+//         }
+//     }
+// }
+
+// $oxfordblue: rgba(0, 20, 100, 0.21);
+// $left_thresh: 180px;
+// ::ng-deep div.section {
+//     background-color: white;
+//     &.first {
+//         // original
+//         // margin-top: $padtop + 7vh; //  + 88px;
+//         // border-top: 1px solid #eee;
+//         margin-top:2vw;
+//         padding-top:10px;
+//     }
+//     margin: 0px 0px 0px 0px;
+    
+//     background-color: white;
+//     position: relative;
+//     // width: 100%;
+//     padding: 20px 0px 20px $padleft;
+//     position: relative;
+    
+//     .sectitle {
+//         display:inline-block;
+//         vertical-align:top;
+//         width:150px;
+//         margin:0px;
+
+//         font-size: 14pt;
+//         // font-weight: bold;
+//         // font-style: italic;
+//         color: black;
+//         // border: 1px solid #eee;
+//         // padding-right: 50px;
+//         padding:0px;
+//         // padding: 10px 0px 0px 0px; // $left_thresh;
+//     }
+//     .secbody {
+//         display:inline-block;
+//         vertical-align:top;
+//         // box-shadow: inset 0px 11px 8px -10px #CCC, inset 0px -11px 8px -10px #CCC;
+//         font-size: 12pt;
+//         // padding: 0px 200px 0px $left_thresh;
+//         padding: 0px 200px 0px 20px;
+//         max-width: 540px;
+//         line-height: 1.3em;
+//         p {
+//             margin: 0px;
+//             padding: 0px 0px 10px 0px;
+//         }
+//     }
+//     .secbody.fullwidth {
+//         padding: 30px 0px 30px 0px;
+//     }
+//     ul.box {
+//         list-style-type: none;
+//         li {
+//             display: inline-block;
+//             width: 150px;
+//             height: 175px;
+//             padding: 5px;
+//             border: 1px solid #eee;
+//         }
+//     }
+//     ul {
+//         list-style-type: none;
+//         padding: 0px;
+//     }
+// }
+

@@ -1,0 +1,23 @@
+{
+    "news": [{
+        "id": "start",
+        "datestr": "2017-10-02",
+        "summary": "Started as Associate Professor of Human-Computer Interaction, with joint appointment as Governing Body Fellow of Kellogg College."
+    }, {
+        "id": "retips",
+        "datestr": "2017-11-01",
+        "summary": "Launching <a href=\"https://www.petrashub.org\">EPSRC PETRAS</a> project <a href=\"https://www.petrashub.org/portfolio-item/respectful-things-in-private-spaces-investigating-ethical-data-handling-for-very-personal-devices-retips/\">ReTiPS: Responsible Things in Private Spaces</a>"
+    }, {
+        "id": "ltlb",
+        "datestr": "2017-09-01",
+        "summary": "Published <a class=\"title\" href=\"https://arxiv.org/abs/1707.01477\">Like Trainer Like Bot</a> in Social Informatics"
+    }, {
+        "id": "news-ft",
+        "datestr":"2018-10-23",
+        "summary": "Financial Times featured a detailed article today about the Privacy X-Ray Project."
+    }, {
+        "id": "news-bbc",
+        "datestr":"2018-10-23",
+        "summary": "BBC News article featuring our Privacy X-Ray work about mobile tracking in the app ecosystem."
+    }]
+}

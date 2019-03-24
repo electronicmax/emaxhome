@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { LoaderService, NewsItem, Thing, CrossRefItem, CuratedPub } from '../loader.service';
 import * as _ from 'lodash';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 class YearPubs {
   year: number;
@@ -14,7 +16,7 @@ class YearPubs {
   styleUrls: ['./list-page.component.scss']
 })
 export class ListPageComponent implements OnInit {
-  @Input() type: string;
+  @Input() itemtype: string;
   @Input() groupBy: string;
   @Input() limit: number;
 
@@ -23,9 +25,12 @@ export class ListPageComponent implements OnInit {
   by_year: YearPubs[];
 
   ngOnInit() {
+    console.log('>> this type ', this.itemtype);
+    console.log('this active route data ', this.route.data);
   }
 
-  constructor(private loader: LoaderService, private sanitizer: DomSanitizer) {
+  constructor(private loader: LoaderService, private sanitizer: DomSanitizer, private router: Router, private route: ActivatedRoute) {
+    
     this.loader.getNews().then(n => this.news = n);
     this.loader.getThings().then(p => this.Things = p);
     this.loader.getMergedPubs().then((pubs) => {
