@@ -1,31 +1,16 @@
-<div class="section first">
-  <div class="sectitle">
-    <ul>
-      <li><a routerLink='/home'>home</a></li>
-      <li> <div>projects</div>
+<div class='main'>
+  <img class="bkimg" [src]="p && p.pics && p.pics.back">  
+  <div class="content">
+   <h1 class="title"> {{ p && p.title }} </h1>
+    <h2> {{ p && p.subtitle }} </h2>
+    <div class='description' [innerHtml]="description"></div>
+    <div *ngIf='p && p.pubs' class='pubs'>
+        <div class="topcorner"></div>
+        See also:
         <ul>
-          <a *ngFor="let pr of projects" [routerLink]='["/projects/", pr.id]' routerActive='active'><li class="project" [style.color]="pr.color" [style.borderColor]="pr.color" >{{ pr.name }}</li></a>      
+          <li *ngFor="let f of p.publications"><app-publication [p]='f'></app-publication></li>
         </ul>
-      </li>
-      <li> <a routerLink="/pubs" routerActive='active'>publications</a></li>
-    </ul>
+        <div class="bottomcorner"><br></div>
+    </div>        
   </div>
-  <div class="secbody">
-    <div class="square" [style.backgroundColor]='p?.color'></div>      
-
-    <h3 class="title" [style.color]='p?.color'>{{p?.name}}</h3>
-
-    <div class="description" [innerHtml]='p?.summaryHtml'></div>
-
-    <div *ngIf="p?.pubs && p?.pubs.length > 0">
-      <h4>publications</h4>
-      <ul>
-        <li *ngFor="let pub of p?.pubs"><app-publication [p]='pub'></app-publication></li>
-      </ul>
-    </div>
-
-    <div *ngIf="p?.vids && p?.vids.length > 0">
-      <h4>videos</h4>
-    </div>      
-  </div>
-</div> 
+</div>

@@ -2,12 +2,19 @@
     font-weight:bold;
     max-width:600px;
 }
+.headbox {
+    img { width:100%; }
+    padding:10px 0px;
+    // border-bottom:1px solid #eee;
+}
 .namebox {
+    background-color:white;
+    text-align:left;
     margin:0px 0px 20px 0px;
-    text-align: left;
+    // text-align: left;
     font-size: 36pt;
-    border-bottom:1px solid #eee;
-    padding:0px 0px 20px 0px;
+    // border-bottom:1px solid #eee;
+    padding:0px 0px 0px 0px;
     .name {
         font-size: 18pt;
     }

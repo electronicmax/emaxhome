@@ -656,7 +656,27 @@
 		   "categories":["crowdsourcing"],
 		   "url":"https://hip.cat/papers/www2015-crowdsourcing.pdf",
 		   "DOI":"10.1145/2736277.2741639"
+		},
+		{	
+			"id":"iotphilosophy",
+			"title":"The Little Book of Philosophy for the Internet of Things",
+			"authors":["Joseph Galen Lindley", "Paul Coulton", "Haider Akmal", "Duncan Hay", "Max Van Kleek", "Sara Cannizzaro", "Reuben Binns"],
+			"type":["book"],
+			"year":2019,
+			"url":"https://www.petrashub.org/download/the-little-book-of-philosophy-for-the-internet-of-things/"
+		},
+		{
+			"id":"ietrespect",
+			"title":"Respectful Things: Adding Social Intelligence to 'Smart' Devices",
+			"authors":["Max Van Kleek","William Seymour","Reuben Binns","Nigel Shadbolt"],
+			"type":["conference paper"],
+			"year":2018,
+			"conference":"IET - Living in the Internet of Things: Cybersecurity of the IoT",
+			"categories":["IoT", "Privacy"],
+			"url":"https://ieeexplore.ieee.org/document/8379693",
+			"DOI":"10.1049/cp.2018.0006"
 		}
+ 
    ],
 	"contact": [
 	   { "id": "dept", "name":"Max Van Kleek @ Oxford CS", "url":"https://www.cs.ox.ac.uk/people/max.vankleek/" },	

@@ -1,55 +1,91 @@
+$padleft:40px;
 
-.section {
-    // shadowed from top
-    // padding: 20px 0px;
-    padding:50px 0px 0px 100px;
-    
-    
-    .sectitle {
-        text-align:right;
-        font-size:16pt;
+div.main {
+    // background-image:url('../../assets/imgs/aretha-bk.jpg');
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: 300px 100px;
+    font-weight:bold;
+    max-width:800px;
+    // border:1px solid #999;
+    margin-left:$padleft;
+    position:relative;
 
-        div { font-weight: 200;  padding: 1em 0px; }
+    h1, h2 { 
+        // font-size:12pt;
+    }
 
-        ul li {
-            font-size:11pt;
-            margin-bottom:1em;
-            &.active {
-                font-weight:bold;
+    h1 { margin-bottom:0px; padding-bottom:0px; }
+    h2 { margin-top:0px; padding-top:0px; }
+
+    .title {
+    }
+
+    img.bkimg {
+        // position:absolute;
+        // top:0px; left:$padleft; right:0px;
+        // opacity:0.2;
+        width:100%;
+        // z-index:100;
+    }
+
+    img.mainimg {
+        // width:100%;
+        width:400px;
+        opacity:1.0;
+    }
+    .content {
+    // width:100%;
+        margin:0px 0px 0px 0px;
+        background-color:rgba(255,255,255,0.9);
+        margin-top:100p;
+        padding:10px 0px 0px 0px; 
+        .description /deep/ img {  
+            width:99%;  
+            margin:auto auto;
+            padding:0px;
+        }
+        .pubs {
+            position:relative;
+            padding:20px 20px 10px 20px;
+            // background-color:#eee;
+            .topcorner {
+                position:absolute;
+                left:0px; top:0px; 
+                border-top: solid 3px #555;
+                border-left: solid 3px #555;
+                height: 15px;
+                width: 15px;
+            }
+            .bottomcorner {
+                position:absolute;
+                right:0px; bottom:0px;
+                border-bottom: solid 3px #555;
+                border-right: solid 3px #555;
+                height: 15px;
+                width: 15px;
             }
         }
+        .pubs ul {
+            margin:20px 0px 0px 0px;
+            list-style-type: none;
+            padding:0px 0px;
+        }    
 
     }
-    position:relative;
-    // border:1px solid #eee;
+    
 
-    .square {
-        // position:absolute;
-        // margin-top:25px;
-        // right:25px;
-        // top: 20px;
-        margin-top:45px;
-        width:80px;
-        height:80px;
-        // margin-left:120px;
-        // height:180px;
-        border:1px solid #eee;
-    }
-    .secbody {
-        // padding-top:20px;
-        padding: 0px 50px 0px 50px;
-    }
-    .title {
-        font-size:18pt;
-        font-weight: 100;
-        // font-weight:bold;        
-        margin: 45px 0px 0em 0px;
-
-    }
-    .description {
-        margin:0px 0px;
-        padding:20px 0px 0px 0px;
-        line-height:1.3em;
-        // max-width:500px;
-    }
+    // .pubs {
+    //     border:1px solid #eee;
+    //     // position:absolute;
+    //     float:right;
+    //     margin:0px 0px 15px 15px;
+    //     padding:22px 22px;
+    //     font-size:8pt;
+    //     width:150px;
+    //     ul {
+    //         list-style-type:none;
+    //         padding-left:0px;            
+    //     }
+    // }
 }

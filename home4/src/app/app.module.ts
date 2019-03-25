@@ -64,7 +64,7 @@ const appRoutes: Routes = [
     data: { itemtype: 'publications', title: 'PAPERS' }
   },
   {
-    component: ProjectsComponent,
+    component: ProjectComponent,
     path: 'projects/:id',
     data: { title: 'RESEARCH' }
   },
