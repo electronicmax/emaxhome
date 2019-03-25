@@ -3,6 +3,7 @@ $padtop: 3vh;
 $padleft: 5vw;
 
 .main {
+    min-width:400px;
     padding:100px 0px;
     display:flex;
     flex-direction: row;        
@@ -61,7 +62,7 @@ $padleft: 5vw;
     }
     .body {
         // max-width:800px;
-        padding:0px 138px 0px 0px;
+        padding:0px 138px 0px 20px;
         flex-grow:0;
     }
 }

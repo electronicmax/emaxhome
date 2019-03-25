@@ -1,24 +1,33 @@
 .main {
     font-weight:bold;
     max-width:600px;
+    position:relative;
 }
+
 .headbox {
-    img { width:100%; }
+    position:relative;
+    z-index:1;
+    img.head { width:50%; margin:20px; }
+    text-align:right;
     padding:10px 0px;
-    // border-bottom:1px solid #eee;
 }
 .namebox {
-    background-color:white;
+    position:relative;
+    z-index:10;
     text-align:left;
-    margin:0px 0px 20px 0px;
+    margin:-80px 0px 20px 0px;
     // text-align: left;
-    font-size: 36pt;
-    // border-bottom:1px solid #eee;
+    // border-bottom:1px solid #eee;p
     padding:0px 0px 0px 0px;
     .name {
+        background:rgba(255,255,255,0.9);
         font-size: 18pt;
+        padding:2px;
     }
     .title {
+        background:rgba(255,255,255,0.9);
         font-size: 12pt;
     }
 }    
+
+

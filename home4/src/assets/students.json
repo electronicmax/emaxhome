@@ -204,6 +204,12 @@
           "status": "ACTIVE"
         },
         {
+          "name": "PETER WEST",
+          "degree": "PHD, UNI. SOUTHAMPTON",
+          "programme": "HEALTH SCIENCE",
+          "status": "ALUMNI"
+        },
+        {
           "name": "DANIEL KARANDIKAR",
           "degree": "MSC",
           "programme": "CS",

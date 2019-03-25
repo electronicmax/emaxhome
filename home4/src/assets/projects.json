@@ -1,0 +1,66 @@
+{ 
+    "projects":[
+        {
+            "id":"aretha",
+            "title":"ARETHA:",
+            "subtitle":"THE FIRST RESPECTFUL, PRIVACY-PRESERVING VIRTUAL ASSISTANT",
+            "pics":{
+                "back":"assets/imgs/aretha-bk.jpg",
+                "main":"assets/imgs/aretha-main.png"
+            },
+            "descriptionHtml":"assets/projects/aretha.html",
+            "active":"true",
+            "link":"",
+            "pubs":["iotphilosophy"]
+        },
+        {
+            "id":"xray",
+            "title":"PRIVACY X-RAY",
+            "subtitle":"EMPOWERING END-USERS TO UNDERSTAND HOW THEIR PERSONAL DATA IS BEING USED AND SHARED",
+            "pics":{
+                "back":"assets/imgs/refine-bk3.png"
+            },
+            "descriptionHtml":"assets/projects/refine.html",
+            "active":"true",
+            "link":"",
+            "pubs":["btd2017", "chi08-refine"]
+        },
+        {
+            "id":"respect",
+            "title":"RESPECTFUL AI",
+            "subtitle":"HONOURING PEOPLE'S GENUINE INTERESTS AND NEEDS",
+            "pics":{
+                "back":"assets/imgs/jetpack-head.png"
+            },
+            "descriptionHtml":"assets/projects/respect.html",
+            "active":"true",
+            "link":"",
+            "pubs":["iotphilosophy", "ietrespect"]
+        },
+        {
+            "id":"qspatient",
+            "title":"QUANTIFIED PATIENTS",
+            "subtitle":"USING DATA FROM WEARABLES AND SELF-TRACKING APPS IN CLINICAL WORKFLOWS",
+            "pics":{
+                "back":"assets/imgs/qsjawbone.png"
+            },
+            "descriptionHtml":"assets/projects/qspatient.html",
+            "active":"true",
+            "link":"",
+            "pubs":["chi2016qs", "chi18-pgd", "qchallenges"]
+        },
+        {
+            "id":"explanations",
+            "title":"EXPLAINING AI",
+            "subtitle":"KEEPING HUMANS IN THE LOOP OF AI-BASED DECISIONS",
+            "pics":{
+                "back":"assets/imgs/ai-fractal.png"
+            },
+            "descriptionHtml":"assets/projects/explaining.html",
+            "active":"true",
+            "link":"",
+            "pubs":["chi08-explanations", "chi18-stakes", "chi18workshop-sense", "chi18workshop-gdpr"]
+        }
+    ]
+}
+
